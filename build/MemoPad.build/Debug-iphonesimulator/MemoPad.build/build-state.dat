@@ -1,0 +1,376 @@
+TMemoPad
+v7
+r0
+t321524444.259266
+cCheck dependencies
+cProcessInfoPlistFile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist MemoPad-Info.plist
+cCompileXIB /MyData/Develope/MyExampples/MemoPad/MainWindow.xib
+cCompileXIB /MyData/Develope/MyExampples/MemoPad/RootViewController.xib
+cCpResource build/Debug-iphonesimulator/MemoPad.app/MemoPad.sqlite MemoPad.sqlite
+cCompileXIB /MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.xib
+cProcessPCH /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch MemoPad_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o /MyData/Develope/MyExampples/MemoPad/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o /MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoAddViewController.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad normal i386
+cGenerateDSYMFile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app.dSYM /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad
+cTouch /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/Availability.h
+c000000004CB3FA080000000000001ADD
+t1286863368
+s6877
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/sqlite3.h
+c000000004CC109C90000000000042B54
+t1287719369
+s273236
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/lib/libsqlite3.0.dylib
+c000000004CC109D90000000000092C20
+t1287719385
+s601120
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.h
+c000000004D79CC5900000000000004D3
+t1299827801
+s1235
+i<UIKit/UIKit.h>
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.m
+c000000004D79CC9B000000000000107A
+t1299827867
+s4218
+i"MemoAddViewController.h"
+i"MemoPadAppDelegate.h"
+i"MemoData.h"
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.xib
+c000000004D79CC7D000000000005E530
+t1299827837
+s386352
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.h
+c000000004D797DF6000000000000023B
+t1299807734
+s571
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m
+c000000004D797DF600000000000001E6
+t1299807734
+s486
+i"MemoData.h"
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.h
+c000000004D79C38D0000000000000688
+t1299825549
+s1672
+i<UIKit/UIKit.h>
+i<sqlite3.h>
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m
+c000000004D79D79A0000000000003306
+t1299830682
+s13062
+i"MemoPadAppDelegate.h"
+i"RootViewController.h"
+i"MemoData.h"
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.h
+c000000004D7994670000000000000249
+t1299813479
+s585
+i<UIKit/UIKit.h>
+i"MemoAddViewController.h"
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m
+c000000004D79C5FA0000000000001AB9
+t1299826170
+s6841
+i"RootViewController.h"
+i"MemoPadAppDelegate.h"
+i"MemoData.h"
+i"MemoAddViewController.h"
+
+N/MyData/Develope/MyExampples/MemoPad/MainWindow.xib
+c000000004D79AC0D00000000000061CD
+t1299819533
+s25037
+
+N/MyData/Develope/MyExampples/MemoPad/MemoPad.sqlite
+c000000004D789E760000000000000C00
+t1299750518
+s3072
+
+N/MyData/Develope/MyExampples/MemoPad/MemoPad_Prefix.pch
+c000000004D789EC80000000000000140
+t1299750600
+s320
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/MyData/Develope/MyExampples/MemoPad/RootViewController.xib
+c000000004D789EC80000000000004452
+t1299750600
+s17490
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app
+t1299831644
+s306
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app.dSYM
+t1299831644
+s102
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist
+t1299807646
+s591
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MainWindow.nib
+t1299819538
+s1553
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoAddViewController.nib
+t1299827840
+s2355
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad
+t1299831644
+s47628
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad.sqlite
+t1299807647
+s3072
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/PkgInfo
+t1299807646
+s8
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/RootViewController.nib
+t1299807646
+s979
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoAddViewController.o
+t1299827868
+s66268
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o
+t1299807735
+s11560
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPad.LinkFileList
+c000000004D79905D0000000000000289
+t1299812445
+s649
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o
+t1299831643
+s78320
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o
+t1299827840
+s61368
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o
+t1299807648
+s6300
+
+N/MyData/Develope/MyExampples/MemoPad/main.m
+c000000004D789EC8000000000000015E
+t1299750600
+s350
+i<UIKit/UIKit.h>
+
+N/var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch
+t1299807648
+s15453392
+
+NMemoPad-Info.plist
+c000000004D789EC8000000000000038D
+t1299750600
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies321524443#321524443#0(0"0(0#1#0"8716959520#0"0#
+
+CCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoAddViewController.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s321520667.786755
+e321520668.281648
+r1
+xCompileC
+xbuild/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoAddViewController.o
+x/MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.m321520667#321520668#0(0"0(0#0#68"/MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.m8720879712#1934"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -include /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch -c /MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.m -o /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoAddViewController.o0#
+
+CCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s321500535.026341
+e321500535.124983
+r1
+xCompileC
+xbuild/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o
+x/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m321500535#321500535#0(0"0(0#0#55"/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m8696182784#1908"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -include /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch -c /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m -o /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o0#
+
+CCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s321524443.127978
+e321524443.684983
+r1
+xCompileC
+xbuild/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o
+x/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m321524443#321524443#0(0"0(0#0#65"/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m8703677280#1928"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -include /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch -c /MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m -o /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o0#
+
+CCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o /MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s321520640.472755
+e321520640.985676
+r1
+xCompileC
+xbuild/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o
+x/MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m321520640#321520640#0(0"0(0#0#65"/MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m8724453760#1928"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -include /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch -c /MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m -o /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o0#
+
+CCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o /MyData/Develope/MyExampples/MemoPad/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s321500448.435971
+e321500448.681089
+r1
+xCompileC
+xbuild/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o
+x/MyData/Develope/MyExampples/MemoPad/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /MyData/Develope/MyExampples/MemoPad/main.m321500448#321500448#0(0"0(0#0#43"/MyData/Develope/MyExampples/MemoPad/main.m8691473504#1892"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -include /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch -c /MyData/Develope/MyExampples/MemoPad/main.m -o /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.xib
+s321520638.516382
+e321520640.470970
+r1
+xCompileXIB
+x/MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.xib
+lSLF07#2@44"CompileXIB Classes/MemoAddViewController.xib321520638#321520640#0(0"0(0#0#70"/MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.xib8720628192#594"    cd /MyData/Develope/MyExampples/MemoPad    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoAddViewController.nib /MyData/Develope/MyExampples/MemoPad/Classes/MemoAddViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /MyData/Develope/MyExampples/MemoPad/MainWindow.xib
+s321512338.220816
+e321512338.656083
+r1
+xCompileXIB
+x/MyData/Develope/MyExampples/MemoPad/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib321512338#321512338#0(0"0(0#0#51"/MyData/Develope/MyExampples/MemoPad/MainWindow.xib8712677152#564"    cd /MyData/Develope/MyExampples/MemoPad    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MainWindow.nib /MyData/Develope/MyExampples/MemoPad/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /MyData/Develope/MyExampples/MemoPad/RootViewController.xib
+s321500446.508605
+e321500446.992385
+r1
+xCompileXIB
+x/MyData/Develope/MyExampples/MemoPad/RootViewController.xib
+lSLF07#2@33"CompileXIB RootViewController.xib321500446#321500446#0(0"0(0#0#59"/MyData/Develope/MyExampples/MemoPad/RootViewController.xib8703579328#580"    cd /MyData/Develope/MyExampples/MemoPad    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/RootViewController.nib /MyData/Develope/MyExampples/MemoPad/RootViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCpResource build/Debug-iphonesimulator/MemoPad.app/MemoPad.sqlite MemoPad.sqlite
+s321500446.986440
+e321500447.051699
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MemoPad.app/MemoPad.sqlite
+xMemoPad.sqlite
+lSLF07#2@19"Copy MemoPad.sqlite321500446#321500447#0(0"0(0#0#51"/MyData/Develope/MyExampples/MemoPad/MemoPad.sqlite8701367168#466"    cd /MyData/Develope/MyExampples/MemoPad    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /MyData/Develope/MyExampples/MemoPad/MemoPad.sqlite /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app0#
+
+CGenerateDSYMFile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app.dSYM /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad
+s321524444.071429
+e321524444.206520
+r1
+xGenerateDSYMFile
+x/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app.dSYM
+x/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad
+lSLF07#2@109"GenerateDSYMFile build/Debug-iphonesimulator/MemoPad.app.dSYM build/Debug-iphonesimulator/MemoPad.app/MemoPad321524444#321524444#0(0"0(0#0#84"/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad8701278848#377"    cd /MyData/Develope/MyExampples/MemoPad    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad -o /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app.dSYM0#
+
+CLd /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad normal i386
+s321524443.685104
+e321524444.071311
+r1
+xLd
+x/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad
+xnormal
+xi386
+lSLF07#2@89"Link /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad321524443#321524444#0(0"0(0#0#0"8692561568#902"    cd /MyData/Develope/MyExampples/MemoPad    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -filelist /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPad.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -lsqlite3.0 -o /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad0#
+
+CProcessInfoPlistFile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist MemoPad-Info.plist
+s321500446.412812
+e321500446.469721
+r1
+xProcessInfoPlistFile
+x/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist
+xMemoPad-Info.plist
+lSLF07#2@26"Process MemoPad-Info.plist321500446#321500446#0(0"0(0#0#55"/MyData/Develope/MyExampples/MemoPad/MemoPad-Info.plist8696042912#473"    cd /MyData/Develope/MyExampples/MemoPad    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility MemoPad-Info.plist -genpkginfo /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist0#
+
+CProcessPCH /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch MemoPad_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s321500447.051861
+e321500448.435800
+r1
+xProcessPCH
+x/var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch
+xMemoPad_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile MemoPad_Prefix.pch321500447#321500448#0(0"0(0#0#55"/MyData/Develope/MyExampples/MemoPad/MemoPad_Prefix.pch8701169504#1786"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -c /MyData/Develope/MyExampples/MemoPad/MemoPad_Prefix.pch -o /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch0#
+
+CTouch /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app
+s321524444.206624
+e321524444.259215
+r1
+xTouch
+x/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app
+lSLF07#2@82"Touch /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app321524444#321524444#0(0"0(0#0#0"8694011808#274"    cd /MyData/Develope/MyExampples/MemoPad    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app0#
+
