@@ -1,0 +1,6 @@
+framework module Pods_seventyDaysTests {
+  umbrella header "Pods-seventyDaysTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CD_Data" representedClassName="CD_Data" syncable="YES">
+        <attribute name="dataBinary" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="dataCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dataDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dataEdited" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dataImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="dataName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dataType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CD_Group" representedClassName="CD_Group" syncable="YES"/>
+    <entity name="CD_Memory" representedClassName="CD_Memory" syncable="YES">
+        <attribute name="memoryCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="memoryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memoryEdited" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="memoryImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="memoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memoryType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CD_MemoryTimeTable" representedClassName="CD_MemoryTimeTable" syncable="YES"/>
+    <entity name="CD_Tag" representedClassName="CD_Tag" syncable="YES">
+        <attribute name="tagCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="tagDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tagEdited" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="tagImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="tagName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tagType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CD_Memory" positionX="-90" positionY="-198" width="128" height="133"/>
+        <element name="CD_Tag" positionX="106" positionY="-198" width="128" height="133"/>
+        <element name="CD_Group" positionX="-279" positionY="135" width="128" height="43"/>
+        <element name="CD_MemoryTimeTable" positionX="-90" positionY="128" width="128" height="43"/>
+        <element name="CD_Data" positionX="-281" positionY="-198" width="128" height="148"/>
+    </elements>
+</model>

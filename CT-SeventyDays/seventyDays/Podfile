@@ -1,0 +1,35 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'seventyDays' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for seventyDays
+  pod 'Alamofire', '~> 4.3.0'
+  pod 'AlamofireObjectMapper', '~> 4.0'
+  pod 'ObjectMapper', '~> 2.2'
+  pod 'SwiftyJSON', '~> 3.1.4'
+  pod 'Kingfisher', '~> 3.4.0'
+  pod 'SwifterSwift', '~> 1.6.1'
+  
+  pod 'Hero', '0.3.2'
+  pod 'arek', '~> 1.0.0'
+  pod 'EZAlertController', '3.2.0'
+  pod 'ActiveLabel'
+  
+  pod 'ReachabilitySwift', '~> 3'
+  pod 'GDPerformanceView-Swift'
+  pod 'Toaster', '~> 2.0'
+  
+  target 'seventyDaysTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'seventyDaysUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

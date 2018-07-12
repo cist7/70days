@@ -1,0 +1,7 @@
+seventyDays.xccheckout
+xcuserdata/
+project.xcworkspace/
+*.xcuserstate
+*.gcno
+*.gcda
+*.xcscmblueprint

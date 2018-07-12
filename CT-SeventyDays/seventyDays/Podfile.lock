@@ -1,0 +1,94 @@
+PODS:
+  - ActiveLabel (0.7.1)
+  - Alamofire (4.3.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - arek (1.0.0):
+    - arek/Bluetooth (= 1.0.0)
+    - arek/Camera (= 1.0.0)
+    - arek/CloudKit (= 1.0.0)
+    - arek/Contacts (= 1.0.0)
+    - arek/Core (= 1.0.0)
+    - arek/Events (= 1.0.0)
+    - arek/Health (= 1.0.0)
+    - arek/Location (= 1.0.0)
+    - arek/MediaLibrary (= 1.0.0)
+    - arek/Microphone (= 1.0.0)
+    - arek/Motion (= 1.0.0)
+    - arek/Notifications (= 1.0.0)
+    - arek/Photos (= 1.0.0)
+    - arek/Reminders (= 1.0.0)
+    - arek/SpeechRecognizer (= 1.0.0)
+  - arek/Bluetooth (1.0.0):
+    - arek/Core
+  - arek/Camera (1.0.0):
+    - arek/Core
+  - arek/CloudKit (1.0.0):
+    - arek/Core
+  - arek/Contacts (1.0.0):
+    - arek/Core
+  - arek/Core (1.0.0)
+  - arek/Events (1.0.0):
+    - arek/Core
+  - arek/Health (1.0.0):
+    - arek/Core
+  - arek/Location (1.0.0):
+    - arek/Core
+  - arek/MediaLibrary (1.0.0):
+    - arek/Core
+  - arek/Microphone (1.0.0):
+    - arek/Core
+  - arek/Motion (1.0.0):
+    - arek/Core
+  - arek/Notifications (1.0.0):
+    - arek/Core
+  - arek/Photos (1.0.0):
+    - arek/Core
+  - arek/Reminders (1.0.0):
+    - arek/Core
+  - arek/SpeechRecognizer (1.0.0):
+    - arek/Core
+  - EZAlertController (3.2)
+  - GDPerformanceView-Swift (1.1.2)
+  - Hero (0.3.2)
+  - Kingfisher (3.4.0)
+  - ObjectMapper (2.2.5)
+  - ReachabilitySwift (3)
+  - SwifterSwift (1.6.2)
+  - SwiftyJSON (3.1.4)
+  - Toaster (2.0.3)
+
+DEPENDENCIES:
+  - ActiveLabel
+  - Alamofire (~> 4.3.0)
+  - AlamofireObjectMapper (~> 4.0)
+  - arek (~> 1.0.0)
+  - EZAlertController (= 3.2.0)
+  - GDPerformanceView-Swift
+  - Hero (= 0.3.2)
+  - Kingfisher (~> 3.4.0)
+  - ObjectMapper (~> 2.2)
+  - ReachabilitySwift (~> 3)
+  - SwifterSwift (~> 1.6.1)
+  - SwiftyJSON (~> 3.1.4)
+  - Toaster (~> 2.0)
+
+SPEC CHECKSUMS:
+  ActiveLabel: 68625f22775f51c31bb691ca8de20f1e5a3bc825
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  arek: 56aea029657d0a1e0b24fd9566d0fa08cea045d3
+  EZAlertController: 633be01320bed47720be54054df47667d61c2481
+  GDPerformanceView-Swift: 18086952416fa8af2df0e7bc8cfdda63afc7e0b6
+  Hero: 48f8df6798d16d35935cfbb0726c5fbbd23cfe5a
+  Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
+  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SwifterSwift: 48a48a193b47e0d577359c75570e5291dd2f460a
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
+
+PODFILE CHECKSUM: c61bdaf5d81b362432badb4fae42d65595ba1c29
+
+COCOAPODS: 1.2.0
