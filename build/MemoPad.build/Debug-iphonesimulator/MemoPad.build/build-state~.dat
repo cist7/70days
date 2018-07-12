@@ -1,0 +1,389 @@
+TMemoPad
+v7
+r0
+t321500448.746686
+cCheck dependencies
+cProcessInfoPlistFile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist MemoPad-Info.plist
+cCompileXIB /MyData/Develope/MyExampples/MemoPad/MainWindow.xib
+cCompileXIB /MyData/Develope/MyExampples/MemoPad/RootViewController.xib
+cCpResource build/Debug-iphonesimulator/MemoPad.app/MemoPad.sqlite MemoPad.sqlite
+cProcessPCH /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch MemoPad_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o /MyData/Develope/MyExampples/MemoPad/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o /MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/Availability.h
+c000000004CB3FA080000000000001ADD
+t1286863368
+s6877
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/sqlite3.h
+c000000004CC109C90000000000042B54
+t1287719369
+s273236
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/lib/libsqlite3.0.dylib
+c000000004CC109D90000000000092C20
+t1287719385
+s601120
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.h
+c000000004D789FAB0000000000000239
+t1299750827
+s569
+i<Cocoa/Cocoa.h>
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m
+c000000004D78A00900000000000001E2
+t1299750921
+s482
+i"MemoData.h"
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.h
+c000000004D797191000000000000040C
+t1299804561
+s1036
+i<UIKit/UIKit.h>
+i<sqlite3.h>
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m
+c000000004D797D9E00000000000015C1
+t1299807646
+s5569
+i"MemoPadAppDelegate.h"
+i"RootViewController.h"
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.h
+c000000004D789EC800000000000000E0
+t1299750600
+s224
+i<UIKit/UIKit.h>
+
+N/MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m
+c000000004D789EC800000000000010B8
+t1299750600
+s4280
+i"RootViewController.h"
+
+N/MyData/Develope/MyExampples/MemoPad/MainWindow.xib
+c000000004D789EC80000000000005FF4
+t1299750600
+s24564
+
+N/MyData/Develope/MyExampples/MemoPad/MemoPad.sqlite
+c000000004D789E760000000000000C00
+t1299750518
+s3072
+
+N/MyData/Develope/MyExampples/MemoPad/MemoPad_Prefix.pch
+c000000004D789EC80000000000000140
+t1299750600
+s320
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/MyData/Develope/MyExampples/MemoPad/RootViewController.xib
+c000000004D789EC80000000000004452
+t1299750600
+s17490
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app
+t2
+s0
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app.dSYM
+t2
+s0
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist
+t1299807646
+s591
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MainWindow.nib
+t1299807646
+s1509
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad
+t2
+s0
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad.sqlite
+t1299807647
+s3072
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/PkgInfo
+t1299807646
+s8
+
+N/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/RootViewController.nib
+t1299807646
+s979
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o
+t2
+s0
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPad.LinkFileList
+c000000004D797D9E0000000000000200
+t1299807646
+s512
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o
+t2
+s0
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o
+t1299807648
+s41156
+
+N/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o
+t1299807648
+s6300
+
+N/MyData/Develope/MyExampples/MemoPad/main.m
+c000000004D789EC8000000000000015E
+t1299750600
+s350
+i<UIKit/UIKit.h>
+
+N/var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch
+t1299807648
+s15453392
+
+NMemoPad-Info.plist
+c000000004D789EC8000000000000038D
+t1299750600
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies321500446#321500446#0(0"0(0#1#0"8697247872#0"0#
+
+CCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s321500448.681195
+e321500448.746603
+r0
+xCompileC
+xbuild/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o
+x/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:9:
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.h:9:24: error: Cocoa/Cocoa.h: No such file or directory
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m: In function '-[MemoData initWithData:Title:Content:Date:]':
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:17: warning: passing argument 1 of 'setMIndex:' makes integer from pointer without a cast
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:18: error: 'title' undeclared (first use in this function)
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:18: error: (Each undeclared identifier is reported only once
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:18: error: for each function it appears in.)
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:19: error: 'content' undeclared (first use in this function)
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:20: error: 'date' undeclared (first use in this function)
+lSLF07#2@63"Compile /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m321500448#321500448#0(1018"In file included from /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:9:/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.h:9:24: error: Cocoa/Cocoa.h: No such file or directory/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m: In function '-[MemoData initWithData:Title:Content:Date:]':/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:17: warning: passing argument 1 of 'setMIndex:' makes integer from pointer without a cast/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:18: error: 'title' undeclared (first use in this function)/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:18: error: (Each undeclared identifier is reported only once/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:18: error: for each function it appears in.)/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:19: error: 'content' undeclared (first use in this function)/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m:20: error: 'date' undeclared (first use in this function)5(4@40"Cocoa/Cocoa.h: No such file or directory321500448#81#110#2(7@77"In file included from /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m321500448#18446744073709551615#0#0(6@55"/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m321443721#9#0#9#0#0"0(13@99"Cocoa/Cocoa.h: No such file or directory in /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.h321500448#18446744073709551615#0#0(6@55"/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.h321443627#9#0#9#0#0"0(6@55"/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.h321443627#9#0#9#0#28"*: No such file or directory0(22@76"Passing argument 1 of 'setMIndex:' makes integer from pointer without a cast321500448#308#146#0(6@55"/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m321443721#17#0#17#0#67"passing argument * of '*' makes integer from pointer without a cast0(4@47"'title' undeclared (first use in this function)321500448#454#115#0(6@55"/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m321443721#18#0#18#0#43"'*' undeclared (first use in this function)0(4@49"'content' undeclared (first use in this function)321500448#787#117#0(6@55"/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m321443721#19#0#19#0#43"'*' undeclared (first use in this function)0(4@46"'date' undeclared (first use in this function)321500448#904#114#0(6@55"/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m321443721#20#0#20#0#43"'*' undeclared (first use in this function)0(0#0#55"/MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m8700656736#1908"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -include /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch -c /MyData/Develope/MyExampples/MemoPad/Classes/MemoData.m -o /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoData.o1#
+
+CCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o /MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s321500448.437543
+e321500448.608226
+r0
+xCompileC
+xbuild/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o
+x/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m: In function '-[MemoPadAppDelegate readMemeoFromDatabase]':
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m:95: error: 'MemoData' undeclared (first use in this function)
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m:95: error: (Each undeclared identifier is reported only once
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m:95: error: for each function it appears in.)
+o/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m:95: error: 'md' undeclared (first use in this function)
+o{standard input}:275:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L00000000002$pb"
+o{standard input}:275:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression
+o{standard input}:264:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L00000000002$pb"
+o{standard input}:264:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression
+o{standard input}:258:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L00000000002$pb"
+o{standard input}:258:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+o{standard input}:248:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000002$pb"
+o{standard input}:248:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+o{standard input}:242:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000002$pb"
+o{standard input}:242:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression
+o{standard input}:235:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_15" minus "L00000000002$pb"
+o{standard input}:235:symbol: "L_OBJC_SELECTOR_REFERENCES_15" can't be undefined in a subtraction expression
+o{standard input}:229:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000002$pb"
+o{standard input}:229:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:226:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000002$pb"
+o{standard input}:226:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:216:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_13" minus "L00000000002$pb"
+o{standard input}:216:symbol: "L_OBJC_SELECTOR_REFERENCES_13" can't be undefined in a subtraction expression
+o{standard input}:210:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L00000000002$pb"
+o{standard input}:210:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+o{standard input}:201:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L00000000002$pb"
+o{standard input}:201:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+o{standard input}:198:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_0" minus "L00000000002$pb"
+o{standard input}:198:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_0" can't be undefined in a subtraction expression
+o{standard input}:166:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L00000000001$pb"
+o{standard input}:166:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression
+o{standard input}:160:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000001$pb"
+o{standard input}:160:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression
+o{standard input}:152:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L00000000001$pb"
+o{standard input}:152:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression
+o{standard input}:146:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_11" minus "L00000000001$pb"
+o{standard input}:146:symbol: "L_OBJC_SELECTOR_REFERENCES_11" can't be undefined in a subtraction expression
+o{standard input}:140:non-relocatable subtraction expression, "L_OBJC_IVAR_$_MemoPadAppDelegate.navigationController$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:140:symbol: "L_OBJC_IVAR_$_MemoPadAppDelegate.navigationController$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:133:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000001$pb"
+o{standard input}:133:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression
+o{standard input}:126:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L00000000001$pb"
+o{standard input}:126:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression
+o{standard input}:119:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"
+o{standard input}:119:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:111:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"
+o{standard input}:111:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:103:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"
+o{standard input}:103:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+o{standard input}:97:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000001$pb"
+o{standard input}:97:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression
+o{standard input}:88:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"
+o{standard input}:88:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+o{standard input}:78:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+o{standard input}:78:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:64:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"
+o{standard input}:64:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_9
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_5
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_6
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_10
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_MemoPadAppDelegate.navigationController$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_11
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_7
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_8
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_12
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_18
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_13
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_1
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_14
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_15
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_16
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_17
+lSLF07#2@73"Compile /MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m321500448#321500448#0(8261"/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m: In function '-[MemoPadAppDelegate readMemeoFromDatabase]':/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m:95: error: 'MemoData' undeclared (first use in this function)/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m:95: error: (Each undeclared identifier is reported only once/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m:95: error: for each function it appears in.)/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m:95: error: 'md' undeclared (first use in this function){standard input}:275:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L00000000002$pb"{standard input}:275:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression{standard input}:264:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L00000000002$pb"{standard input}:264:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression{standard input}:258:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L00000000002$pb"{standard input}:258:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression{standard input}:248:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000002$pb"{standard input}:248:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression{standard input}:242:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000002$pb"{standard input}:242:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression{standard input}:235:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_15" minus "L00000000002$pb"{standard input}:235:symbol: "L_OBJC_SELECTOR_REFERENCES_15" can't be undefined in a subtraction expression{standard input}:229:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L00000000002$pb"{standard input}:229:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:226:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L00000000002$pb"{standard input}:226:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:216:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_13" minus "L00000000002$pb"{standard input}:216:symbol: "L_OBJC_SELECTOR_REFERENCES_13" can't be undefined in a subtraction expression{standard input}:210:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L00000000002$pb"{standard input}:210:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression{standard input}:201:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L00000000002$pb"{standard input}:201:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression{standard input}:198:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_0" minus "L00000000002$pb"{standard input}:198:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_0" can't be undefined in a subtraction expression{standard input}:166:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L00000000001$pb"{standard input}:166:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression{standard input}:160:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000001$pb"{standard input}:160:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression{standard input}:152:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L00000000001$pb"{standard input}:152:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression{standard input}:146:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_11" minus "L00000000001$pb"{standard input}:146:symbol: "L_OBJC_SELECTOR_REFERENCES_11" can't be undefined in a subtraction expression{standard input}:140:non-relocatable subtraction expression, "L_OBJC_IVAR_$_MemoPadAppDelegate.navigationController$non_lazy_ptr" minus "L00000000001$pb"{standard input}:140:symbol: "L_OBJC_IVAR_$_MemoPadAppDelegate.navigationController$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:133:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L00000000001$pb"{standard input}:133:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression{standard input}:126:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L00000000001$pb"{standard input}:126:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression{standard input}:119:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"{standard input}:119:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:111:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"{standard input}:111:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:103:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"{standard input}:103:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression{standard input}:97:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L00000000001$pb"{standard input}:97:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression{standard input}:88:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"{standard input}:88:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression{standard input}:78:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"{standard input}:78:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:64:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"{standard input}:64:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_9{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_5{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_6{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_10{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_MemoPadAppDelegate.navigationController$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_11{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_7{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_8{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_0{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_12{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_18{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_13{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_1{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_14{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_15{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_16{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_172(4@50"'MemoData' undeclared (first use in this function)321500448#126#128#0(6@65"/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m321500446#95#0#95#0#43"'*' undeclared (first use in this function)0(4@44"'md' undeclared (first use in this function)321500448#492#122#0(6@65"/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m321500446#95#0#95#0#43"'*' undeclared (first use in this function)0(0#0#65"/MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m8692330304#1928"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -include /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch -c /MyData/Develope/MyExampples/MemoPad/Classes/MemoPadAppDelegate.m -o /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/MemoPadAppDelegate.o1#
+
+CCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o /MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s321500448.608331
+e321500448.695276
+r1
+xCompileC
+xbuild/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o
+x/MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m321500448#321500448#0(0"0(0#0#65"/MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m8701268896#1928"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -include /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch -c /MyData/Develope/MyExampples/MemoPad/Classes/RootViewController.m -o /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/RootViewController.o0#
+
+CCompileC build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o /MyData/Develope/MyExampples/MemoPad/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s321500448.435971
+e321500448.681089
+r1
+xCompileC
+xbuild/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o
+x/MyData/Develope/MyExampples/MemoPad/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /MyData/Develope/MyExampples/MemoPad/main.m321500448#321500448#0(0"0(0#0#43"/MyData/Develope/MyExampples/MemoPad/main.m8691473504#1892"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -include /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch -c /MyData/Develope/MyExampples/MemoPad/main.m -o /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /MyData/Develope/MyExampples/MemoPad/MainWindow.xib
+s321500446.469845
+e321500446.986348
+r1
+xCompileXIB
+x/MyData/Develope/MyExampples/MemoPad/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib321500446#321500446#0(0"0(0#0#51"/MyData/Develope/MyExampples/MemoPad/MainWindow.xib8694716608#564"    cd /MyData/Develope/MyExampples/MemoPad    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MainWindow.nib /MyData/Develope/MyExampples/MemoPad/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /MyData/Develope/MyExampples/MemoPad/RootViewController.xib
+s321500446.508605
+e321500446.992385
+r1
+xCompileXIB
+x/MyData/Develope/MyExampples/MemoPad/RootViewController.xib
+lSLF07#2@33"CompileXIB RootViewController.xib321500446#321500446#0(0"0(0#0#59"/MyData/Develope/MyExampples/MemoPad/RootViewController.xib8703579328#580"    cd /MyData/Develope/MyExampples/MemoPad    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/RootViewController.nib /MyData/Develope/MyExampples/MemoPad/RootViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCpResource build/Debug-iphonesimulator/MemoPad.app/MemoPad.sqlite MemoPad.sqlite
+s321500446.986440
+e321500447.051699
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/MemoPad.app/MemoPad.sqlite
+xMemoPad.sqlite
+lSLF07#2@19"Copy MemoPad.sqlite321500446#321500447#0(0"0(0#0#51"/MyData/Develope/MyExampples/MemoPad/MemoPad.sqlite8701367168#466"    cd /MyData/Develope/MyExampples/MemoPad    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /MyData/Develope/MyExampples/MemoPad/MemoPad.sqlite /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app0#
+
+CGenerateDSYMFile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app.dSYM /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad
+r0
+
+CLd /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/MemoPad normal i386
+r0
+
+CProcessInfoPlistFile /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist MemoPad-Info.plist
+s321500446.412812
+e321500446.469721
+r1
+xProcessInfoPlistFile
+x/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist
+xMemoPad-Info.plist
+lSLF07#2@26"Process MemoPad-Info.plist321500446#321500446#0(0"0(0#0#55"/MyData/Develope/MyExampples/MemoPad/MemoPad-Info.plist8696042912#473"    cd /MyData/Develope/MyExampples/MemoPad    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility MemoPad-Info.plist -genpkginfo /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app/Info.plist0#
+
+CProcessPCH /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch MemoPad_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s321500447.051861
+e321500448.435800
+r1
+xProcessPCH
+x/var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch
+xMemoPad_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile MemoPad_Prefix.pch321500447#321500448#0(0"0(0#0#55"/MyData/Develope/MyExampples/MemoPad/MemoPad_Prefix.pch8701169504#1786"    cd /MyData/Develope/MyExampples/MemoPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-generated-files.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-own-target-headers.hmap -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-all-target-headers.hmap -iquote /MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/MemoPad-project-headers.hmap -F/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator -I/MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/include -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources/i386 -I/MyData/Develope/MyExampples/MemoPad/build/MemoPad.build/Debug-iphonesimulator/MemoPad.build/DerivedSources -c /MyData/Develope/MyExampples/MemoPad/MemoPad_Prefix.pch -o /var/folders/a8/a8jH40VHH1O7qjX6fa6ehU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/MemoPad_Prefix-fwqdjdrbfnwrcqaywpkpbyrtyhin/MemoPad_Prefix.pch.gch0#
+
+CTouch /MyData/Develope/MyExampples/MemoPad/build/Debug-iphonesimulator/MemoPad.app
+r0
+
