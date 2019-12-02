@@ -1,0 +1,6 @@
+framework module Pods_seventyDays_dist {
+  umbrella header "Pods-seventyDays dist-umbrella.h"
+
+  export *
+  module * { export * }
+}

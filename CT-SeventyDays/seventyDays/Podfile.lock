@@ -1,94 +1,129 @@
 PODS:
-  - ActiveLabel (0.7.1)
-  - Alamofire (4.3.0)
-  - AlamofireObjectMapper (4.1.0):
-    - Alamofire (~> 4.1)
-    - ObjectMapper (~> 2.0)
-  - arek (1.0.0):
-    - arek/Bluetooth (= 1.0.0)
-    - arek/Camera (= 1.0.0)
-    - arek/CloudKit (= 1.0.0)
-    - arek/Contacts (= 1.0.0)
-    - arek/Core (= 1.0.0)
-    - arek/Events (= 1.0.0)
-    - arek/Health (= 1.0.0)
-    - arek/Location (= 1.0.0)
-    - arek/MediaLibrary (= 1.0.0)
-    - arek/Microphone (= 1.0.0)
-    - arek/Motion (= 1.0.0)
-    - arek/Notifications (= 1.0.0)
-    - arek/Photos (= 1.0.0)
-    - arek/Reminders (= 1.0.0)
-    - arek/SpeechRecognizer (= 1.0.0)
-  - arek/Bluetooth (1.0.0):
+  - Alamofire (4.9.1)
+  - arek (4.0.2):
+    - arek/Bluetooth (= 4.0.2)
+    - arek/Camera (= 4.0.2)
+    - arek/CloudKit (= 4.0.2)
+    - arek/Contacts (= 4.0.2)
+    - arek/Core (= 4.0.2)
+    - arek/Events (= 4.0.2)
+    - arek/Health (= 4.0.2)
+    - arek/Location (= 4.0.2)
+    - arek/MediaLibrary (= 4.0.2)
+    - arek/Microphone (= 4.0.2)
+    - arek/Motion (= 4.0.2)
+    - arek/Notifications (= 4.0.2)
+    - arek/Photos (= 4.0.2)
+    - arek/Reminders (= 4.0.2)
+    - arek/SpeechRecognizer (= 4.0.2)
+    - PMAlertController (= 3.5.0)
+  - arek/Bluetooth (4.0.2):
     - arek/Core
-  - arek/Camera (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Camera (4.0.2):
     - arek/Core
-  - arek/CloudKit (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/CloudKit (4.0.2):
     - arek/Core
-  - arek/Contacts (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Contacts (4.0.2):
     - arek/Core
-  - arek/Core (1.0.0)
-  - arek/Events (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Core (4.0.2):
+    - PMAlertController (= 3.5.0)
+  - arek/Events (4.0.2):
     - arek/Core
-  - arek/Health (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Health (4.0.2):
     - arek/Core
-  - arek/Location (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Location (4.0.2):
     - arek/Core
-  - arek/MediaLibrary (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/MediaLibrary (4.0.2):
     - arek/Core
-  - arek/Microphone (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Microphone (4.0.2):
     - arek/Core
-  - arek/Motion (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Motion (4.0.2):
     - arek/Core
-  - arek/Notifications (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Notifications (4.0.2):
     - arek/Core
-  - arek/Photos (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Photos (4.0.2):
     - arek/Core
-  - arek/Reminders (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/Reminders (4.0.2):
     - arek/Core
-  - arek/SpeechRecognizer (1.0.0):
+    - PMAlertController (= 3.5.0)
+  - arek/SpeechRecognizer (4.0.2):
     - arek/Core
-  - EZAlertController (3.2)
-  - GDPerformanceView-Swift (1.1.2)
-  - Hero (0.3.2)
-  - Kingfisher (3.4.0)
-  - ObjectMapper (2.2.5)
+    - PMAlertController (= 3.5.0)
+  - GDPerformanceView-Swift (2.0.2)
+  - Hero (1.4.0)
+  - Kingfisher (5.4.0)
+  - ObjectMapper (3.4.2)
+  - PMAlertController (3.5.0)
   - ReachabilitySwift (3)
-  - SwifterSwift (1.6.2)
-  - SwiftyJSON (3.1.4)
-  - Toaster (2.0.3)
+  - SwifterSwift (5.0.0):
+    - SwifterSwift/AppKit (= 5.0.0)
+    - SwifterSwift/CoreGraphics (= 5.0.0)
+    - SwifterSwift/CoreLocation (= 5.0.0)
+    - SwifterSwift/Dispatch (= 5.0.0)
+    - SwifterSwift/Foundation (= 5.0.0)
+    - SwifterSwift/MapKit (= 5.0.0)
+    - SwifterSwift/SpriteKit (= 5.0.0)
+    - SwifterSwift/SwiftStdlib (= 5.0.0)
+    - SwifterSwift/UIKit (= 5.0.0)
+  - SwifterSwift/AppKit (5.0.0)
+  - SwifterSwift/CoreGraphics (5.0.0)
+  - SwifterSwift/CoreLocation (5.0.0)
+  - SwifterSwift/Dispatch (5.0.0)
+  - SwifterSwift/Foundation (5.0.0)
+  - SwifterSwift/MapKit (5.0.0)
+  - SwifterSwift/SpriteKit (5.0.0)
+  - SwifterSwift/SwiftStdlib (5.0.0)
+  - SwifterSwift/UIKit (5.0.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - ActiveLabel
-  - Alamofire (~> 4.3.0)
-  - AlamofireObjectMapper (~> 4.0)
-  - arek (~> 1.0.0)
-  - EZAlertController (= 3.2.0)
+  - Alamofire (~> 4.1)
+  - arek (~> 4.0.2)
   - GDPerformanceView-Swift
-  - Hero (= 0.3.2)
-  - Kingfisher (~> 3.4.0)
-  - ObjectMapper (~> 2.2)
+  - Hero (= 1.4.0)
+  - Kingfisher (~> 5.4.0)
+  - ObjectMapper (~> 3.4.2)
   - ReachabilitySwift (~> 3)
-  - SwifterSwift (~> 1.6.1)
-  - SwiftyJSON (~> 3.1.4)
-  - Toaster (~> 2.0)
+  - SwifterSwift (~> 5.0.0)
+  - SwiftyJSON (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - arek
+    - GDPerformanceView-Swift
+    - Hero
+    - Kingfisher
+    - ObjectMapper
+    - PMAlertController
+    - ReachabilitySwift
+    - SwifterSwift
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  ActiveLabel: 68625f22775f51c31bb691ca8de20f1e5a3bc825
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
-  arek: 56aea029657d0a1e0b24fd9566d0fa08cea045d3
-  EZAlertController: 633be01320bed47720be54054df47667d61c2481
-  GDPerformanceView-Swift: 18086952416fa8af2df0e7bc8cfdda63afc7e0b6
-  Hero: 48f8df6798d16d35935cfbb0726c5fbbd23cfe5a
-  Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
-  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  arek: 59e81a83c8a6c4e70c3598f66d3f1092824d3170
+  GDPerformanceView-Swift: a40b2f675589449f5b5082f3178f01bfdb7882ce
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  SwifterSwift: 48a48a193b47e0d577359c75570e5291dd2f460a
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
+  SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: c61bdaf5d81b362432badb4fae42d65595ba1c29
+PODFILE CHECKSUM: b84e8ef18c8f8a73f81cacf4f55520f327de7b86
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.8.4

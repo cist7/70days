@@ -54,7 +54,7 @@ class SecondViewController: UIViewController {
         view.addGestureRecognizer(panGR)
     }
     
-    func handlePan(gestureRecognizer:UIPanGestureRecognizer) {
+    @objc func handlePan(gestureRecognizer:UIPanGestureRecognizer) {
         // calculate the progress based on how far the user moved
         let translation = panGR.translation(in: nil)
         let progress = translation.y / 2 / view.bounds.height
@@ -64,7 +64,7 @@ class SecondViewController: UIViewController {
             // begin the transition as normal
             dismiss(animated: true, completion: nil)
         case .changed:
-            Hero.shared.update(progress: Double(progress))
+            Hero.shared.update(progress)
             
             // update views' position (limited to only vertical scroll)
 //            Hero.shared.apply(modifiers: [.position(CGPoint(x:imageView.center.x, y:translation.y + imageView.center.y))], to: imageView)
@@ -73,7 +73,7 @@ class SecondViewController: UIViewController {
         default:
             // end or cancel the transition based on the progress and user's touch velocity
             if progress + panGR.velocity(in: nil).y / view.bounds.height > 0.3 {
-                Hero.shared.end()
+                Hero.shared.animationEnded(true)
             } else {
                 Hero.shared.cancel()
             }
