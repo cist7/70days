@@ -1,6 +1,0 @@
-framework module Pods_seventyDays_dev {
-  umbrella header "Pods-seventyDays dev-umbrella.h"
-
-  export *
-  module * { export * }
-}
