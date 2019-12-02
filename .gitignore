@@ -5,6 +5,8 @@ project.xcworkspace/
 *.gcno
 *.gcda
 *.xcscmblueprint
-CT-SeventyDays/backup/.DS_Store
+*.DS_Store
 CT-SeventyDays/.DS_Store
 CT-SeventyDays/backup/Pods/.DS_Store
+CT-SeventyDays/seventyDays/.DS_Store
+CT-SeventyDays/seventyDays/.DS_Store
