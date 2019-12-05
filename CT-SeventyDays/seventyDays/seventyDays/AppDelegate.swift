@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AWSAppSync
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,9 +21,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        return true
 //    }
 
+    var appSyncClient: AWSAppSyncClient?
+
     //pull request test
     func applicationDidFinishLaunching(_ application: UIApplication) {
 //        return true
+        do {
+            // You can choose the directory in which AppSync stores its persistent cache databases
+            let cacheConfiguration = try AWSAppSyncCacheConfiguration()
+
+            // AppSync configuration & client initialization
+            let appSyncServiceConfig = try AWSAppSyncServiceConfig()
+            let appSyncConfig = try AWSAppSyncClientConfiguration(appSyncServiceConfig: appSyncServiceConfig,
+                                                                  cacheConfiguration: cacheConfiguration)
+            appSyncClient = try AWSAppSyncClient(appSyncConfig: appSyncConfig)
+            print("Initialized appsync client.")
+        } catch {
+            print("Error initializing appsync client. \(error)")
+        }
+        // other methods
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

@@ -47,6 +47,16 @@
 		DA7F66EC2394CC52008CF4E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A16A64E1E7BA8C50099388F /* LaunchScreen.storyboard */; };
 		DA7F66ED2394CC52008CF4E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A16A64C1E7BA8C50099388F /* Assets.xcassets */; };
 		DA7F66EE2394CC52008CF4E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A16A6461E7BA8C50099388F /* Main.storyboard */; };
+		DA8191982397837300482911 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191972397837300482911 /* MainViewController.swift */; };
+		DA8191992397837300482911 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191972397837300482911 /* MainViewController.swift */; };
+		DA81919A2397837300482911 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191972397837300482911 /* MainViewController.swift */; };
+		DA81919B2397837300482911 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191972397837300482911 /* MainViewController.swift */; };
+		DA81919D239798D400482911 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DA81919C239798D400482911 /* awsconfiguration.json */; };
+		DA81919E239798D400482911 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DA81919C239798D400482911 /* awsconfiguration.json */; };
+		DA8191A023979CA400482911 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81919F23979CA400482911 /* API.swift */; };
+		DA8191A123979CA400482911 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81919F23979CA400482911 /* API.swift */; };
+		DA8191A323989F2000482911 /* BaseMemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A223989F2000482911 /* BaseMemoryController.swift */; };
+		DA8191A423989F2000482911 /* BaseMemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A223989F2000482911 /* BaseMemoryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +112,10 @@
 		DA179FBA1E7CA63300C554C5 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DA7F66F42394CC52008CF4E4 /* seventyDays dist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seventyDays dist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7F66F52394CC52008CF4E4 /* seventyDays copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "seventyDays copy-Info.plist"; path = "/Users/cistree/Documents/GitHub/70days/CT-SeventyDays/seventyDays/seventyDays copy-Info.plist"; sourceTree = "<absolute>"; };
+		DA8191972397837300482911 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DA81919C239798D400482911 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		DA81919F23979CA400482911 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
+		DA8191A223989F2000482911 /* BaseMemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMemoryController.swift; sourceTree = "<group>"; };
 		FCB49933D782001A5C6423D6 /* Pods-seventyDays dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seventyDays dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-seventyDays dev/Pods-seventyDays dev.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +202,9 @@
 		4A16A6411E7BA8C50099388F /* seventyDays */ = {
 			isa = PBXGroup;
 			children = (
+				DA81919F23979CA400482911 /* API.swift */,
+				DA81919C239798D400482911 /* awsconfiguration.json */,
+				DA8191962397834E00482911 /* View */,
 				4A16A6731E7F752D0099388F /* Model */,
 				4A16A6421E7BA8C50099388F /* AppDelegate.swift */,
 				4A16A6441E7BA8C50099388F /* ViewController.swift */,
@@ -243,6 +260,15 @@
 				4A16A6A21E7F79C10099388F /* CD_Tag+CoreDataProperties.swift */,
 			);
 			path = CDModel;
+			sourceTree = "<group>";
+		};
+		DA8191962397834E00482911 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA8191972397837300482911 /* MainViewController.swift */,
+				DA8191A223989F2000482911 /* BaseMemoryController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA81919D239798D400482911 /* awsconfiguration.json in Resources */,
 				4A16A6501E7BA8C50099388F /* LaunchScreen.storyboard in Resources */,
 				4A16A64D1E7BA8C50099388F /* Assets.xcassets in Resources */,
 				4A16A6481E7BA8C50099388F /* Main.storyboard in Resources */,
@@ -404,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA81919E239798D400482911 /* awsconfiguration.json in Resources */,
 				DA7F66EC2394CC52008CF4E4 /* LaunchScreen.storyboard in Resources */,
 				DA7F66ED2394CC52008CF4E4 /* Assets.xcassets in Resources */,
 				DA7F66EE2394CC52008CF4E4 /* Main.storyboard in Resources */,
@@ -420,26 +448,32 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-seventyDays dev/Pods-seventyDays dev-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAppSync/AWSAppSync.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/arek/arek.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAppSync.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/arek.framework",
@@ -499,13 +533,16 @@
 				4A16A6A51E7F79C10099388F /* CD_MemoryTimeTable+CoreDataClass.swift in Sources */,
 				4A16A64B1E7BA8C50099388F /* seventyDays.xcdatamodeld in Sources */,
 				4A16A6A81E7F79C10099388F /* CD_Group+CoreDataProperties.swift in Sources */,
+				DA8191982397837300482911 /* MainViewController.swift in Sources */,
 				4A16A6451E7BA8C50099388F /* ViewController.swift in Sources */,
 				4A16A6431E7BA8C50099388F /* AppDelegate.swift in Sources */,
 				4A16A6AA1E7F79C10099388F /* CD_Data+CoreDataProperties.swift in Sources */,
 				4A16A6A41E7F79C10099388F /* CD_Memory+CoreDataProperties.swift in Sources */,
 				4A16A6A61E7F79C10099388F /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
+				DA8191A323989F2000482911 /* BaseMemoryController.swift in Sources */,
 				4A16A6AB1E7F79C10099388F /* CD_Tag+CoreDataClass.swift in Sources */,
 				4A16A6A71E7F79C10099388F /* CD_Group+CoreDataClass.swift in Sources */,
+				DA8191A023979CA400482911 /* API.swift in Sources */,
 				4A16A6AC1E7F79C10099388F /* CD_Tag+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A16A65B1E7BA8C50099388F /* seventyDaysTests.swift in Sources */,
+				DA8191992397837300482911 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A16A6661E7BA8C60099388F /* seventyDaysUITests.swift in Sources */,
+				DA81919A2397837300482911 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,13 +576,16 @@
 				DA7F66DE2394CC52008CF4E4 /* CD_MemoryTimeTable+CoreDataClass.swift in Sources */,
 				DA7F66DF2394CC52008CF4E4 /* seventyDays.xcdatamodeld in Sources */,
 				DA7F66E02394CC52008CF4E4 /* CD_Group+CoreDataProperties.swift in Sources */,
+				DA81919B2397837300482911 /* MainViewController.swift in Sources */,
 				DA7F66E12394CC52008CF4E4 /* ViewController.swift in Sources */,
 				DA7F66E22394CC52008CF4E4 /* AppDelegate.swift in Sources */,
 				DA7F66E32394CC52008CF4E4 /* CD_Data+CoreDataProperties.swift in Sources */,
 				DA7F66E42394CC52008CF4E4 /* CD_Memory+CoreDataProperties.swift in Sources */,
 				DA7F66E52394CC52008CF4E4 /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
+				DA8191A423989F2000482911 /* BaseMemoryController.swift in Sources */,
 				DA7F66E62394CC52008CF4E4 /* CD_Tag+CoreDataClass.swift in Sources */,
 				DA7F66E72394CC52008CF4E4 /* CD_Group+CoreDataClass.swift in Sources */,
+				DA8191A123979CA400482911 /* API.swift in Sources */,
 				DA7F66E82394CC52008CF4E4 /* CD_Tag+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

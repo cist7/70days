@@ -16,8 +16,11 @@ target 'seventyDays dev' do
   pod 'Hero', '1.4.0'
   pod 'arek', '~> 4.0.2'
   
-  pod 'ReachabilitySwift', '~> 3'
+  pod 'ReachabilitySwift', '~> 4.3.0'
   pod 'GDPerformanceView-Swift'
+
+  pod 'AWSCore', '~> 2.10.2'
+  pod 'AWSAppSync', '~> 2.14.2'
 end
 
 target 'seventyDays dist' do

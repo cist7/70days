@@ -13,7 +13,6 @@ protocol ModelManagerProtocol : class {
     
 }
 
-
 class ModelManager : NSObject, ModelManagerProtocol {
     
 }
