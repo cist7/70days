@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import AWSAppSync
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import AWSAppSync
 
-class BaseMemoryController : ViewController {
+class BaseMemoryViewController : ViewController {
+    
     
 }

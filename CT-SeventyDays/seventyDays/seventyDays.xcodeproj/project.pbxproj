@@ -55,8 +55,14 @@
 		DA81919E239798D400482911 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DA81919C239798D400482911 /* awsconfiguration.json */; };
 		DA8191A023979CA400482911 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81919F23979CA400482911 /* API.swift */; };
 		DA8191A123979CA400482911 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81919F23979CA400482911 /* API.swift */; };
-		DA8191A323989F2000482911 /* BaseMemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A223989F2000482911 /* BaseMemoryController.swift */; };
-		DA8191A423989F2000482911 /* BaseMemoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A223989F2000482911 /* BaseMemoryController.swift */; };
+		DA8191A323989F2000482911 /* BaseMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A223989F2000482911 /* BaseMemoryViewController.swift */; };
+		DA8191A423989F2000482911 /* BaseMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A223989F2000482911 /* BaseMemoryViewController.swift */; };
+		DA8191A6239B763700482911 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A5239B763700482911 /* MemoryDetailViewController.swift */; };
+		DA8191A7239B763700482911 /* MemoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A5239B763700482911 /* MemoryDetailViewController.swift */; };
+		DA8191A9239B8F9000482911 /* MemoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A8239B8F9000482911 /* MemoryTableViewCell.swift */; };
+		DA8191AA239B8F9000482911 /* MemoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A8239B8F9000482911 /* MemoryTableViewCell.swift */; };
+		DA8191D0239B9B8D00482911 /* MemoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8191CF239B9B8D00482911 /* MemoryTableViewCell.xib */; };
+		DA8191D1239B9B8D00482911 /* MemoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8191CF239B9B8D00482911 /* MemoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +121,10 @@
 		DA8191972397837300482911 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DA81919C239798D400482911 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		DA81919F23979CA400482911 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
-		DA8191A223989F2000482911 /* BaseMemoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMemoryController.swift; sourceTree = "<group>"; };
+		DA8191A223989F2000482911 /* BaseMemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMemoryViewController.swift; sourceTree = "<group>"; };
+		DA8191A5239B763700482911 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
+		DA8191A8239B8F9000482911 /* MemoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTableViewCell.swift; sourceTree = "<group>"; };
+		DA8191CF239B9B8D00482911 /* MemoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoryTableViewCell.xib; sourceTree = "<group>"; };
 		FCB49933D782001A5C6423D6 /* Pods-seventyDays dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seventyDays dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-seventyDays dev/Pods-seventyDays dev.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,8 +274,11 @@
 		DA8191962397834E00482911 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA8191A223989F2000482911 /* BaseMemoryViewController.swift */,
 				DA8191972397837300482911 /* MainViewController.swift */,
-				DA8191A223989F2000482911 /* BaseMemoryController.swift */,
+				DA8191A5239B763700482911 /* MemoryDetailViewController.swift */,
+				DA8191A8239B8F9000482911 /* MemoryTableViewCell.swift */,
+				DA8191CF239B9B8D00482911 /* MemoryTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -406,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8191D0239B9B8D00482911 /* MemoryTableViewCell.xib in Resources */,
 				DA81919D239798D400482911 /* awsconfiguration.json in Resources */,
 				4A16A6501E7BA8C50099388F /* LaunchScreen.storyboard in Resources */,
 				4A16A64D1E7BA8C50099388F /* Assets.xcassets in Resources */,
@@ -431,6 +444,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8191D1239B9B8D00482911 /* MemoryTableViewCell.xib in Resources */,
 				DA81919E239798D400482911 /* awsconfiguration.json in Resources */,
 				DA7F66EC2394CC52008CF4E4 /* LaunchScreen.storyboard in Resources */,
 				DA7F66ED2394CC52008CF4E4 /* Assets.xcassets in Resources */,
@@ -530,6 +544,7 @@
 				DA179FBB1E7CA63300C554C5 /* SecondViewController.swift in Sources */,
 				4A16A6AE1E7F7A7B0099388F /* ModelManager.swift in Sources */,
 				4A16A6A91E7F79C10099388F /* CD_Data+CoreDataClass.swift in Sources */,
+				DA8191A9239B8F9000482911 /* MemoryTableViewCell.swift in Sources */,
 				4A16A6A51E7F79C10099388F /* CD_MemoryTimeTable+CoreDataClass.swift in Sources */,
 				4A16A64B1E7BA8C50099388F /* seventyDays.xcdatamodeld in Sources */,
 				4A16A6A81E7F79C10099388F /* CD_Group+CoreDataProperties.swift in Sources */,
@@ -538,8 +553,9 @@
 				4A16A6431E7BA8C50099388F /* AppDelegate.swift in Sources */,
 				4A16A6AA1E7F79C10099388F /* CD_Data+CoreDataProperties.swift in Sources */,
 				4A16A6A41E7F79C10099388F /* CD_Memory+CoreDataProperties.swift in Sources */,
+				DA8191A6239B763700482911 /* MemoryDetailViewController.swift in Sources */,
 				4A16A6A61E7F79C10099388F /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
-				DA8191A323989F2000482911 /* BaseMemoryController.swift in Sources */,
+				DA8191A323989F2000482911 /* BaseMemoryViewController.swift in Sources */,
 				4A16A6AB1E7F79C10099388F /* CD_Tag+CoreDataClass.swift in Sources */,
 				4A16A6A71E7F79C10099388F /* CD_Group+CoreDataClass.swift in Sources */,
 				DA8191A023979CA400482911 /* API.swift in Sources */,
@@ -573,6 +589,7 @@
 				DA7F66DB2394CC52008CF4E4 /* SecondViewController.swift in Sources */,
 				DA7F66DC2394CC52008CF4E4 /* ModelManager.swift in Sources */,
 				DA7F66DD2394CC52008CF4E4 /* CD_Data+CoreDataClass.swift in Sources */,
+				DA8191AA239B8F9000482911 /* MemoryTableViewCell.swift in Sources */,
 				DA7F66DE2394CC52008CF4E4 /* CD_MemoryTimeTable+CoreDataClass.swift in Sources */,
 				DA7F66DF2394CC52008CF4E4 /* seventyDays.xcdatamodeld in Sources */,
 				DA7F66E02394CC52008CF4E4 /* CD_Group+CoreDataProperties.swift in Sources */,
@@ -581,8 +598,9 @@
 				DA7F66E22394CC52008CF4E4 /* AppDelegate.swift in Sources */,
 				DA7F66E32394CC52008CF4E4 /* CD_Data+CoreDataProperties.swift in Sources */,
 				DA7F66E42394CC52008CF4E4 /* CD_Memory+CoreDataProperties.swift in Sources */,
+				DA8191A7239B763700482911 /* MemoryDetailViewController.swift in Sources */,
 				DA7F66E52394CC52008CF4E4 /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
-				DA8191A423989F2000482911 /* BaseMemoryController.swift in Sources */,
+				DA8191A423989F2000482911 /* BaseMemoryViewController.swift in Sources */,
 				DA7F66E62394CC52008CF4E4 /* CD_Tag+CoreDataClass.swift in Sources */,
 				DA7F66E72394CC52008CF4E4 /* CD_Group+CoreDataClass.swift in Sources */,
 				DA8191A123979CA400482911 /* API.swift in Sources */,
