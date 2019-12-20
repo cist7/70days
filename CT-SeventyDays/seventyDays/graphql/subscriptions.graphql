@@ -23,15 +23,24 @@ subscription OnDeleteTodo {
 subscription OnCreateCtmemory($MemoryID: String) {
   onCreateCTMEMORY(MemoryID: $MemoryID) {
     MemoryID
+    Name
+    CreateDate
+    Description
   }
 }
 subscription OnUpdateCtmemory($MemoryID: String) {
   onUpdateCTMEMORY(MemoryID: $MemoryID) {
     MemoryID
+    Name
+    CreateDate
+    Description
   }
 }
 subscription OnDeleteCtmemory($MemoryID: String) {
   onDeleteCTMEMORY(MemoryID: $MemoryID) {
     MemoryID
+    Name
+    CreateDate
+    Description
   }
 }

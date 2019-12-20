@@ -130,11 +130,34 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
          
-        memoryArray.append(textField.text ?? "empty") // sharedModelManager.searchMemory(memoryName: textField.text!)
-        mainTableView.reloadData()
+        guard let memoryText = textField.text else{return false}
         
-        UserDefaults.standard.setValue(memoryArray, forKey: "MemoryArray")
-        UserDefaults.standard.synchronize()
+        let saveToServer = true
+        //server
+        if saveToServer {
+//            sharedModelManager.searchMemory(memoryName: textField.text!)
+            appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+                if error != nil {
+                    print(error?.localizedDescription ?? "")
+                    return
+                }
+                print("Query complete.")
+                    
+//                if(result?.data?.listCtmemories?.items?.count ?? 0 > 0){
+//                    //기존 메모리
+//                    print("\(result?.data?.listCtmemories?.items?.count)")
+//                }else{
+                    sharedModelManager.createMemory(memoryString:memoryText)
+//                }
+            }
+        }else{
+            //local
+            memoryArray.append(textField.text ?? "empty")
+            mainTableView.reloadData()
+            
+            UserDefaults.standard.setValue(memoryArray, forKey: "MemoryArray")
+            UserDefaults.standard.synchronize()
+        }
         
         textField.text = ""
         textField.resignFirstResponder()

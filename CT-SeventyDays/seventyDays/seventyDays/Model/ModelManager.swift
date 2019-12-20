@@ -33,12 +33,6 @@ class ModelManager : NSObject, ModelManagerProtocol {
     func createMemory(memoryString:String){
 
         
-//        let resultMemory = self.isExistMemory(memoryName: "20191206")
-        
-//        if(resultMemory){
-//            return;
-//        }
-        
         appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
                 
             if error != nil {
@@ -47,12 +41,16 @@ class ModelManager : NSObject, ModelManagerProtocol {
             }
             print("Query complete.")
             
-            if(result?.data?.listCtmemories?.items?.count ?? 0 > 0){
-                UIAlertAction (title: "존재하는메모리", style: .cancel, handler:nil)
-                print("존재하는메모리.")
-            }else{
-                        
-                let mutationInput = CreateCTMEMORYInput(memoryId: "20191206")
+//            if(result?.data?.listCtmemories?.items?.count ?? 0 > 0){
+//                UIAlertAction (title: "존재하는메모리", style: .cancel, handler:nil)
+//                print("존재하는메모리.")
+//            }else{
+            let dateFormatter = DateFormatter.init()
+            dateFormatter.dateFormat = "YYYYMMddHHmmss"
+            let dateString = dateFormatter.string(from: Date())
+            
+                let mutationInput = CreateCTMEMORYInput(memoryId: "M\(dateString)", name: memoryString, createDate: dateString, description: "설명문구")
+//                let mutationInput = CreateCTMEMORYInput(memoryId: )
                 self.appSyncClient?.perform(mutation: CreateCtmemoryMutation(input: mutationInput)) { (result, error) in
                             
                     if let error = error as? AWSAppSyncClientError {
@@ -66,10 +64,11 @@ class ModelManager : NSObject, ModelManagerProtocol {
                         
                 }
                 
-            }
+//            }
                     
         //            return searchResult
-                }
+               
+        }
         
         
         
@@ -111,19 +110,19 @@ class ModelManager : NSObject, ModelManagerProtocol {
     func searchMemory(memoryName:String) -> Array<Any> {
         
 //        var searchResult : Bool! = false
-//                
-//                appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
-//                
-//                    if error != nil {
-//                        print(error?.localizedDescription ?? "")
-//                        return
-//                    }
-//                    print("Query complete.")
-//                    
-//                    if(result?.data?.listCtmemories?.items?.count ?? 0 > 0){
-////                        return result?.data?.listCtmemories?.items?
-//                    }
-//                }
+                
+                appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+                
+                    if error != nil {
+                        print(error?.localizedDescription ?? "")
+                        return
+                    }
+                    print("Query complete.")
+                    
+                    if(result?.data?.listCtmemories?.items?.count ?? 0 > 0){
+//                        return result?.data?.listCtmemories?.items?
+                    }
+                }
         
         return ["m1","m2","m3","m4","m1"]
     }

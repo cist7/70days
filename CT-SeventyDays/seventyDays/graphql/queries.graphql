@@ -23,6 +23,9 @@ query ListTodos(
 query GetCtmemory($MemoryID: String!) {
   getCTMEMORY(MemoryID: $MemoryID) {
     MemoryID
+    Name
+    CreateDate
+    Description
   }
 }
 query ListCtmemories(
@@ -33,6 +36,9 @@ query ListCtmemories(
   listCTMEMORIES(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       MemoryID
+      Name
+      CreateDate
+      Description
     }
     nextToken
   }
