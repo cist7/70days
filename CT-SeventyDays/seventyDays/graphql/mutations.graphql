@@ -32,7 +32,8 @@ mutation DeleteTodo(
 mutation CreateCtmemory($input: CreateCTMEMORYInput!) {
   createCTMEMORY(input: $input) {
     MemoryID
-    Name
+    MemoryName
+    UserID
     CreateDate
     Description
   }
@@ -40,7 +41,8 @@ mutation CreateCtmemory($input: CreateCTMEMORYInput!) {
 mutation UpdateCtmemory($input: UpdateCTMEMORYInput!) {
   updateCTMEMORY(input: $input) {
     MemoryID
-    Name
+    MemoryName
+    UserID
     CreateDate
     Description
   }
@@ -48,7 +50,8 @@ mutation UpdateCtmemory($input: UpdateCTMEMORYInput!) {
 mutation DeleteCtmemory($input: DeleteCTMEMORYInput!) {
   deleteCTMEMORY(input: $input) {
     MemoryID
-    Name
+    MemoryName
+    UserID
     CreateDate
     Description
   }

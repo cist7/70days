@@ -406,8 +406,8 @@ public struct DeleteTodoInput: GraphQLMapConvertible {
 public struct CreateCTMEMORYInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(memoryId: String, name: String, createDate: String? = nil, description: String? = nil) {
-    graphQLMap = ["MemoryID": memoryId, "Name": name, "CreateDate": createDate, "Description": description]
+  public init(memoryId: String, memoryName: String, userId: String, createDate: String? = nil, description: String? = nil) {
+    graphQLMap = ["MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId, "CreateDate": createDate, "Description": description]
   }
 
   public var memoryId: String {
@@ -419,12 +419,21 @@ public struct CreateCTMEMORYInput: GraphQLMapConvertible {
     }
   }
 
-  public var name: String {
+  public var memoryName: String {
     get {
-      return graphQLMap["Name"] as! String
+      return graphQLMap["MemoryName"] as! String
     }
     set {
-      graphQLMap.updateValue(newValue, forKey: "Name")
+      graphQLMap.updateValue(newValue, forKey: "MemoryName")
+    }
+  }
+
+  public var userId: String {
+    get {
+      return graphQLMap["UserID"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "UserID")
     }
   }
 
@@ -450,8 +459,8 @@ public struct CreateCTMEMORYInput: GraphQLMapConvertible {
 public struct UpdateCTMEMORYInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(memoryId: String) {
-    graphQLMap = ["MemoryID": memoryId]
+  public init(memoryId: String, memoryName: String, userId: String) {
+    graphQLMap = ["MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId]
   }
 
   public var memoryId: String {
@@ -460,6 +469,24 @@ public struct UpdateCTMEMORYInput: GraphQLMapConvertible {
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "MemoryID")
+    }
+  }
+
+  public var memoryName: String {
+    get {
+      return graphQLMap["MemoryName"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "MemoryName")
+    }
+  }
+
+  public var userId: String {
+    get {
+      return graphQLMap["UserID"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "UserID")
     }
   }
 }
@@ -467,8 +494,8 @@ public struct UpdateCTMEMORYInput: GraphQLMapConvertible {
 public struct DeleteCTMEMORYInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(memoryId: String) {
-    graphQLMap = ["MemoryID": memoryId]
+  public init(memoryId: String, memoryName: String, userId: String) {
+    graphQLMap = ["MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId]
   }
 
   public var memoryId: String {
@@ -477,6 +504,24 @@ public struct DeleteCTMEMORYInput: GraphQLMapConvertible {
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "MemoryID")
+    }
+  }
+
+  public var memoryName: String {
+    get {
+      return graphQLMap["MemoryName"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "MemoryName")
+    }
+  }
+
+  public var userId: String {
+    get {
+      return graphQLMap["UserID"] as! String
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "UserID")
     }
   }
 }
@@ -671,8 +716,8 @@ public struct ModelIDInput: GraphQLMapConvertible {
 public struct TableCTMEMORYFilterInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
 
-  public init(memoryId: TableStringFilterInput? = nil) {
-    graphQLMap = ["MemoryID": memoryId]
+  public init(memoryId: TableStringFilterInput? = nil, memoryName: TableStringFilterInput? = nil, userId: TableStringFilterInput? = nil) {
+    graphQLMap = ["MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId]
   }
 
   public var memoryId: TableStringFilterInput? {
@@ -681,6 +726,24 @@ public struct TableCTMEMORYFilterInput: GraphQLMapConvertible {
     }
     set {
       graphQLMap.updateValue(newValue, forKey: "MemoryID")
+    }
+  }
+
+  public var memoryName: TableStringFilterInput? {
+    get {
+      return graphQLMap["MemoryName"] as! TableStringFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "MemoryName")
+    }
+  }
+
+  public var userId: TableStringFilterInput? {
+    get {
+      return graphQLMap["UserID"] as! TableStringFilterInput?
+    }
+    set {
+      graphQLMap.updateValue(newValue, forKey: "UserID")
     }
   }
 }
@@ -1088,7 +1151,7 @@ public final class DeleteTodoMutation: GraphQLMutation {
 
 public final class CreateCtmemoryMutation: GraphQLMutation {
   public static let operationString =
-    "mutation CreateCtmemory($input: CreateCTMEMORYInput!) {\n  createCTMEMORY(input: $input) {\n    __typename\n    MemoryID\n    Name\n    CreateDate\n    Description\n  }\n}"
+    "mutation CreateCtmemory($input: CreateCTMEMORYInput!) {\n  createCTMEMORY(input: $input) {\n    __typename\n    MemoryID\n    MemoryName\n    UserID\n    CreateDate\n    Description\n  }\n}"
 
   public var input: CreateCTMEMORYInput
 
@@ -1132,7 +1195,8 @@ public final class CreateCtmemoryMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("MemoryID", type: .nonNull(.scalar(String.self))),
-        GraphQLField("Name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("MemoryName", type: .nonNull(.scalar(String.self))),
+        GraphQLField("UserID", type: .nonNull(.scalar(String.self))),
         GraphQLField("CreateDate", type: .scalar(String.self)),
         GraphQLField("Description", type: .scalar(String.self)),
       ]
@@ -1143,8 +1207,8 @@ public final class CreateCtmemoryMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(memoryId: String, name: String, createDate: String? = nil, description: String? = nil) {
-        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "Name": name, "CreateDate": createDate, "Description": description])
+      public init(memoryId: String, memoryName: String, userId: String, createDate: String? = nil, description: String? = nil) {
+        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId, "CreateDate": createDate, "Description": description])
       }
 
       public var __typename: String {
@@ -1165,12 +1229,21 @@ public final class CreateCtmemoryMutation: GraphQLMutation {
         }
       }
 
-      public var name: String {
+      public var memoryName: String {
         get {
-          return snapshot["Name"]! as! String
+          return snapshot["MemoryName"]! as! String
         }
         set {
-          snapshot.updateValue(newValue, forKey: "Name")
+          snapshot.updateValue(newValue, forKey: "MemoryName")
+        }
+      }
+
+      public var userId: String {
+        get {
+          return snapshot["UserID"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "UserID")
         }
       }
 
@@ -1197,7 +1270,7 @@ public final class CreateCtmemoryMutation: GraphQLMutation {
 
 public final class UpdateCtmemoryMutation: GraphQLMutation {
   public static let operationString =
-    "mutation UpdateCtmemory($input: UpdateCTMEMORYInput!) {\n  updateCTMEMORY(input: $input) {\n    __typename\n    MemoryID\n    Name\n    CreateDate\n    Description\n  }\n}"
+    "mutation UpdateCtmemory($input: UpdateCTMEMORYInput!) {\n  updateCTMEMORY(input: $input) {\n    __typename\n    MemoryID\n    MemoryName\n    UserID\n    CreateDate\n    Description\n  }\n}"
 
   public var input: UpdateCTMEMORYInput
 
@@ -1241,7 +1314,8 @@ public final class UpdateCtmemoryMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("MemoryID", type: .nonNull(.scalar(String.self))),
-        GraphQLField("Name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("MemoryName", type: .nonNull(.scalar(String.self))),
+        GraphQLField("UserID", type: .nonNull(.scalar(String.self))),
         GraphQLField("CreateDate", type: .scalar(String.self)),
         GraphQLField("Description", type: .scalar(String.self)),
       ]
@@ -1252,8 +1326,8 @@ public final class UpdateCtmemoryMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(memoryId: String, name: String, createDate: String? = nil, description: String? = nil) {
-        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "Name": name, "CreateDate": createDate, "Description": description])
+      public init(memoryId: String, memoryName: String, userId: String, createDate: String? = nil, description: String? = nil) {
+        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId, "CreateDate": createDate, "Description": description])
       }
 
       public var __typename: String {
@@ -1274,12 +1348,21 @@ public final class UpdateCtmemoryMutation: GraphQLMutation {
         }
       }
 
-      public var name: String {
+      public var memoryName: String {
         get {
-          return snapshot["Name"]! as! String
+          return snapshot["MemoryName"]! as! String
         }
         set {
-          snapshot.updateValue(newValue, forKey: "Name")
+          snapshot.updateValue(newValue, forKey: "MemoryName")
+        }
+      }
+
+      public var userId: String {
+        get {
+          return snapshot["UserID"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "UserID")
         }
       }
 
@@ -1306,7 +1389,7 @@ public final class UpdateCtmemoryMutation: GraphQLMutation {
 
 public final class DeleteCtmemoryMutation: GraphQLMutation {
   public static let operationString =
-    "mutation DeleteCtmemory($input: DeleteCTMEMORYInput!) {\n  deleteCTMEMORY(input: $input) {\n    __typename\n    MemoryID\n    Name\n    CreateDate\n    Description\n  }\n}"
+    "mutation DeleteCtmemory($input: DeleteCTMEMORYInput!) {\n  deleteCTMEMORY(input: $input) {\n    __typename\n    MemoryID\n    MemoryName\n    UserID\n    CreateDate\n    Description\n  }\n}"
 
   public var input: DeleteCTMEMORYInput
 
@@ -1350,7 +1433,8 @@ public final class DeleteCtmemoryMutation: GraphQLMutation {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("MemoryID", type: .nonNull(.scalar(String.self))),
-        GraphQLField("Name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("MemoryName", type: .nonNull(.scalar(String.self))),
+        GraphQLField("UserID", type: .nonNull(.scalar(String.self))),
         GraphQLField("CreateDate", type: .scalar(String.self)),
         GraphQLField("Description", type: .scalar(String.self)),
       ]
@@ -1361,8 +1445,8 @@ public final class DeleteCtmemoryMutation: GraphQLMutation {
         self.snapshot = snapshot
       }
 
-      public init(memoryId: String, name: String, createDate: String? = nil, description: String? = nil) {
-        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "Name": name, "CreateDate": createDate, "Description": description])
+      public init(memoryId: String, memoryName: String, userId: String, createDate: String? = nil, description: String? = nil) {
+        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId, "CreateDate": createDate, "Description": description])
       }
 
       public var __typename: String {
@@ -1383,12 +1467,21 @@ public final class DeleteCtmemoryMutation: GraphQLMutation {
         }
       }
 
-      public var name: String {
+      public var memoryName: String {
         get {
-          return snapshot["Name"]! as! String
+          return snapshot["MemoryName"]! as! String
         }
         set {
-          snapshot.updateValue(newValue, forKey: "Name")
+          snapshot.updateValue(newValue, forKey: "MemoryName")
+        }
+      }
+
+      public var userId: String {
+        get {
+          return snapshot["UserID"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "UserID")
         }
       }
 
@@ -1664,23 +1757,27 @@ public final class ListTodosQuery: GraphQLQuery {
 
 public final class GetCtmemoryQuery: GraphQLQuery {
   public static let operationString =
-    "query GetCtmemory($MemoryID: String!) {\n  getCTMEMORY(MemoryID: $MemoryID) {\n    __typename\n    MemoryID\n    Name\n    CreateDate\n    Description\n  }\n}"
+    "query GetCtmemory($MemoryID: String!, $MemoryName: String!, $UserID: String!) {\n  getCTMEMORY(MemoryID: $MemoryID, MemoryName: $MemoryName, UserID: $UserID) {\n    __typename\n    MemoryID\n    MemoryName\n    UserID\n    CreateDate\n    Description\n  }\n}"
 
   public var MemoryID: String
+  public var MemoryName: String
+  public var UserID: String
 
-  public init(MemoryID: String) {
+  public init(MemoryID: String, MemoryName: String, UserID: String) {
     self.MemoryID = MemoryID
+    self.MemoryName = MemoryName
+    self.UserID = UserID
   }
 
   public var variables: GraphQLMap? {
-    return ["MemoryID": MemoryID]
+    return ["MemoryID": MemoryID, "MemoryName": MemoryName, "UserID": UserID]
   }
 
   public struct Data: GraphQLSelectionSet {
     public static let possibleTypes = ["Query"]
 
     public static let selections: [GraphQLSelection] = [
-      GraphQLField("getCTMEMORY", arguments: ["MemoryID": GraphQLVariable("MemoryID")], type: .object(GetCtmemory.selections)),
+      GraphQLField("getCTMEMORY", arguments: ["MemoryID": GraphQLVariable("MemoryID"), "MemoryName": GraphQLVariable("MemoryName"), "UserID": GraphQLVariable("UserID")], type: .object(GetCtmemory.selections)),
     ]
 
     public var snapshot: Snapshot
@@ -1708,7 +1805,8 @@ public final class GetCtmemoryQuery: GraphQLQuery {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("MemoryID", type: .nonNull(.scalar(String.self))),
-        GraphQLField("Name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("MemoryName", type: .nonNull(.scalar(String.self))),
+        GraphQLField("UserID", type: .nonNull(.scalar(String.self))),
         GraphQLField("CreateDate", type: .scalar(String.self)),
         GraphQLField("Description", type: .scalar(String.self)),
       ]
@@ -1719,8 +1817,8 @@ public final class GetCtmemoryQuery: GraphQLQuery {
         self.snapshot = snapshot
       }
 
-      public init(memoryId: String, name: String, createDate: String? = nil, description: String? = nil) {
-        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "Name": name, "CreateDate": createDate, "Description": description])
+      public init(memoryId: String, memoryName: String, userId: String, createDate: String? = nil, description: String? = nil) {
+        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId, "CreateDate": createDate, "Description": description])
       }
 
       public var __typename: String {
@@ -1741,12 +1839,21 @@ public final class GetCtmemoryQuery: GraphQLQuery {
         }
       }
 
-      public var name: String {
+      public var memoryName: String {
         get {
-          return snapshot["Name"]! as! String
+          return snapshot["MemoryName"]! as! String
         }
         set {
-          snapshot.updateValue(newValue, forKey: "Name")
+          snapshot.updateValue(newValue, forKey: "MemoryName")
+        }
+      }
+
+      public var userId: String {
+        get {
+          return snapshot["UserID"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "UserID")
         }
       }
 
@@ -1773,7 +1880,7 @@ public final class GetCtmemoryQuery: GraphQLQuery {
 
 public final class ListCtmemoriesQuery: GraphQLQuery {
   public static let operationString =
-    "query ListCtmemories($filter: TableCTMEMORYFilterInput, $limit: Int, $nextToken: String) {\n  listCTMEMORIES(filter: $filter, limit: $limit, nextToken: $nextToken) {\n    __typename\n    items {\n      __typename\n      MemoryID\n      Name\n      CreateDate\n      Description\n    }\n    nextToken\n  }\n}"
+    "query ListCtmemories($filter: TableCTMEMORYFilterInput, $limit: Int, $nextToken: String) {\n  listCTMEMORIES(filter: $filter, limit: $limit, nextToken: $nextToken) {\n    __typename\n    items {\n      __typename\n      MemoryID\n      MemoryName\n      UserID\n      CreateDate\n      Description\n    }\n    nextToken\n  }\n}"
 
   public var filter: TableCTMEMORYFilterInput?
   public var limit: Int?
@@ -1867,7 +1974,8 @@ public final class ListCtmemoriesQuery: GraphQLQuery {
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
           GraphQLField("MemoryID", type: .nonNull(.scalar(String.self))),
-          GraphQLField("Name", type: .nonNull(.scalar(String.self))),
+          GraphQLField("MemoryName", type: .nonNull(.scalar(String.self))),
+          GraphQLField("UserID", type: .nonNull(.scalar(String.self))),
           GraphQLField("CreateDate", type: .scalar(String.self)),
           GraphQLField("Description", type: .scalar(String.self)),
         ]
@@ -1878,8 +1986,8 @@ public final class ListCtmemoriesQuery: GraphQLQuery {
           self.snapshot = snapshot
         }
 
-        public init(memoryId: String, name: String, createDate: String? = nil, description: String? = nil) {
-          self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "Name": name, "CreateDate": createDate, "Description": description])
+        public init(memoryId: String, memoryName: String, userId: String, createDate: String? = nil, description: String? = nil) {
+          self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId, "CreateDate": createDate, "Description": description])
         }
 
         public var __typename: String {
@@ -1900,12 +2008,21 @@ public final class ListCtmemoriesQuery: GraphQLQuery {
           }
         }
 
-        public var name: String {
+        public var memoryName: String {
           get {
-            return snapshot["Name"]! as! String
+            return snapshot["MemoryName"]! as! String
           }
           set {
-            snapshot.updateValue(newValue, forKey: "Name")
+            snapshot.updateValue(newValue, forKey: "MemoryName")
+          }
+        }
+
+        public var userId: String {
+          get {
+            return snapshot["UserID"]! as! String
+          }
+          set {
+            snapshot.updateValue(newValue, forKey: "UserID")
           }
         }
 
@@ -2209,7 +2326,7 @@ public final class OnDeleteTodoSubscription: GraphQLSubscription {
 
 public final class OnCreateCtmemorySubscription: GraphQLSubscription {
   public static let operationString =
-    "subscription OnCreateCtmemory($MemoryID: String) {\n  onCreateCTMEMORY(MemoryID: $MemoryID) {\n    __typename\n    MemoryID\n    Name\n    CreateDate\n    Description\n  }\n}"
+    "subscription OnCreateCtmemory($MemoryID: String) {\n  onCreateCTMEMORY(MemoryID: $MemoryID) {\n    __typename\n    MemoryID\n    MemoryName\n    UserID\n    CreateDate\n    Description\n  }\n}"
 
   public var MemoryID: String?
 
@@ -2253,7 +2370,8 @@ public final class OnCreateCtmemorySubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("MemoryID", type: .nonNull(.scalar(String.self))),
-        GraphQLField("Name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("MemoryName", type: .nonNull(.scalar(String.self))),
+        GraphQLField("UserID", type: .nonNull(.scalar(String.self))),
         GraphQLField("CreateDate", type: .scalar(String.self)),
         GraphQLField("Description", type: .scalar(String.self)),
       ]
@@ -2264,8 +2382,8 @@ public final class OnCreateCtmemorySubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(memoryId: String, name: String, createDate: String? = nil, description: String? = nil) {
-        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "Name": name, "CreateDate": createDate, "Description": description])
+      public init(memoryId: String, memoryName: String, userId: String, createDate: String? = nil, description: String? = nil) {
+        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId, "CreateDate": createDate, "Description": description])
       }
 
       public var __typename: String {
@@ -2286,12 +2404,21 @@ public final class OnCreateCtmemorySubscription: GraphQLSubscription {
         }
       }
 
-      public var name: String {
+      public var memoryName: String {
         get {
-          return snapshot["Name"]! as! String
+          return snapshot["MemoryName"]! as! String
         }
         set {
-          snapshot.updateValue(newValue, forKey: "Name")
+          snapshot.updateValue(newValue, forKey: "MemoryName")
+        }
+      }
+
+      public var userId: String {
+        get {
+          return snapshot["UserID"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "UserID")
         }
       }
 
@@ -2318,7 +2445,7 @@ public final class OnCreateCtmemorySubscription: GraphQLSubscription {
 
 public final class OnUpdateCtmemorySubscription: GraphQLSubscription {
   public static let operationString =
-    "subscription OnUpdateCtmemory($MemoryID: String) {\n  onUpdateCTMEMORY(MemoryID: $MemoryID) {\n    __typename\n    MemoryID\n    Name\n    CreateDate\n    Description\n  }\n}"
+    "subscription OnUpdateCtmemory($MemoryID: String) {\n  onUpdateCTMEMORY(MemoryID: $MemoryID) {\n    __typename\n    MemoryID\n    MemoryName\n    UserID\n    CreateDate\n    Description\n  }\n}"
 
   public var MemoryID: String?
 
@@ -2362,7 +2489,8 @@ public final class OnUpdateCtmemorySubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("MemoryID", type: .nonNull(.scalar(String.self))),
-        GraphQLField("Name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("MemoryName", type: .nonNull(.scalar(String.self))),
+        GraphQLField("UserID", type: .nonNull(.scalar(String.self))),
         GraphQLField("CreateDate", type: .scalar(String.self)),
         GraphQLField("Description", type: .scalar(String.self)),
       ]
@@ -2373,8 +2501,8 @@ public final class OnUpdateCtmemorySubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(memoryId: String, name: String, createDate: String? = nil, description: String? = nil) {
-        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "Name": name, "CreateDate": createDate, "Description": description])
+      public init(memoryId: String, memoryName: String, userId: String, createDate: String? = nil, description: String? = nil) {
+        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId, "CreateDate": createDate, "Description": description])
       }
 
       public var __typename: String {
@@ -2395,12 +2523,21 @@ public final class OnUpdateCtmemorySubscription: GraphQLSubscription {
         }
       }
 
-      public var name: String {
+      public var memoryName: String {
         get {
-          return snapshot["Name"]! as! String
+          return snapshot["MemoryName"]! as! String
         }
         set {
-          snapshot.updateValue(newValue, forKey: "Name")
+          snapshot.updateValue(newValue, forKey: "MemoryName")
+        }
+      }
+
+      public var userId: String {
+        get {
+          return snapshot["UserID"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "UserID")
         }
       }
 
@@ -2427,7 +2564,7 @@ public final class OnUpdateCtmemorySubscription: GraphQLSubscription {
 
 public final class OnDeleteCtmemorySubscription: GraphQLSubscription {
   public static let operationString =
-    "subscription OnDeleteCtmemory($MemoryID: String) {\n  onDeleteCTMEMORY(MemoryID: $MemoryID) {\n    __typename\n    MemoryID\n    Name\n    CreateDate\n    Description\n  }\n}"
+    "subscription OnDeleteCtmemory($MemoryID: String) {\n  onDeleteCTMEMORY(MemoryID: $MemoryID) {\n    __typename\n    MemoryID\n    MemoryName\n    UserID\n    CreateDate\n    Description\n  }\n}"
 
   public var MemoryID: String?
 
@@ -2471,7 +2608,8 @@ public final class OnDeleteCtmemorySubscription: GraphQLSubscription {
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
         GraphQLField("MemoryID", type: .nonNull(.scalar(String.self))),
-        GraphQLField("Name", type: .nonNull(.scalar(String.self))),
+        GraphQLField("MemoryName", type: .nonNull(.scalar(String.self))),
+        GraphQLField("UserID", type: .nonNull(.scalar(String.self))),
         GraphQLField("CreateDate", type: .scalar(String.self)),
         GraphQLField("Description", type: .scalar(String.self)),
       ]
@@ -2482,8 +2620,8 @@ public final class OnDeleteCtmemorySubscription: GraphQLSubscription {
         self.snapshot = snapshot
       }
 
-      public init(memoryId: String, name: String, createDate: String? = nil, description: String? = nil) {
-        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "Name": name, "CreateDate": createDate, "Description": description])
+      public init(memoryId: String, memoryName: String, userId: String, createDate: String? = nil, description: String? = nil) {
+        self.init(snapshot: ["__typename": "CTMEMORY", "MemoryID": memoryId, "MemoryName": memoryName, "UserID": userId, "CreateDate": createDate, "Description": description])
       }
 
       public var __typename: String {
@@ -2504,12 +2642,21 @@ public final class OnDeleteCtmemorySubscription: GraphQLSubscription {
         }
       }
 
-      public var name: String {
+      public var memoryName: String {
         get {
-          return snapshot["Name"]! as! String
+          return snapshot["MemoryName"]! as! String
         }
         set {
-          snapshot.updateValue(newValue, forKey: "Name")
+          snapshot.updateValue(newValue, forKey: "MemoryName")
+        }
+      }
+
+      public var userId: String {
+        get {
+          return snapshot["UserID"]! as! String
+        }
+        set {
+          snapshot.updateValue(newValue, forKey: "UserID")
         }
       }
 

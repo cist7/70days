@@ -29,6 +29,8 @@
 		4A16A6AE1E7F7A7B0099388F /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16A6AD1E7F7A7B0099388F /* ModelManager.swift */; };
 		7C3E8F02ECD48F3098603EDA /* Pods_seventyDays_dist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C451E418B2C9AE27D84C841 /* Pods_seventyDays_dist.framework */; };
 		DA179FBB1E7CA63300C554C5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA179FBA1E7CA63300C554C5 /* SecondViewController.swift */; };
+		DA58E0F623ADA4890074528D /* SingletonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E0F523ADA4890074528D /* SingletonObject.swift */; };
+		DA58E0F723ADA4890074528D /* SingletonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E0F523ADA4890074528D /* SingletonObject.swift */; };
 		DA7F66DA2394CC52008CF4E4 /* CD_Memory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16A6991E7F79C10099388F /* CD_Memory+CoreDataClass.swift */; };
 		DA7F66DB2394CC52008CF4E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA179FBA1E7CA63300C554C5 /* SecondViewController.swift */; };
 		DA7F66DC2394CC52008CF4E4 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16A6AD1E7F7A7B0099388F /* ModelManager.swift */; };
@@ -116,6 +118,7 @@
 		A0E2641815F5A0DF1346D20E /* Pods-seventyDays dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seventyDays dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-seventyDays dev/Pods-seventyDays dev.debug.xcconfig"; sourceTree = "<group>"; };
 		B7B224DB52490A4297D4E6CC /* Pods-seventyDays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seventyDays.debug.xcconfig"; path = "Pods/Target Support Files/Pods-seventyDays/Pods-seventyDays.debug.xcconfig"; sourceTree = "<group>"; };
 		DA179FBA1E7CA63300C554C5 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DA58E0F523ADA4890074528D /* SingletonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonObject.swift; sourceTree = "<group>"; };
 		DA7F66F42394CC52008CF4E4 /* seventyDays dist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seventyDays dist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7F66F52394CC52008CF4E4 /* seventyDays copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "seventyDays copy-Info.plist"; path = "/Users/cistree/Documents/GitHub/70days/CT-SeventyDays/seventyDays/seventyDays copy-Info.plist"; sourceTree = "<absolute>"; };
 		DA8191972397837300482911 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +253,7 @@
 			children = (
 				4A16A6741E7F75740099388F /* CDModel */,
 				4A16A6AD1E7F7A7B0099388F /* ModelManager.swift */,
+				DA58E0F523ADA4890074528D /* SingletonObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -553,6 +557,7 @@
 				4A16A6431E7BA8C50099388F /* AppDelegate.swift in Sources */,
 				4A16A6AA1E7F79C10099388F /* CD_Data+CoreDataProperties.swift in Sources */,
 				4A16A6A41E7F79C10099388F /* CD_Memory+CoreDataProperties.swift in Sources */,
+				DA58E0F623ADA4890074528D /* SingletonObject.swift in Sources */,
 				DA8191A6239B763700482911 /* MemoryDetailViewController.swift in Sources */,
 				4A16A6A61E7F79C10099388F /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
 				DA8191A323989F2000482911 /* BaseMemoryViewController.swift in Sources */,
@@ -598,6 +603,7 @@
 				DA7F66E22394CC52008CF4E4 /* AppDelegate.swift in Sources */,
 				DA7F66E32394CC52008CF4E4 /* CD_Data+CoreDataProperties.swift in Sources */,
 				DA7F66E42394CC52008CF4E4 /* CD_Memory+CoreDataProperties.swift in Sources */,
+				DA58E0F723ADA4890074528D /* SingletonObject.swift in Sources */,
 				DA8191A7239B763700482911 /* MemoryDetailViewController.swift in Sources */,
 				DA7F66E52394CC52008CF4E4 /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
 				DA8191A423989F2000482911 /* BaseMemoryViewController.swift in Sources */,
