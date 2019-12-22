@@ -16,6 +16,8 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
     var appSyncClient: AWSAppSyncClient?
 
     @IBOutlet weak var resultLabel:UILabel!
+    @IBOutlet weak var userIDTextField:UITextField!
+    @IBOutlet weak var userIDButton:UIButton!
     
     @IBOutlet weak var mainTableView:UITableView!
     
@@ -31,6 +33,12 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
         appSyncClient = appDelegate.appSyncClient
         
         sharedModelManager.mainViewController = self
+
+        if let userID = UserDefaults.standard.object(forKey: "userID") {
+            sharedUserManager.userID = userID as? String
+        }else{
+            sharedUserManager.userID = "ilyong"
+        }
         
 //        if let memory = UserDefaults.standard.object(forKey: "MemoryArray") {
 //            memoryArray = memory as! [String]
@@ -50,10 +58,57 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
     
     func loadMemory(resultArray:Array<Dictionary<String,String>>){
 //        sharedModelManager.loadAllMemory(resultHandler)
+        self.memoryArray.removeAll()
         self.memoryArray = resultArray
+        self.mainTableView.reloadData()
     }
     
-    
+    @IBAction func setUserID(){
+        
+        if userIDTextField.text?.count ?? 0 <= 0 {
+            let alertVc = UIAlertController(title: "", message: "아이디 입력해라.", preferredStyle: .alert)
+            //                    let cancelAction = UIAlertAction(
+            //                        title: "아니오",
+            //                        style: .cancel) {
+            //                            action in
+            //
+            //                    }
+                                let okAction = UIAlertAction(
+                                    title: "확인",
+                                    style: .default) {
+                                        action in
+            //                            println("pressed Cancel Button")
+                                }
+            //                    alertVc.addAction(cancelAction)
+                                alertVc.addAction(okAction)
+
+                                self.present(alertVc, animated: true, completion: {() in
+
+                                    })
+        }
+        
+        sharedUserManager.userID = userIDTextField.text
+        let alertVc = UIAlertController(title: "", message: "\(userIDTextField.text)로 아이디가 설정되었습니다.", preferredStyle: .alert)
+        //                    let cancelAction = UIAlertAction(
+        //                        title: "아니오",
+        //                        style: .cancel) {
+        //                            action in
+        //
+        //                    }
+                            let okAction = UIAlertAction(
+                                title: "확인",
+                                style: .default) {
+                                    action in
+        //                            println("pressed Cancel Button")
+                            }
+        //                    alertVc.addAction(cancelAction)
+                            alertVc.addAction(okAction)
+
+                            self.present(alertVc, animated: true, completion: {() in
+                                sharedModelManager.loadAllMemory()
+
+                                })
+    }
     @IBAction func createMemory(){
         
 //        sharedModelManager.createMemory(memoryString: "메모리스트링");
@@ -100,7 +155,7 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
     }
     
     func runQuery(){
-        appSyncClient?.fetch(query: ListTodosQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+        appSyncClient?.fetch(query: ListTodosQuery(), cachePolicy: .fetchIgnoringCacheData) {(result, error) in
             if error != nil {
                 print(error?.localizedDescription ?? "")
                 return
@@ -111,7 +166,7 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
     }
     
     func runMemoryQuery(){
-        appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+        appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .fetchIgnoringCacheData) {(result, error) in
             if error != nil {
                 print(error?.localizedDescription ?? "")
                 return
@@ -151,21 +206,46 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
          
         guard let memoryText = textField.text else{return false}
         
+        if textField == userIDTextField{
+            sharedUserManager.userID = textField.text
+            let alertVc = UIAlertController(title: "", message: "\(textField.text)로 아이디가 설정되었습니다.", preferredStyle: .alert)
+            //                    let cancelAction = UIAlertAction(
+            //                        title: "아니오",
+            //                        style: .cancel) {
+            //                            action in
+            //
+            //                    }
+                                let okAction = UIAlertAction(
+                                    title: "확인",
+                                    style: .default) {
+                                        action in
+            //                            println("pressed Cancel Button")
+                                }
+            //                    alertVc.addAction(cancelAction)
+                                alertVc.addAction(okAction)
+
+                                self.present(alertVc, animated: true, completion: {() in
+                                    sharedModelManager.loadAllMemory()
+                                    })
+            return true
+        }
+        
         let saveToServer = true
         //server
         if saveToServer {
 //            sharedModelManager.searchMemory(memoryName: textField.text!)
 //            GetCtmemoryQuery(MemoryID: nil, MemoryName: memoryText, UserID: sharedUserManager.userID)
             
-            var filterMemoryID = TableStringFilterInput.init()
-            filterMemoryID.eq = "M129"
+//            var filterMemoryID = TableStringFilterInput.init()
+//            filterMemoryID.eq = "M129"
             var filterMemoryName = TableStringFilterInput.init()
             filterMemoryName.eq = memoryText
             var filterUserID = TableStringFilterInput.init()
             filterUserID.eq = sharedUserManager.userID
             
-            
-            appSyncClient?.fetch(query:ListCtmemoriesQuery(filter: TableCTMEMORYFilterInput(memoryId: filterMemoryID, memoryName: filterMemoryName, userId: filterUserID), limit: nil, nextToken: nil) , cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+            //returnCacheDataAndFetch 이것때문에 중복저장되고,검색이 안되는거였음.
+            //fetchIgnoringCacheData
+            appSyncClient?.fetch(query:ListCtmemoriesQuery(filter: TableCTMEMORYFilterInput(memoryId: nil, memoryName: filterMemoryName, userId: filterUserID), limit: nil, nextToken: nil) , cachePolicy: .fetchIgnoringCacheData) {(result, error) in
                 if error != nil {
                     print(error?.localizedDescription ?? "")
                     return
@@ -175,7 +255,8 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
                 result?.data?.listCtmemories?.items!.forEach { self.resultLabel.text = $0?.memoryId
                 print(($0?.memoryId)! + ":" + ($0?.memoryName)! + ":" + ($0?.userId)!) }
                 
-                if(result?.data?.listCtmemories?.items?.count ?? 0 > 1){
+                print("result?.data?.listCtmemories?.items?.count : \(result?.data?.listCtmemories?.items?.count)")
+                if(result?.data?.listCtmemories?.items?.count ?? 0 > 0){
                     //기존 메모리
 //                    print("\(result?.data?.listCtmemories?.items?.count)")
                     let alertVc = UIAlertController(title: "", message: "존재하는 메모리 입니다", preferredStyle: .alert)

@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODC-2g-slg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1271" y="-49"/>
+            <point key="canvasLocation" x="-1332" y="-49"/>
         </scene>
         <!--70Days-->
         <scene sceneID="ErJ-kS-tFu">
@@ -58,13 +58,33 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaA-eB-gfR">
+                                        <rect key="frame" x="293" y="19" width="65" height="30"/>
+                                        <state key="normal" title="사용자설정"/>
+                                        <connections>
+                                            <action selector="setUserID" destination="zlC-19-U1V" eventType="touchUpInside" id="PIi-5d-8ZY"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zn3-S2-IQI">
+                                        <rect key="frame" x="188" y="15" width="97" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="97" id="89O-9w-k9o"/>
+                                            <constraint firstAttribute="height" constant="34" id="SXk-uk-3nM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JaA-eB-gfR" secondAttribute="trailing" constant="17" id="0fN-dK-uVM"/>
+                                    <constraint firstItem="JaA-eB-gfR" firstAttribute="leading" secondItem="Zn3-S2-IQI" secondAttribute="trailing" constant="8" id="1CN-G8-l8g"/>
                                     <constraint firstItem="Qwt-JU-DAK" firstAttribute="top" secondItem="szc-Sz-XIc" secondAttribute="bottom" constant="15" id="6j6-FF-dGy"/>
+                                    <constraint firstItem="Zn3-S2-IQI" firstAttribute="top" secondItem="21B-9B-cb2" secondAttribute="top" constant="15" id="Dl5-dR-UD7"/>
                                     <constraint firstAttribute="bottom" secondItem="Qwt-JU-DAK" secondAttribute="bottom" constant="60" id="GIY-0n-9No"/>
                                     <constraint firstItem="Qwt-JU-DAK" firstAttribute="centerX" secondItem="21B-9B-cb2" secondAttribute="centerX" id="K5a-2c-PmO"/>
                                     <constraint firstItem="szc-Sz-XIc" firstAttribute="leading" secondItem="ebw-aQ-yoe" secondAttribute="trailing" constant="8" id="dS8-0s-iBK"/>
+                                    <constraint firstItem="JaA-eB-gfR" firstAttribute="top" secondItem="21B-9B-cb2" secondAttribute="top" constant="19" id="hKf-Wm-3H4"/>
                                     <constraint firstItem="szc-Sz-XIc" firstAttribute="centerX" secondItem="21B-9B-cb2" secondAttribute="centerX" id="mvN-8l-H9V"/>
                                     <constraint firstItem="Qwt-JU-DAK" firstAttribute="top" secondItem="ebw-aQ-yoe" secondAttribute="bottom" constant="15" id="p0j-iz-USI"/>
                                     <constraint firstAttribute="height" constant="200" id="rL5-I1-EsP"/>
@@ -147,6 +167,8 @@
                     <connections>
                         <outlet property="mainTableView" destination="Q3Q-Sq-T35" id="iO0-tK-guU"/>
                         <outlet property="resultLabel" destination="rXu-As-5Tk" id="8dN-jk-4C1"/>
+                        <outlet property="userIDButton" destination="JaA-eB-gfR" id="LPS-y7-lYr"/>
+                        <outlet property="userIDTextField" destination="Zn3-S2-IQI" id="Vpm-3U-8S2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNZ-Ek-9bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

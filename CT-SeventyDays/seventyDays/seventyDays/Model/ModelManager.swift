@@ -38,10 +38,10 @@ class ModelManager : NSObject, ModelManagerProtocol {
         
         let tableCTMemoryFilterInput =  TableCTMEMORYFilterInput.init(memoryId: nil, memoryName: nil, userId:tableStringFilterInputUserID)
         
-//        let listCTMemoriesQuery = ListCtmemoriesQuery.init(filter: tableCTMemoryFilterInput, limit: 20, nextToken: "1")
-        let listCTMemoriesQuery = ListCtmemoriesQuery()
+        let listCTMemoriesQuery = ListCtmemoriesQuery.init(filter: tableCTMemoryFilterInput, limit: nil, nextToken: nil)
+//        let listCTMemoriesQuery = ListCtmemoriesQuery()
         
-        self.appSyncClient?.fetch(query: listCTMemoriesQuery, cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+        self.appSyncClient?.fetch(query: listCTMemoriesQuery, cachePolicy: .fetchIgnoringCacheData) {(result, error) in
                 
             if error != nil {
                 print(error?.localizedDescription ?? "")
@@ -83,7 +83,7 @@ class ModelManager : NSObject, ModelManagerProtocol {
         
         let listCTMemoriesQuery = ListCtmemoriesQuery.init(filter: tableCTMemoryFilterInput, limit: 20, nextToken: "1")
         
-        appSyncClient?.fetch(query: listCTMemoriesQuery, cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+        appSyncClient?.fetch(query: listCTMemoriesQuery, cachePolicy: .fetchIgnoringCacheData) {(result, error) in
                 
             
             if error != nil {
@@ -144,7 +144,7 @@ class ModelManager : NSObject, ModelManagerProtocol {
         
         var searchResult : Bool! = false
         
-        appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+        appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .fetchIgnoringCacheData) {(result, error) in
         
             if error != nil {
                 print(error?.localizedDescription ?? "")
@@ -169,7 +169,7 @@ class ModelManager : NSObject, ModelManagerProtocol {
         
 //        var searchResult : Bool! = false
                 
-                appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .returnCacheDataAndFetch) {(result, error) in
+                appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .fetchIgnoringCacheData) {(result, error) in
                 
                     if error != nil {
                         print(error?.localizedDescription ?? "")
