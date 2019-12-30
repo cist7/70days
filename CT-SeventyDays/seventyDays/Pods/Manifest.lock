@@ -66,9 +66,10 @@ PODS:
     - ReachabilitySwift (= 4.3.0)
     - SQLite.swift (= 0.11.6)
   - AWSCore (2.10.3)
-  - GDPerformanceView-Swift (2.0.2)
+  - GDPerformanceView-Swift (2.0.3)
   - Hero (1.4.0)
   - Kingfisher (5.4.0)
+  - lottie-ios (3.1.5)
   - ObjectMapper (3.4.2)
   - PMAlertController (3.5.0)
   - ReachabilitySwift (4.3.0)
@@ -95,6 +96,7 @@ PODS:
   - SwifterSwift/SwiftStdlib (5.0.0)
   - SwifterSwift/UIKit (5.0.0)
   - SwiftyJSON (5.0.0)
+  - Toaster (2.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.1)
@@ -104,10 +106,12 @@ DEPENDENCIES:
   - GDPerformanceView-Swift
   - Hero (= 1.4.0)
   - Kingfisher (~> 5.4.0)
+  - lottie-ios
   - ObjectMapper (~> 3.4.2)
   - ReachabilitySwift (~> 4.3.0)
   - SwifterSwift (~> 5.0.0)
   - SwiftyJSON (~> 5.0.0)
+  - Toaster
 
 SPEC REPOS:
   trunk:
@@ -118,28 +122,32 @@ SPEC REPOS:
     - GDPerformanceView-Swift
     - Hero
     - Kingfisher
+    - lottie-ios
     - ObjectMapper
     - PMAlertController
     - ReachabilitySwift
     - SQLite.swift
     - SwifterSwift
     - SwiftyJSON
+    - Toaster
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   arek: 59e81a83c8a6c4e70c3598f66d3f1092824d3170
   AWSAppSync: 0a08b12bcabd1a0633d1f478827a8fb09868fca2
   AWSCore: f9b8a30d9e8ec07d1a6dd8f0ec5fe84b6a215041
-  GDPerformanceView-Swift: a40b2f675589449f5b5082f3178f01bfdb7882ce
+  GDPerformanceView-Swift: ef3d05deb103e472a5494d3f60aeca5a58b88a7d
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   SQLite.swift: 46d890be8601964454bd3392527f863d1b802d45
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
 
-PODFILE CHECKSUM: 7afafbd6029ca3903025c9951e7e6293cd11dcbf
+PODFILE CHECKSUM: 54d67a9574c0c513aeb95e48a4a57657f0c36308
 
 COCOAPODS: 1.8.4

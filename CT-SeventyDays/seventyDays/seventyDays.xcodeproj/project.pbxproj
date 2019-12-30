@@ -31,6 +31,36 @@
 		DA179FBB1E7CA63300C554C5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA179FBA1E7CA63300C554C5 /* SecondViewController.swift */; };
 		DA58E0F623ADA4890074528D /* SingletonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E0F523ADA4890074528D /* SingletonObject.swift */; };
 		DA58E0F723ADA4890074528D /* SingletonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E0F523ADA4890074528D /* SingletonObject.swift */; };
+		DA58E0F923B4D6860074528D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E0F823B4D6860074528D /* LoginViewController.swift */; };
+		DA58E0FA23B4D6860074528D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E0F823B4D6860074528D /* LoginViewController.swift */; };
+		DA58E0FC23B5011F0074528D /* CTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E0FB23B5011F0074528D /* CTNavigationController.swift */; };
+		DA58E0FD23B5011F0074528D /* CTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E0FB23B5011F0074528D /* CTNavigationController.swift */; };
+		DA58E12B23B58BB90074528D /* CTBootLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E10923B58BB90074528D /* CTBootLoader.swift */; };
+		DA58E12C23B58BB90074528D /* CTBootLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E10923B58BB90074528D /* CTBootLoader.swift */; };
+		DA58E12D23B58BB90074528D /* GPCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E10B23B58BB90074528D /* GPCircleImageView.swift */; };
+		DA58E12E23B58BB90074528D /* GPCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E10B23B58BB90074528D /* GPCircleImageView.swift */; };
+		DA58E12F23B58BB90074528D /* GPEasyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E10D23B58BB90074528D /* GPEasyButton.swift */; };
+		DA58E13023B58BB90074528D /* GPEasyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E10D23B58BB90074528D /* GPEasyButton.swift */; };
+		DA58E13923B58BB90074528D /* GPGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E11423B58BB90074528D /* GPGradientView.swift */; };
+		DA58E13A23B58BB90074528D /* GPGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E11423B58BB90074528D /* GPGradientView.swift */; };
+		DA58E13B23B58BB90074528D /* ProfileImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA58E11623B58BB90074528D /* ProfileImageCropViewController.m */; };
+		DA58E13C23B58BB90074528D /* ProfileImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA58E11623B58BB90074528D /* ProfileImageCropViewController.m */; };
+		DA58E13D23B58BB90074528D /* ProfileImageCropViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E11823B58BB90074528D /* ProfileImageCropViewController.storyboard */; };
+		DA58E13E23B58BB90074528D /* ProfileImageCropViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E11823B58BB90074528D /* ProfileImageCropViewController.storyboard */; };
+		DA58E1EC23B59C790074528D /* GPEditProfileViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E1E123B59C780074528D /* GPEditProfileViewController+Networking.swift */; };
+		DA58E1ED23B59C790074528D /* GPEditProfileViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E1E123B59C780074528D /* GPEditProfileViewController+Networking.swift */; };
+		DA58E1EE23B59C790074528D /* GPEditProfileViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E1E223B59C780074528D /* GPEditProfileViewController+View.swift */; };
+		DA58E1EF23B59C790074528D /* GPEditProfileViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E1E223B59C780074528D /* GPEditProfileViewController+View.swift */; };
+		DA58E1F023B59C790074528D /* GPEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E1E323B59C780074528D /* GPEditProfileViewController.swift */; };
+		DA58E1F123B59C790074528D /* GPEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E1E323B59C780074528D /* GPEditProfileViewController.swift */; };
+		DA58E1F223B59C790074528D /* GPProfileNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E1E423B59C780074528D /* GPProfileNetworkModel.swift */; };
+		DA58E1F323B59C790074528D /* GPProfileNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E1E423B59C780074528D /* GPProfileNetworkModel.swift */; };
+		DA58E20223B59D2F0074528D /* NotificationInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E20023B59D2E0074528D /* NotificationInfo.storyboard */; };
+		DA58E20323B59D2F0074528D /* NotificationInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E20023B59D2E0074528D /* NotificationInfo.storyboard */; };
+		DA58E20423B59D2F0074528D /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E20123B59D2F0074528D /* Settings.storyboard */; };
+		DA58E20523B59D2F0074528D /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA58E20123B59D2F0074528D /* Settings.storyboard */; };
+		DA58E22423B5A13B0074528D /* GPProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E20C23B5A1370074528D /* GPProfileModel.swift */; };
+		DA58E22523B5A13B0074528D /* GPProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58E20C23B5A1370074528D /* GPProfileModel.swift */; };
 		DA7F66DA2394CC52008CF4E4 /* CD_Memory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16A6991E7F79C10099388F /* CD_Memory+CoreDataClass.swift */; };
 		DA7F66DB2394CC52008CF4E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA179FBA1E7CA63300C554C5 /* SecondViewController.swift */; };
 		DA7F66DC2394CC52008CF4E4 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A16A6AD1E7F7A7B0099388F /* ModelManager.swift */; };
@@ -119,6 +149,23 @@
 		B7B224DB52490A4297D4E6CC /* Pods-seventyDays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seventyDays.debug.xcconfig"; path = "Pods/Target Support Files/Pods-seventyDays/Pods-seventyDays.debug.xcconfig"; sourceTree = "<group>"; };
 		DA179FBA1E7CA63300C554C5 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DA58E0F523ADA4890074528D /* SingletonObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonObject.swift; sourceTree = "<group>"; };
+		DA58E0F823B4D6860074528D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DA58E0FB23B5011F0074528D /* CTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTNavigationController.swift; sourceTree = "<group>"; };
+		DA58E10923B58BB90074528D /* CTBootLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTBootLoader.swift; sourceTree = "<group>"; };
+		DA58E10B23B58BB90074528D /* GPCircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCircleImageView.swift; sourceTree = "<group>"; };
+		DA58E10D23B58BB90074528D /* GPEasyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPEasyButton.swift; sourceTree = "<group>"; };
+		DA58E11423B58BB90074528D /* GPGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPGradientView.swift; sourceTree = "<group>"; };
+		DA58E11623B58BB90074528D /* ProfileImageCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileImageCropViewController.m; sourceTree = "<group>"; };
+		DA58E11723B58BB90074528D /* ProfileImageCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileImageCropViewController.h; sourceTree = "<group>"; };
+		DA58E11823B58BB90074528D /* ProfileImageCropViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileImageCropViewController.storyboard; sourceTree = "<group>"; };
+		DA58E1E123B59C780074528D /* GPEditProfileViewController+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPEditProfileViewController+Networking.swift"; sourceTree = "<group>"; };
+		DA58E1E223B59C780074528D /* GPEditProfileViewController+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GPEditProfileViewController+View.swift"; sourceTree = "<group>"; };
+		DA58E1E323B59C780074528D /* GPEditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPEditProfileViewController.swift; sourceTree = "<group>"; };
+		DA58E1E423B59C780074528D /* GPProfileNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPProfileNetworkModel.swift; sourceTree = "<group>"; };
+		DA58E20023B59D2E0074528D /* NotificationInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotificationInfo.storyboard; sourceTree = "<group>"; };
+		DA58E20123B59D2F0074528D /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		DA58E20C23B5A1370074528D /* GPProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPProfileModel.swift; sourceTree = "<group>"; };
+		DA58E23C23B5AB860074528D /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		DA7F66F42394CC52008CF4E4 /* seventyDays dist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seventyDays dist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7F66F52394CC52008CF4E4 /* seventyDays copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "seventyDays copy-Info.plist"; path = "/Users/cistree/Documents/GitHub/70days/CT-SeventyDays/seventyDays/seventyDays copy-Info.plist"; sourceTree = "<absolute>"; };
 		DA8191972397837300482911 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +261,8 @@
 		4A16A6411E7BA8C50099388F /* seventyDays */ = {
 			isa = PBXGroup;
 			children = (
+				DA58E1DF23B59C780074528D /* Settings */,
+				DA58E0FE23B58BB90074528D /* Module */,
 				DA81919F23979CA400482911 /* API.swift */,
 				DA81919C239798D400482911 /* awsconfiguration.json */,
 				DA8191962397834E00482911 /* View */,
@@ -222,10 +271,13 @@
 				4A16A6441E7BA8C50099388F /* ViewController.swift */,
 				DA179FBA1E7CA63300C554C5 /* SecondViewController.swift */,
 				4A16A6461E7BA8C50099388F /* Main.storyboard */,
+				DA58E20023B59D2E0074528D /* NotificationInfo.storyboard */,
+				DA58E20123B59D2F0074528D /* Settings.storyboard */,
 				4A16A64C1E7BA8C50099388F /* Assets.xcassets */,
 				4A16A64E1E7BA8C50099388F /* LaunchScreen.storyboard */,
 				4A16A6511E7BA8C50099388F /* Info.plist */,
 				4A16A6491E7BA8C50099388F /* seventyDays.xcdatamodeld */,
+				DA58E23C23B5AB860074528D /* BridgingHeader.h */,
 			);
 			path = seventyDays;
 			sourceTree = "<group>";
@@ -251,6 +303,7 @@
 		4A16A6731E7F752D0099388F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA58E20C23B5A1370074528D /* GPProfileModel.swift */,
 				4A16A6741E7F75740099388F /* CDModel */,
 				4A16A6AD1E7F7A7B0099388F /* ModelManager.swift */,
 				DA58E0F523ADA4890074528D /* SingletonObject.swift */,
@@ -275,6 +328,79 @@
 			path = CDModel;
 			sourceTree = "<group>";
 		};
+		DA58E0FE23B58BB90074528D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E19223B5919B0074528D /* Extensions */,
+				DA58E10823B58BB90074528D /* Boot */,
+				DA58E10A23B58BB90074528D /* CircleImageView */,
+				DA58E10C23B58BB90074528D /* EasyButton */,
+				DA58E11423B58BB90074528D /* GPGradientView.swift */,
+				DA58E11523B58BB90074528D /* ImageCrop */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		DA58E10823B58BB90074528D /* Boot */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E10923B58BB90074528D /* CTBootLoader.swift */,
+			);
+			path = Boot;
+			sourceTree = "<group>";
+		};
+		DA58E10A23B58BB90074528D /* CircleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E10B23B58BB90074528D /* GPCircleImageView.swift */,
+			);
+			path = CircleImageView;
+			sourceTree = "<group>";
+		};
+		DA58E10C23B58BB90074528D /* EasyButton */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E10D23B58BB90074528D /* GPEasyButton.swift */,
+			);
+			path = EasyButton;
+			sourceTree = "<group>";
+		};
+		DA58E11523B58BB90074528D /* ImageCrop */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E11623B58BB90074528D /* ProfileImageCropViewController.m */,
+				DA58E11723B58BB90074528D /* ProfileImageCropViewController.h */,
+				DA58E11823B58BB90074528D /* ProfileImageCropViewController.storyboard */,
+			);
+			path = ImageCrop;
+			sourceTree = "<group>";
+		};
+		DA58E19223B5919B0074528D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA58E1DF23B59C780074528D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E1E023B59C780074528D /* EditProfile */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DA58E1E023B59C780074528D /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				DA58E1E123B59C780074528D /* GPEditProfileViewController+Networking.swift */,
+				DA58E1E223B59C780074528D /* GPEditProfileViewController+View.swift */,
+				DA58E1E323B59C780074528D /* GPEditProfileViewController.swift */,
+				DA58E1E423B59C780074528D /* GPProfileNetworkModel.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
 		DA8191962397834E00482911 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +409,8 @@
 				DA8191A5239B763700482911 /* MemoryDetailViewController.swift */,
 				DA8191A8239B8F9000482911 /* MemoryTableViewCell.swift */,
 				DA8191CF239B9B8D00482911 /* MemoryTableViewCell.xib */,
+				DA58E0F823B4D6860074528D /* LoginViewController.swift */,
+				DA58E0FB23B5011F0074528D /* CTNavigationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +481,7 @@
 				DA7F66D92394CC52008CF4E4 /* Sources */,
 				DA7F66E92394CC52008CF4E4 /* Frameworks */,
 				DA7F66EB2394CC52008CF4E4 /* Resources */,
+				CEFD73288CA2BAD11FA7C26A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -422,9 +551,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA58E13D23B58BB90074528D /* ProfileImageCropViewController.storyboard in Resources */,
 				DA8191D0239B9B8D00482911 /* MemoryTableViewCell.xib in Resources */,
 				DA81919D239798D400482911 /* awsconfiguration.json in Resources */,
+				DA58E20423B59D2F0074528D /* Settings.storyboard in Resources */,
 				4A16A6501E7BA8C50099388F /* LaunchScreen.storyboard in Resources */,
+				DA58E20223B59D2F0074528D /* NotificationInfo.storyboard in Resources */,
 				4A16A64D1E7BA8C50099388F /* Assets.xcassets in Resources */,
 				4A16A6481E7BA8C50099388F /* Main.storyboard in Resources */,
 			);
@@ -448,9 +580,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA58E13E23B58BB90074528D /* ProfileImageCropViewController.storyboard in Resources */,
 				DA8191D1239B9B8D00482911 /* MemoryTableViewCell.xib in Resources */,
 				DA81919E239798D400482911 /* awsconfiguration.json in Resources */,
+				DA58E20523B59D2F0074528D /* Settings.storyboard in Resources */,
 				DA7F66EC2394CC52008CF4E4 /* LaunchScreen.storyboard in Resources */,
+				DA58E20323B59D2F0074528D /* NotificationInfo.storyboard in Resources */,
 				DA7F66ED2394CC52008CF4E4 /* Assets.xcassets in Resources */,
 				DA7F66EE2394CC52008CF4E4 /* Main.storyboard in Resources */,
 			);
@@ -478,7 +613,9 @@
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/arek/arek.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -494,7 +631,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/arek.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -517,6 +656,52 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEFD73288CA2BAD11FA7C26A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-seventyDays dist/Pods-seventyDays dist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAppSync/AWSAppSync.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
+				"${BUILT_PRODUCTS_DIR}/arek/arek.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAppSync.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/arek.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-seventyDays dist/Pods-seventyDays dist-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA7F66D82394CC52008CF4E4 /* [CP] Check Pods Manifest.lock */ = {
@@ -547,18 +732,30 @@
 				4A16A6A31E7F79C10099388F /* CD_Memory+CoreDataClass.swift in Sources */,
 				DA179FBB1E7CA63300C554C5 /* SecondViewController.swift in Sources */,
 				4A16A6AE1E7F7A7B0099388F /* ModelManager.swift in Sources */,
+				DA58E12D23B58BB90074528D /* GPCircleImageView.swift in Sources */,
+				DA58E1EE23B59C790074528D /* GPEditProfileViewController+View.swift in Sources */,
 				4A16A6A91E7F79C10099388F /* CD_Data+CoreDataClass.swift in Sources */,
+				DA58E13923B58BB90074528D /* GPGradientView.swift in Sources */,
+				DA58E0FC23B5011F0074528D /* CTNavigationController.swift in Sources */,
 				DA8191A9239B8F9000482911 /* MemoryTableViewCell.swift in Sources */,
 				4A16A6A51E7F79C10099388F /* CD_MemoryTimeTable+CoreDataClass.swift in Sources */,
+				DA58E13B23B58BB90074528D /* ProfileImageCropViewController.m in Sources */,
 				4A16A64B1E7BA8C50099388F /* seventyDays.xcdatamodeld in Sources */,
+				DA58E22423B5A13B0074528D /* GPProfileModel.swift in Sources */,
+				DA58E1EC23B59C790074528D /* GPEditProfileViewController+Networking.swift in Sources */,
 				4A16A6A81E7F79C10099388F /* CD_Group+CoreDataProperties.swift in Sources */,
 				DA8191982397837300482911 /* MainViewController.swift in Sources */,
 				4A16A6451E7BA8C50099388F /* ViewController.swift in Sources */,
+				DA58E0F923B4D6860074528D /* LoginViewController.swift in Sources */,
 				4A16A6431E7BA8C50099388F /* AppDelegate.swift in Sources */,
 				4A16A6AA1E7F79C10099388F /* CD_Data+CoreDataProperties.swift in Sources */,
+				DA58E12F23B58BB90074528D /* GPEasyButton.swift in Sources */,
+				DA58E12B23B58BB90074528D /* CTBootLoader.swift in Sources */,
 				4A16A6A41E7F79C10099388F /* CD_Memory+CoreDataProperties.swift in Sources */,
 				DA58E0F623ADA4890074528D /* SingletonObject.swift in Sources */,
+				DA58E1F023B59C790074528D /* GPEditProfileViewController.swift in Sources */,
 				DA8191A6239B763700482911 /* MemoryDetailViewController.swift in Sources */,
+				DA58E1F223B59C790074528D /* GPProfileNetworkModel.swift in Sources */,
 				4A16A6A61E7F79C10099388F /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
 				DA8191A323989F2000482911 /* BaseMemoryViewController.swift in Sources */,
 				4A16A6AB1E7F79C10099388F /* CD_Tag+CoreDataClass.swift in Sources */,
@@ -593,18 +790,30 @@
 				DA7F66DA2394CC52008CF4E4 /* CD_Memory+CoreDataClass.swift in Sources */,
 				DA7F66DB2394CC52008CF4E4 /* SecondViewController.swift in Sources */,
 				DA7F66DC2394CC52008CF4E4 /* ModelManager.swift in Sources */,
+				DA58E12E23B58BB90074528D /* GPCircleImageView.swift in Sources */,
+				DA58E1EF23B59C790074528D /* GPEditProfileViewController+View.swift in Sources */,
 				DA7F66DD2394CC52008CF4E4 /* CD_Data+CoreDataClass.swift in Sources */,
+				DA58E13A23B58BB90074528D /* GPGradientView.swift in Sources */,
+				DA58E0FD23B5011F0074528D /* CTNavigationController.swift in Sources */,
 				DA8191AA239B8F9000482911 /* MemoryTableViewCell.swift in Sources */,
 				DA7F66DE2394CC52008CF4E4 /* CD_MemoryTimeTable+CoreDataClass.swift in Sources */,
+				DA58E13C23B58BB90074528D /* ProfileImageCropViewController.m in Sources */,
 				DA7F66DF2394CC52008CF4E4 /* seventyDays.xcdatamodeld in Sources */,
+				DA58E22523B5A13B0074528D /* GPProfileModel.swift in Sources */,
+				DA58E1ED23B59C790074528D /* GPEditProfileViewController+Networking.swift in Sources */,
 				DA7F66E02394CC52008CF4E4 /* CD_Group+CoreDataProperties.swift in Sources */,
 				DA81919B2397837300482911 /* MainViewController.swift in Sources */,
 				DA7F66E12394CC52008CF4E4 /* ViewController.swift in Sources */,
+				DA58E0FA23B4D6860074528D /* LoginViewController.swift in Sources */,
 				DA7F66E22394CC52008CF4E4 /* AppDelegate.swift in Sources */,
 				DA7F66E32394CC52008CF4E4 /* CD_Data+CoreDataProperties.swift in Sources */,
+				DA58E13023B58BB90074528D /* GPEasyButton.swift in Sources */,
+				DA58E12C23B58BB90074528D /* CTBootLoader.swift in Sources */,
 				DA7F66E42394CC52008CF4E4 /* CD_Memory+CoreDataProperties.swift in Sources */,
 				DA58E0F723ADA4890074528D /* SingletonObject.swift in Sources */,
+				DA58E1F123B59C790074528D /* GPEditProfileViewController.swift in Sources */,
 				DA8191A7239B763700482911 /* MemoryDetailViewController.swift in Sources */,
+				DA58E1F323B59C790074528D /* GPProfileNetworkModel.swift in Sources */,
 				DA7F66E52394CC52008CF4E4 /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
 				DA8191A423989F2000482911 /* BaseMemoryViewController.swift in Sources */,
 				DA7F66E62394CC52008CF4E4 /* CD_Tag+CoreDataClass.swift in Sources */,
@@ -755,6 +964,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = seventyDays/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -770,6 +980,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cistree.70daysdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = seventyDays/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

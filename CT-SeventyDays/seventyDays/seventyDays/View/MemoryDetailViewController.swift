@@ -48,6 +48,13 @@ class MemoryDetailViewController : BaseMemoryViewController {
         
     }
     
+    @IBAction func editingMode(buttonSelected:UIButton) {
+        buttonSelected.isSelected = !buttonSelected.isSelected
+        self.mainTableView.isEditing = buttonSelected.isSelected
+        self.mainTableView.reloadData()
+//        self.mainTableView.row
+    }
+    
     func getRandomString() -> String{
         
         let number = Int.random(in: 0 ..< 6)
@@ -115,6 +122,45 @@ extension MemoryDetailViewController : UITableViewDataSource, UITableViewDelegat
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    //
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        let movedObject = self.headlines[sourceIndexPath.row]
+//        headlines.remove(at: sourceIndexPath.row)
+//        headlines.insert(movedObject, at: destinationIndexPath.row)
+    }
+    
+//    override func setEditing(_ editing: Bool, animated: Bool) {
+//
+//    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if tableView.isEditing {
+            return 40
+        }
+         
+        
+//        var cell = tableView.cellForRow(at: indexPath) as? MemoryTableViewCell
+//        cell?.textLabel?.text = memoryDetailArray[indexPath.row]
+        
+        return 80.0
     }
 }
 
