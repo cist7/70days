@@ -266,6 +266,7 @@ extension GPEditProfileViewController: UIImagePickerControllerDelegate, UINaviga
             guard let image = info[.originalImage] as? UIImage else { return }
             
             // 이미지 사이즈 감소. 1100, 1200 정도에서 1000 으로 줄이는건 큰 의미가 없다고 판단, 1500 이상이면 1000으로 줄인다.
+            
             let resizedImage = (image.size.width > 1500.0) ? image.scaled(toWidth: 1000.0) : image
             picker.dismiss(animated: true, completion: { [weak self] in
                 self?.presentCropImageViewController(image: resizedImage ?? image)

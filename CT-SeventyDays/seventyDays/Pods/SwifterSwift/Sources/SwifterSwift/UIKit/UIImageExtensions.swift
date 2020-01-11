@@ -64,37 +64,6 @@ public extension UIImage {
         return UIImage(cgImage: image)
     }
 
-    /// SwifterSwift: UIImage scaled to height with respect to aspect ratio.
-    ///
-    /// - Parameters:
-    ///   - toHeight: new height.
-    ///   - opaque: flag indicating whether the bitmap is opaque.
-    /// - Returns: optional scaled UIImage (if applicable).
-    func scaled(toHeight: CGFloat, opaque: Bool = false) -> UIImage? {
-        let scale = toHeight / size.height
-        let newWidth = size.width * scale
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: newWidth, height: toHeight), opaque, 0)
-        draw(in: CGRect(x: 0, y: 0, width: newWidth, height: toHeight))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
-    }
-
-    /// SwifterSwift: UIImage scaled to width with respect to aspect ratio.
-    ///
-    /// - Parameters:
-    ///   - toWidth: new width.
-    ///   - opaque: flag indicating whether the bitmap is opaque.
-    /// - Returns: optional scaled UIImage (if applicable).
-    func scaled(toWidth: CGFloat, opaque: Bool = false) -> UIImage? {
-        let scale = toWidth / size.width
-        let newHeight = size.height * scale
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: toWidth, height: newHeight), opaque, 0)
-        draw(in: CGRect(x: 0, y: 0, width: toWidth, height: newHeight))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
-    }
 
     /// SwifterSwift: Creates a copy of the receiver rotated by the given angle.
     ///

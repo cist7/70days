@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
   - arek (4.0.2):
     - arek/Bluetooth (= 4.0.2)
     - arek/Camera (= 4.0.2)
@@ -100,6 +103,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.1)
+  - AlamofireObjectMapper (~> 5.2)
   - arek (~> 4.0.2)
   - AWSAppSync (~> 2.14.2)
   - AWSCore (~> 2.10.2)
@@ -116,6 +120,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireObjectMapper
     - arek
     - AWSAppSync
     - AWSCore
@@ -133,6 +138,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   arek: 59e81a83c8a6c4e70c3598f66d3f1092824d3170
   AWSAppSync: 0a08b12bcabd1a0633d1f478827a8fb09868fca2
   AWSCore: f9b8a30d9e8ec07d1a6dd8f0ec5fe84b6a215041
@@ -148,6 +154,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
 
-PODFILE CHECKSUM: 54d67a9574c0c513aeb95e48a4a57657f0c36308
+PODFILE CHECKSUM: 1e88c776514eb742dbe08c3f8b985fef4b1a0746
 
 COCOAPODS: 1.8.4

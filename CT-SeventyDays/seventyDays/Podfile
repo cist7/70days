@@ -7,6 +7,7 @@ target 'seventyDays dev' do
 
   # Pods for seventyDays dev
   pod 'Alamofire', '~> 4.1'
+  pod 'AlamofireObjectMapper', '~> 5.2'
   
   pod 'ObjectMapper', '~> 3.4.2'
   pod 'SwiftyJSON', '~> 5.0.0'
@@ -33,7 +34,8 @@ target 'seventyDays dist' do
 
   # Pods for seventyDays dist
   pod 'Alamofire', '~> 4.1'
-  
+  pod 'AlamofireObjectMapper', '~> 5.2'
+
   pod 'ObjectMapper', '~> 3.4.2'
   pod 'SwiftyJSON', '~> 5.0.0'
   pod 'Kingfisher', '~> 5.4.0'

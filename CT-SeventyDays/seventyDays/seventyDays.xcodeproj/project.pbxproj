@@ -95,6 +95,20 @@
 		DA8191AA239B8F9000482911 /* MemoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8191A8239B8F9000482911 /* MemoryTableViewCell.swift */; };
 		DA8191D0239B9B8D00482911 /* MemoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8191CF239B9B8D00482911 /* MemoryTableViewCell.xib */; };
 		DA8191D1239B9B8D00482911 /* MemoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8191CF239B9B8D00482911 /* MemoryTableViewCell.xib */; };
+		DA8FBB6923B9BBBB002BE616 /* GPNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB6823B9BBBB002BE616 /* GPNetworkService.swift */; };
+		DA8FBB6A23B9BBBF002BE616 /* GPNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB6823B9BBBB002BE616 /* GPNetworkService.swift */; };
+		DA8FBB6E23B9BC8E002BE616 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB6B23B9BC8D002BE616 /* String+Extension.swift */; };
+		DA8FBB6F23B9BC8E002BE616 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB6B23B9BC8D002BE616 /* String+Extension.swift */; };
+		DA8FBB7023B9BC8E002BE616 /* String+PhotoInfra.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB6C23B9BC8E002BE616 /* String+PhotoInfra.swift */; };
+		DA8FBB7123B9BC8E002BE616 /* String+PhotoInfra.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB6C23B9BC8E002BE616 /* String+PhotoInfra.swift */; };
+		DA8FBB7223B9BC8E002BE616 /* String+UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB6D23B9BC8E002BE616 /* String+UserAgent.swift */; };
+		DA8FBB7323B9BC8E002BE616 /* String+UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB6D23B9BC8E002BE616 /* String+UserAgent.swift */; };
+		DA8FBB7523B9BE42002BE616 /* GPUrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB7423B9BE42002BE616 /* GPUrlBuilder.swift */; };
+		DA8FBB7623B9BE42002BE616 /* GPUrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB7423B9BE42002BE616 /* GPUrlBuilder.swift */; };
+		DA8FBB7823B9BE76002BE616 /* GPServerPhaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB7723B9BE76002BE616 /* GPServerPhaseManager.swift */; };
+		DA8FBB7923B9BE76002BE616 /* GPServerPhaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB7723B9BE76002BE616 /* GPServerPhaseManager.swift */; };
+		DA8FBB7B23B9C733002BE616 /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB7A23B9C733002BE616 /* CommonExtensions.swift */; };
+		DA8FBB7C23B9C733002BE616 /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8FBB7A23B9C733002BE616 /* CommonExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +189,13 @@
 		DA8191A5239B763700482911 /* MemoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryDetailViewController.swift; sourceTree = "<group>"; };
 		DA8191A8239B8F9000482911 /* MemoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTableViewCell.swift; sourceTree = "<group>"; };
 		DA8191CF239B9B8D00482911 /* MemoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoryTableViewCell.xib; sourceTree = "<group>"; };
+		DA8FBB6823B9BBBB002BE616 /* GPNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPNetworkService.swift; sourceTree = "<group>"; };
+		DA8FBB6B23B9BC8D002BE616 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		DA8FBB6C23B9BC8E002BE616 /* String+PhotoInfra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PhotoInfra.swift"; sourceTree = "<group>"; };
+		DA8FBB6D23B9BC8E002BE616 /* String+UserAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UserAgent.swift"; sourceTree = "<group>"; };
+		DA8FBB7423B9BE42002BE616 /* GPUrlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPUrlBuilder.swift; sourceTree = "<group>"; };
+		DA8FBB7723B9BE76002BE616 /* GPServerPhaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPServerPhaseManager.swift; sourceTree = "<group>"; };
+		DA8FBB7A23B9C733002BE616 /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		FCB49933D782001A5C6423D6 /* Pods-seventyDays dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seventyDays dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-seventyDays dev/Pods-seventyDays dev.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -331,6 +352,9 @@
 		DA58E0FE23B58BB90074528D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				DA8FBB7723B9BE76002BE616 /* GPServerPhaseManager.swift */,
+				DA8FBB7423B9BE42002BE616 /* GPUrlBuilder.swift */,
+				DA8FBB6823B9BBBB002BE616 /* GPNetworkService.swift */,
 				DA58E19223B5919B0074528D /* Extensions */,
 				DA58E10823B58BB90074528D /* Boot */,
 				DA58E10A23B58BB90074528D /* CircleImageView */,
@@ -378,6 +402,10 @@
 		DA58E19223B5919B0074528D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DA8FBB6B23B9BC8D002BE616 /* String+Extension.swift */,
+				DA8FBB6C23B9BC8E002BE616 /* String+PhotoInfra.swift */,
+				DA8FBB6D23B9BC8E002BE616 /* String+UserAgent.swift */,
+				DA8FBB7A23B9C733002BE616 /* CommonExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -604,6 +632,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSAppSync/AWSAppSync.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -622,6 +651,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAppSync.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -668,6 +698,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSAppSync/AWSAppSync.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -686,6 +717,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAppSync.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -733,10 +765,14 @@
 				DA179FBB1E7CA63300C554C5 /* SecondViewController.swift in Sources */,
 				4A16A6AE1E7F7A7B0099388F /* ModelManager.swift in Sources */,
 				DA58E12D23B58BB90074528D /* GPCircleImageView.swift in Sources */,
+				DA8FBB7523B9BE42002BE616 /* GPUrlBuilder.swift in Sources */,
 				DA58E1EE23B59C790074528D /* GPEditProfileViewController+View.swift in Sources */,
 				4A16A6A91E7F79C10099388F /* CD_Data+CoreDataClass.swift in Sources */,
 				DA58E13923B58BB90074528D /* GPGradientView.swift in Sources */,
 				DA58E0FC23B5011F0074528D /* CTNavigationController.swift in Sources */,
+				DA8FBB6E23B9BC8E002BE616 /* String+Extension.swift in Sources */,
+				DA8FBB7B23B9C733002BE616 /* CommonExtensions.swift in Sources */,
+				DA8FBB7223B9BC8E002BE616 /* String+UserAgent.swift in Sources */,
 				DA8191A9239B8F9000482911 /* MemoryTableViewCell.swift in Sources */,
 				4A16A6A51E7F79C10099388F /* CD_MemoryTimeTable+CoreDataClass.swift in Sources */,
 				DA58E13B23B58BB90074528D /* ProfileImageCropViewController.m in Sources */,
@@ -744,6 +780,7 @@
 				DA58E22423B5A13B0074528D /* GPProfileModel.swift in Sources */,
 				DA58E1EC23B59C790074528D /* GPEditProfileViewController+Networking.swift in Sources */,
 				4A16A6A81E7F79C10099388F /* CD_Group+CoreDataProperties.swift in Sources */,
+				DA8FBB6923B9BBBB002BE616 /* GPNetworkService.swift in Sources */,
 				DA8191982397837300482911 /* MainViewController.swift in Sources */,
 				4A16A6451E7BA8C50099388F /* ViewController.swift in Sources */,
 				DA58E0F923B4D6860074528D /* LoginViewController.swift in Sources */,
@@ -757,6 +794,8 @@
 				DA8191A6239B763700482911 /* MemoryDetailViewController.swift in Sources */,
 				DA58E1F223B59C790074528D /* GPProfileNetworkModel.swift in Sources */,
 				4A16A6A61E7F79C10099388F /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
+				DA8FBB7023B9BC8E002BE616 /* String+PhotoInfra.swift in Sources */,
+				DA8FBB7823B9BE76002BE616 /* GPServerPhaseManager.swift in Sources */,
 				DA8191A323989F2000482911 /* BaseMemoryViewController.swift in Sources */,
 				4A16A6AB1E7F79C10099388F /* CD_Tag+CoreDataClass.swift in Sources */,
 				4A16A6A71E7F79C10099388F /* CD_Group+CoreDataClass.swift in Sources */,
@@ -791,10 +830,14 @@
 				DA7F66DB2394CC52008CF4E4 /* SecondViewController.swift in Sources */,
 				DA7F66DC2394CC52008CF4E4 /* ModelManager.swift in Sources */,
 				DA58E12E23B58BB90074528D /* GPCircleImageView.swift in Sources */,
+				DA8FBB7623B9BE42002BE616 /* GPUrlBuilder.swift in Sources */,
 				DA58E1EF23B59C790074528D /* GPEditProfileViewController+View.swift in Sources */,
 				DA7F66DD2394CC52008CF4E4 /* CD_Data+CoreDataClass.swift in Sources */,
 				DA58E13A23B58BB90074528D /* GPGradientView.swift in Sources */,
 				DA58E0FD23B5011F0074528D /* CTNavigationController.swift in Sources */,
+				DA8FBB6F23B9BC8E002BE616 /* String+Extension.swift in Sources */,
+				DA8FBB7C23B9C733002BE616 /* CommonExtensions.swift in Sources */,
+				DA8FBB7323B9BC8E002BE616 /* String+UserAgent.swift in Sources */,
 				DA8191AA239B8F9000482911 /* MemoryTableViewCell.swift in Sources */,
 				DA7F66DE2394CC52008CF4E4 /* CD_MemoryTimeTable+CoreDataClass.swift in Sources */,
 				DA58E13C23B58BB90074528D /* ProfileImageCropViewController.m in Sources */,
@@ -802,6 +845,7 @@
 				DA58E22523B5A13B0074528D /* GPProfileModel.swift in Sources */,
 				DA58E1ED23B59C790074528D /* GPEditProfileViewController+Networking.swift in Sources */,
 				DA7F66E02394CC52008CF4E4 /* CD_Group+CoreDataProperties.swift in Sources */,
+				DA8FBB6A23B9BBBF002BE616 /* GPNetworkService.swift in Sources */,
 				DA81919B2397837300482911 /* MainViewController.swift in Sources */,
 				DA7F66E12394CC52008CF4E4 /* ViewController.swift in Sources */,
 				DA58E0FA23B4D6860074528D /* LoginViewController.swift in Sources */,
@@ -815,6 +859,8 @@
 				DA8191A7239B763700482911 /* MemoryDetailViewController.swift in Sources */,
 				DA58E1F323B59C790074528D /* GPProfileNetworkModel.swift in Sources */,
 				DA7F66E52394CC52008CF4E4 /* CD_MemoryTimeTable+CoreDataProperties.swift in Sources */,
+				DA8FBB7123B9BC8E002BE616 /* String+PhotoInfra.swift in Sources */,
+				DA8FBB7923B9BE76002BE616 /* GPServerPhaseManager.swift in Sources */,
 				DA8191A423989F2000482911 /* BaseMemoryViewController.swift in Sources */,
 				DA7F66E62394CC52008CF4E4 /* CD_Tag+CoreDataClass.swift in Sources */,
 				DA7F66E72394CC52008CF4E4 /* CD_Group+CoreDataClass.swift in Sources */,
