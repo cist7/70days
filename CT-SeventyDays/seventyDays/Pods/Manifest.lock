@@ -69,10 +69,10 @@ PODS:
     - ReachabilitySwift (= 4.3.0)
     - SQLite.swift (= 0.11.6)
   - AWSCore (2.10.3)
-  - GDPerformanceView-Swift (2.0.3)
+  - GDPerformanceView-Swift (2.1.1)
   - Hero (1.4.0)
   - Kingfisher (5.4.0)
-  - lottie-ios (3.1.5)
+  - lottie-ios (3.2.3)
   - ObjectMapper (3.4.2)
   - PMAlertController (3.5.0)
   - ReachabilitySwift (4.3.0)
@@ -98,8 +98,8 @@ PODS:
   - SwifterSwift/SpriteKit (5.0.0)
   - SwifterSwift/SwiftStdlib (5.0.0)
   - SwifterSwift/UIKit (5.0.0)
-  - SwiftyJSON (5.0.0)
-  - Toaster (2.2.0)
+  - SwiftyJSON (5.0.1)
+  - Toaster (2.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.1)
@@ -142,18 +142,18 @@ SPEC CHECKSUMS:
   arek: 59e81a83c8a6c4e70c3598f66d3f1092824d3170
   AWSAppSync: 0a08b12bcabd1a0633d1f478827a8fb09868fca2
   AWSCore: f9b8a30d9e8ec07d1a6dd8f0ec5fe84b6a215041
-  GDPerformanceView-Swift: ef3d05deb103e472a5494d3f60aeca5a58b88a7d
+  GDPerformanceView-Swift: 22d964fe40b19e3d914dba2586237d064de8fd77
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
-  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   SQLite.swift: 46d890be8601964454bd3392527f863d1b802d45
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: 1e88c776514eb742dbe08c3f8b985fef4b1a0746
+PODFILE CHECKSUM: 2f9c4c232e8d328674b1d357528ec710c2887187
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.2

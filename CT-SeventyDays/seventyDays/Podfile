@@ -15,7 +15,7 @@ target 'seventyDays dev' do
   pod 'SwifterSwift', '~> 5.0.0'
   
   pod 'Hero', '1.4.0'
-  pod 'arek', '~> 4.0.2'
+#  pod 'arek', '~> 4.0.2'
   
   pod 'ReachabilitySwift', '~> 4.3.0'
   pod 'GDPerformanceView-Swift'
