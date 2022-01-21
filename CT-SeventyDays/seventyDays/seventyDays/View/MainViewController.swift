@@ -7,13 +7,13 @@
 //
 
 import Foundation
-import AWSAppSync
-import AWSCore
+//import AWSAppSync
+//import AWSCore
 
 class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
     
     //Reference AppSync client
-    var appSyncClient: AWSAppSyncClient?
+//    var appSyncClient: AWSAppSyncClient?
 
     @IBOutlet weak var resultLabel:UILabel!
     @IBOutlet weak var userIDTextField:UITextField!
@@ -29,8 +29,8 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appSyncClient = appDelegate.appSyncClient
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appSyncClient = appDelegate.appSyncClient
         
         sharedModelManager.mainViewController = self
 
@@ -39,14 +39,6 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
         }else{
             sharedUserManager.userID = "ilyong"
         }
-        
-//        if let memory = UserDefaults.standard.object(forKey: "MemoryArray") {
-//            memoryArray = memory as! [String]
-//        }
-//        loadMemory { () -> Array<Dictionary<String, String>> in
-//
-//        }
-        
         
         sharedModelManager.loadAllMemory()
         
@@ -133,65 +125,65 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
     }
     
     func runMutation(){
-        let mutationInput = CreateTodoInput(name: "Use AppSync", description:"Realtime and Offline")
-        appSyncClient?.perform(mutation: CreateTodoMutation(input: mutationInput)) { (result, error) in
-            if let error = error as? AWSAppSyncClientError {
-                print("Error occurred: \(error.localizedDescription )")
-            }
-            if let resultError = result?.errors {
-                print("Error saving the item on server: \(resultError)")
-                return
-            }
-            print("Mutation complete.")
-        }
+//        let mutationInput = CreateTodoInput(name: "Use AppSync", description:"Realtime and Offline")
+//        appSyncClient?.perform(mutation: CreateTodoMutation(input: mutationInput)) { (result, error) in
+//            if let error = error as? AWSAppSyncClientError {
+//                print("Error occurred: \(error.localizedDescription )")
+//            }
+//            if let resultError = result?.errors {
+//                print("Error saving the item on server: \(resultError)")
+//                return
+//            }
+//            print("Mutation complete.")
+//        }
     }
     
     func runMutationAndQuery(){
-        let mutationInput = CreateTodoInput(name: "Use AppSync", description:"Realtime and Offline")
-        appSyncClient?.perform(mutation: CreateTodoMutation(input: mutationInput)) { [weak self] (result, error) in
-            // ... do whatever error checking or processing you wish here
-            self?.runQuery()
-        }
+//        let mutationInput = CreateTodoInput(name: "Use AppSync", description:"Realtime and Offline")
+//        appSyncClient?.perform(mutation: CreateTodoMutation(input: mutationInput)) { [weak self] (result, error) in
+//            // ... do whatever error checking or processing you wish here
+//            self?.runQuery()
+//        }
     }
     
     func runQuery(){
-        appSyncClient?.fetch(query: ListTodosQuery(), cachePolicy: .fetchIgnoringCacheData) {(result, error) in
-            if error != nil {
-                print(error?.localizedDescription ?? "")
-                return
-            }
-            print("Query complete.")
-            result?.data?.listTodos?.items!.forEach { print(($0?.name)! + " " + ($0?.description)!) }
-        }
+//        appSyncClient?.fetch(query: ListTodosQuery(), cachePolicy: .fetchIgnoringCacheData) {(result, error) in
+//            if error != nil {
+//                print(error?.localizedDescription ?? "")
+//                return
+//            }
+//            print("Query complete.")
+//            result?.data?.listTodos?.items!.forEach { print(($0?.name)! + " " + ($0?.description)!) }
+//        }
     }
     
     func runMemoryQuery(){
-        appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .fetchIgnoringCacheData) {(result, error) in
-            if error != nil {
-                print(error?.localizedDescription ?? "")
-                return
-            }
-            print("Query complete.")
-            result?.data?.listCtmemories?.items!.forEach { self.resultLabel.text = $0?.memoryId
-                print(($0?.memoryId)! + " " + ($0?.memoryId)!) }
-        }
+//        appSyncClient?.fetch(query: ListCtmemoriesQuery(), cachePolicy: .fetchIgnoringCacheData) {(result, error) in
+//            if error != nil {
+//                print(error?.localizedDescription ?? "")
+//                return
+//            }
+//            print("Query complete.")
+//            result?.data?.listCtmemories?.items!.forEach { self.resultLabel.text = $0?.memoryId
+//                print(($0?.memoryId)! + " " + ($0?.memoryId)!) }
+//        }
     }
     
-    var discard: Cancellable?
+//    var discard: Cancellable?
 
     func subscribe() {
-        do {
-            discard = try appSyncClient?.subscribe(subscription: OnCreateTodoSubscription(), resultHandler: { (result, transaction, error) in
-                if let result = result {
-                    print("CreateTodo subscription data:" + result.data!.onCreateTodo!.name + " " + result.data!.onCreateTodo!.description!)
-                } else if let error = error {
-                    print(error.localizedDescription)
-                }
-            })
-            print("Subscribed to CreateTodo Mutations.")
-            } catch {
-                print("Error starting subscription.")
-            }
+//        do {
+//            discard = try appSyncClient?.subscribe(subscription: OnCreateTodoSubscription(), resultHandler: { (result, transaction, error) in
+//                if let result = result {
+//                    print("CreateTodo subscription data:" + result.data!.onCreateTodo!.name + " " + result.data!.onCreateTodo!.description!)
+//                } else if let error = error {
+//                    print(error.localizedDescription)
+//                }
+//            })
+//            print("Subscribed to CreateTodo Mutations.")
+//            } catch {
+//                print("Error starting subscription.")
+//            }
     }
     
     override func didReceiveMemoryWarning() {
@@ -232,78 +224,73 @@ class MainViewController : BaseMemoryViewController, UITextFieldDelegate {
         
         let saveToServer = true
         //server
-        if saveToServer {
-//            sharedModelManager.searchMemory(memoryName: textField.text!)
-//            GetCtmemoryQuery(MemoryID: nil, MemoryName: memoryText, UserID: sharedUserManager.userID)
-            
-//            var filterMemoryID = TableStringFilterInput.init()
-//            filterMemoryID.eq = "M129"
-            var filterMemoryName = TableStringFilterInput.init()
-            filterMemoryName.eq = memoryText
-            var filterUserID = TableStringFilterInput.init()
-            filterUserID.eq = sharedUserManager.userID
-            
-            //returnCacheDataAndFetch 이것때문에 중복저장되고,검색이 안되는거였음.
-            //fetchIgnoringCacheData
-            appSyncClient?.fetch(query:ListCtmemoriesQuery(filter: TableCTMEMORYFilterInput(memoryId: nil, memoryName: filterMemoryName, userId: filterUserID), limit: nil, nextToken: nil) , cachePolicy: .fetchIgnoringCacheData) {(result, error) in
-                if error != nil {
-                    print(error?.localizedDescription ?? "")
-                    return
-                }
-                print("Query complete.")
-                    
-                result?.data?.listCtmemories?.items!.forEach { self.resultLabel.text = $0?.memoryId
-                print(($0?.memoryId)! + ":" + ($0?.memoryName)! + ":" + ($0?.userId)!) }
-                
-                print("result?.data?.listCtmemories?.items?.count : \(result?.data?.listCtmemories?.items?.count)")
-                if(result?.data?.listCtmemories?.items?.count ?? 0 > 0){
-                    //기존 메모리
-//                    print("\(result?.data?.listCtmemories?.items?.count)")
-                    let alertVc = UIAlertController(title: "", message: "존재하는 메모리 입니다", preferredStyle: .alert)
-//                    let cancelAction = UIAlertAction(
-//                        title: "아니오",
-//                        style: .cancel) {
+//        if saveToServer {
+//            var filterMemoryName = TableStringFilterInput.init()
+//            filterMemoryName.eq = memoryText
+//            var filterUserID = TableStringFilterInput.init()
+//            filterUserID.eq = sharedUserManager.userID
+//
+//            //returnCacheDataAndFetch 이것때문에 중복저장되고,검색이 안되는거였음.
+//            //fetchIgnoringCacheData
+//            appSyncClient?.fetch(query:ListCtmemoriesQuery(filter: TableCTMEMORYFilterInput(memoryId: nil, memoryName: filterMemoryName, userId: filterUserID), limit: nil, nextToken: nil) , cachePolicy: .fetchIgnoringCacheData) {(result, error) in
+//                if error != nil {
+//                    print(error?.localizedDescription ?? "")
+//                    return
+//                }
+//                print("Query complete.")
+//
+//                result?.data?.listCtmemories?.items!.forEach { self.resultLabel.text = $0?.memoryId
+//                print(($0?.memoryId)! + ":" + ($0?.memoryName)! + ":" + ($0?.userId)!) }
+//
+//                print("result?.data?.listCtmemories?.items?.count : \(result?.data?.listCtmemories?.items?.count)")
+//                if(result?.data?.listCtmemories?.items?.count ?? 0 > 0){
+//                    //기존 메모리
+////                    print("\(result?.data?.listCtmemories?.items?.count)")
+//                    let alertVc = UIAlertController(title: "", message: "존재하는 메모리 입니다", preferredStyle: .alert)
+////                    let cancelAction = UIAlertAction(
+////                        title: "아니오",
+////                        style: .cancel) {
+////                            action in
+////
+////                    }
+//                    let okAction = UIAlertAction(
+//                        title: "확인",
+//                        style: .default) {
 //                            action in
+////                            println("pressed Cancel Button")
+//                    }
+////                    alertVc.addAction(cancelAction)
+//                    alertVc.addAction(okAction)
+//
+//                    self.present(alertVc, animated: true, completion: {() in
+//
+//                        })
+//                }else{
+//
+//                    sharedModelManager.createMemory(memoryString: memoryText, completionHandler: {(error)->Void in
 //
 //                    }
-                    let okAction = UIAlertAction(
-                        title: "확인",
-                        style: .default) {
-                            action in
-//                            println("pressed Cancel Button")
-                    }
-//                    alertVc.addAction(cancelAction)
-                    alertVc.addAction(okAction)
-
-                    self.present(alertVc, animated: true, completion: {() in
-
-                        })
-                }else{
-                
-                    sharedModelManager.createMemory(memoryString: memoryText, completionHandler: {(error)->Void in
-                        
-                    }
-                    )
-                }
-                
-//                sharedModelManager.createMemory(memoryString: memoryText, completionHandler: (result<Any>,error) in
+//                    )
+//                }
 //
-//                )
-//                sharedModelManager.createMemory(memoryString: memoryText, completionHandler: (result:GraphQLResult<Any>,error:Error)->Void in
-                
-                    
-//                )
- 
-                    
-            }
-        }else{
-            //local
-            memoryArray.append([textField.text ?? "empty":"\(textField.text)1"])
-            mainTableView.reloadData()
-            
-            UserDefaults.standard.setValue(memoryArray, forKey: "MemoryArray")
-            UserDefaults.standard.synchronize()
-        }
+////                sharedModelManager.createMemory(memoryString: memoryText, completionHandler: (result<Any>,error) in
+////
+////                )
+////                sharedModelManager.createMemory(memoryString: memoryText, completionHandler: (result:GraphQLResult<Any>,error:Error)->Void in
+//
+//
+////                )
+//
+//
+//            }
+//        }else{
+//            //local
+//            memoryArray.append([textField.text ?? "empty":"\(textField.text)1"])
+//            mainTableView.reloadData()
+//
+//            UserDefaults.standard.setValue(memoryArray, forKey: "MemoryArray")
+//            UserDefaults.standard.synchronize()
+//        }
         
         textField.text = ""
         textField.resignFirstResponder()

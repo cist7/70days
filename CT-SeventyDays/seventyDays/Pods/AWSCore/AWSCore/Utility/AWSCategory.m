@@ -427,30 +427,6 @@ static NSTimeInterval _clockskew = 0.0;
     return result?result:self;
 }
 
-- (NSString *)aws_md5String {
-    NSData *dataString = [self dataUsingEncoding:NSUTF8StringEncoding];
-    unsigned char digestArray[CC_MD5_DIGEST_LENGTH];
-    CC_MD5([dataString bytes], (CC_LONG)[dataString length], digestArray);
-
-    NSMutableString *md5String = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
-        [md5String appendFormat:@"%02x", digestArray[i]];
-    }
-    return md5String;
-}
-
-- (NSString *)aws_md5StringLittleEndian {
-    NSData *dataString = [self dataUsingEncoding:NSUTF16LittleEndianStringEncoding];
-    unsigned char digestArray[CC_MD5_DIGEST_LENGTH];
-    CC_MD5([dataString bytes], (CC_LONG)[dataString length], digestArray);
-
-    NSMutableString *md5String = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
-        [md5String appendFormat:@"%02x", digestArray[i]];
-    }
-    return md5String;
-}
-
 - (BOOL)aws_isDNSBucketName {
     if ([self length] < 3 || [self length] > 63) {
         return NO;
@@ -539,6 +515,11 @@ static NSTimeInterval _clockskew = 0.0;
         || [self isEqualToString:@"ap-southeast-2"]) {
         return AWSRegionAPSoutheast2;
     }
+    if ([self isEqualToString:@"AWSRegionAPSoutheast3"]
+        || [self isEqualToString:@"APSoutheast3"]
+        || [self isEqualToString:@"ap-southeast-3"]) {
+        return AWSRegionAPSoutheast3;
+    }
     if ([self isEqualToString:@"AWSRegionAPSouth1"]
         || [self isEqualToString:@"APSouth1"]
         || [self isEqualToString:@"ap-south-1"]) {
@@ -600,6 +581,18 @@ static NSTimeInterval _clockskew = 0.0;
         || [self isEqualToString:@"MESouth1"]
         || [self isEqualToString:@"me-south-1"]) {
         return AWSRegionMESouth1;
+    }
+
+    if ([self isEqualToString:@"AWSRegionAFSouth1"]
+        || [self isEqualToString:@"AFSouth1"]
+        || [self isEqualToString:@"af-south-1"]) {
+        return AWSRegionAFSouth1;
+    }
+
+    if ([self isEqualToString:@"AWSRegionEUSouth1"]
+        || [self isEqualToString:@"EUSouth1"]
+        || [self isEqualToString:@"eu-south-1"]) {
+        return AWSRegionEUSouth1;
     }
 
     return AWSRegionUnknown;

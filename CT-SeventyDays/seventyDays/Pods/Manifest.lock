@@ -3,82 +3,34 @@ PODS:
   - AlamofireObjectMapper (5.2.1):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
-  - arek (4.0.2):
-    - arek/Bluetooth (= 4.0.2)
-    - arek/Camera (= 4.0.2)
-    - arek/CloudKit (= 4.0.2)
-    - arek/Contacts (= 4.0.2)
-    - arek/Core (= 4.0.2)
-    - arek/Events (= 4.0.2)
-    - arek/Health (= 4.0.2)
-    - arek/Location (= 4.0.2)
-    - arek/MediaLibrary (= 4.0.2)
-    - arek/Microphone (= 4.0.2)
-    - arek/Motion (= 4.0.2)
-    - arek/Notifications (= 4.0.2)
-    - arek/Photos (= 4.0.2)
-    - arek/Reminders (= 4.0.2)
-    - arek/SpeechRecognizer (= 4.0.2)
-    - PMAlertController (= 3.5.0)
-  - arek/Bluetooth (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Camera (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/CloudKit (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Contacts (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Core (4.0.2):
-    - PMAlertController (= 3.5.0)
-  - arek/Events (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Health (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Location (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/MediaLibrary (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Microphone (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Motion (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Notifications (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Photos (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/Reminders (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - arek/SpeechRecognizer (4.0.2):
-    - arek/Core
-    - PMAlertController (= 3.5.0)
-  - AWSAppSync (2.14.2):
-    - AWSCore (~> 2.10.2)
-    - ReachabilitySwift (= 4.3.0)
-    - SQLite.swift (= 0.11.6)
-  - AWSCore (2.10.3)
+  - Amplify (1.18.1):
+    - Amplify/Default (= 1.18.1)
+  - Amplify/Default (1.18.1)
+  - Amplify/Tools (1.18.1)
+  - AmplifyPlugins/AWSAPIPlugin (1.18.1):
+    - AppSyncRealTimeClient (~> 1.4)
+    - AWSCore (~> 2.26.6)
+    - AWSPluginsCore (= 1.18.1)
+  - AmplifyPlugins/AWSDataStorePlugin (1.18.1):
+    - AWSCore (~> 2.26.6)
+    - AWSPluginsCore (= 1.18.1)
+    - SQLite.swift (= 0.12.2)
+  - AppSyncRealTimeClient (1.6.0):
+    - Starscream (~> 3.1.1)
+  - AWSCore (2.26.7)
+  - AWSPluginsCore (1.18.1):
+    - Amplify (= 1.18.1)
+    - AWSCore (~> 2.26.6)
   - GDPerformanceView-Swift (2.1.1)
   - Hero (1.4.0)
   - Kingfisher (5.4.0)
-  - lottie-ios (3.2.3)
+  - lottie-ios (3.3.0)
   - ObjectMapper (3.4.2)
-  - PMAlertController (3.5.0)
-  - ReachabilitySwift (4.3.0)
-  - SQLite.swift (0.11.6):
-    - SQLite.swift/standard (= 0.11.6)
-  - SQLite.swift/standard (0.11.6)
+  - ReachabilitySwift (4.3.1)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - Starscream (3.1.1)
   - SwifterSwift (5.0.0):
     - SwifterSwift/AppKit (= 5.0.0)
     - SwifterSwift/CoreGraphics (= 5.0.0)
@@ -104,9 +56,10 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.1)
   - AlamofireObjectMapper (~> 5.2)
-  - arek (~> 4.0.2)
-  - AWSAppSync (~> 2.14.2)
-  - AWSCore (~> 2.10.2)
+  - Amplify
+  - Amplify/Tools
+  - AmplifyPlugins/AWSAPIPlugin
+  - AmplifyPlugins/AWSDataStorePlugin
   - GDPerformanceView-Swift
   - Hero (= 1.4.0)
   - Kingfisher (~> 5.4.0)
@@ -121,17 +74,19 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireObjectMapper
-    - arek
-    - AWSAppSync
+    - Amplify
+    - AmplifyPlugins
+    - AppSyncRealTimeClient
     - AWSCore
+    - AWSPluginsCore
     - GDPerformanceView-Swift
     - Hero
     - Kingfisher
     - lottie-ios
     - ObjectMapper
-    - PMAlertController
     - ReachabilitySwift
     - SQLite.swift
+    - Starscream
     - SwifterSwift
     - SwiftyJSON
     - Toaster
@@ -139,21 +94,23 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
-  arek: 59e81a83c8a6c4e70c3598f66d3f1092824d3170
-  AWSAppSync: 0a08b12bcabd1a0633d1f478827a8fb09868fca2
-  AWSCore: f9b8a30d9e8ec07d1a6dd8f0ec5fe84b6a215041
+  Amplify: 515c6993bfba7c26a29c39aa8ee79bf695d87e1e
+  AmplifyPlugins: 89c4639364e956195f8f6b89d2035b54faf13cd8
+  AppSyncRealTimeClient: 8b5ec94085b8ee9bb6fb9d9d76a157beb538ec6f
+  AWSCore: e7fc9a005c527f2623b699a3ff8595fc45c24bd9
+  AWSPluginsCore: 1fe76c21a9e011d434be35ea646dddcd249d624f
   GDPerformanceView-Swift: 22d964fe40b19e3d914dba2586237d064de8fd77
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
-  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
-  PMAlertController: 06dab8160066fc4ce991c880e3722cd403e2926a
-  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
-  SQLite.swift: 46d890be8601964454bd3392527f863d1b802d45
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: 2f9c4c232e8d328674b1d357528ec710c2887187
+PODFILE CHECKSUM: 51cbd411fe73bdea089c5860586e08a42490890b
 
 COCOAPODS: 1.11.2

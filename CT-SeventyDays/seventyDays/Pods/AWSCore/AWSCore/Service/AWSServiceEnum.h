@@ -72,6 +72,10 @@ typedef NS_ENUM(NSInteger, AWSRegionType) {
      */
     AWSRegionAPSoutheast2 NS_SWIFT_NAME(APSoutheast2),
     /**
+     * Asia Pacific (Jakarta)
+     */
+    AWSRegionAPSoutheast3 NS_SWIFT_NAME(APSoutheast3),
+    /**
      *  Asia Pacific (Mumbai)
      */
     AWSRegionAPSouth1 NS_SWIFT_NAME(APSouth1),
@@ -115,6 +119,14 @@ typedef NS_ENUM(NSInteger, AWSRegionType) {
      *  Middle East South (Bahrain)
      */
     AWSRegionMESouth1 NS_SWIFT_NAME(MESouth1),
+    /**
+     *  Africa (Cape Town)
+     */
+    AWSRegionAFSouth1 NS_SWIFT_NAME(AFSouth1),
+    /**
+     *  Europe (Milan)
+     */
+    AWSRegionEUSouth1 NS_SWIFT_NAME(EUSouth1),
 };
 
 /**
@@ -161,6 +173,10 @@ typedef NS_ENUM(NSInteger, AWSServiceType) {
      */
     AWSServiceConnect NS_SWIFT_NAME(Connect),
     /**
+     *  Amazon Connect Participant
+     */
+    AWSServiceConnectParticipant NS_SWIFT_NAME(ConnectParticipant),
+    /**
      *  Amazon DynamoDB
      */
     AWSServiceDynamoDB NS_SWIFT_NAME(DynamoDB),
@@ -196,6 +212,10 @@ typedef NS_ENUM(NSInteger, AWSServiceType) {
      *  Amazon Kinesis Video Archived Media
      */
     AWSServiceKinesisVideoArchivedMedia NS_SWIFT_NAME(KinesisVideoArchivedMedia),
+    /**
+     *  Amazon Kinesis Video Signaling
+     */
+    AWSServiceKinesisVideoSignaling NS_SWIFT_NAME(KinesisVideoSignaling),
     /**
      *  AWS Key Management Service (KMS)
      */
@@ -269,9 +289,25 @@ typedef NS_ENUM(NSInteger, AWSServiceType) {
      */
     AWSServiceTranscribe NS_SWIFT_NAME(Transcribe),
     /**
+     *  Amazon Transcribe Streaming
+     */
+    AWSServiceTranscribeStreaming NS_SWIFT_NAME(TranscribeStreaming),
+    /**
      *  Amazon Translate
      */
     AWSServiceTranslate NS_SWIFT_NAME(Translate),
+    /**
+     *  Amazon Location
+     */
+    AWSServiceLocation NS_SWIFT_NAME(Location),
+    /**
+     *  Amazon Chime Messaging
+     */
+    AWSServiceChimeSDKMessaging NS_SWIFT_NAME(ChimeSDKMessaging),
+    /**
+     *  Amazon Chime Identity
+     */
+    AWSServiceChimeSDKIdentity NS_SWIFT_NAME(ChimeSDKIdentity),
 };
 
 #endif

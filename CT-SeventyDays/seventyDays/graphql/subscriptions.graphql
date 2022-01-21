@@ -4,6 +4,8 @@ subscription OnCreateTodo {
     id
     name
     description
+    createdAt
+    updatedAt
   }
 }
 subscription OnUpdateTodo {
@@ -11,6 +13,8 @@ subscription OnUpdateTodo {
     id
     name
     description
+    createdAt
+    updatedAt
   }
 }
 subscription OnDeleteTodo {
@@ -18,32 +22,7 @@ subscription OnDeleteTodo {
     id
     name
     description
-  }
-}
-subscription OnCreateCtmemory($MemoryID: String) {
-  onCreateCTMEMORY(MemoryID: $MemoryID) {
-    MemoryID
-    MemoryName
-    UserID
-    CreateDate
-    Description
-  }
-}
-subscription OnUpdateCtmemory($MemoryID: String) {
-  onUpdateCTMEMORY(MemoryID: $MemoryID) {
-    MemoryID
-    MemoryName
-    UserID
-    CreateDate
-    Description
-  }
-}
-subscription OnDeleteCtmemory($MemoryID: String) {
-  onDeleteCTMEMORY(MemoryID: $MemoryID) {
-    MemoryID
-    MemoryName
-    UserID
-    CreateDate
-    Description
+    createdAt
+    updatedAt
   }
 }

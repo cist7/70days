@@ -1,0 +1,43 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateCtMemory(
+  $input: CreateCTMemoryInput!
+  $condition: ModelCTMemoryConditionInput
+) {
+  createCTMemory(input: $input, condition: $condition) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateCtMemory(
+  $input: UpdateCTMemoryInput!
+  $condition: ModelCTMemoryConditionInput
+) {
+  updateCTMemory(input: $input, condition: $condition) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteCtMemory(
+  $input: DeleteCTMemoryInput!
+  $condition: ModelCTMemoryConditionInput
+) {
+  deleteCTMemory(input: $input, condition: $condition) {
+    id
+    name
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}

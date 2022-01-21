@@ -4,6 +4,8 @@ query GetTodo($id: ID!) {
     id
     name
     description
+    createdAt
+    updatedAt
   }
 }
 query ListTodos(
@@ -16,31 +18,8 @@ query ListTodos(
       id
       name
       description
-    }
-    nextToken
-  }
-}
-query GetCtmemory($MemoryID: String!, $MemoryName: String!, $UserID: String!) {
-  getCTMEMORY(MemoryID: $MemoryID, MemoryName: $MemoryName, UserID: $UserID) {
-    MemoryID
-    MemoryName
-    UserID
-    CreateDate
-    Description
-  }
-}
-query ListCtmemories(
-  $filter: TableCTMEMORYFilterInput
-  $limit: Int
-  $nextToken: String
-) {
-  listCTMEMORIES(filter: $filter, limit: $limit, nextToken: $nextToken) {
-    items {
-      MemoryID
-      MemoryName
-      UserID
-      CreateDate
-      Description
+      createdAt
+      updatedAt
     }
     nextToken
   }

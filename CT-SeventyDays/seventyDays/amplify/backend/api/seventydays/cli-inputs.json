@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": "365",
+      "keyDescription": "seventydays description"
+    },
+    "conflictResolution": {},
+    "apiName": "seventydays",
+    "gqlSchemaPath": "/Users/mobile_ios/70days/CT-SeventyDays/seventyDays/amplify/backend/api/seventydays/schema.graphql"
+  }
+}

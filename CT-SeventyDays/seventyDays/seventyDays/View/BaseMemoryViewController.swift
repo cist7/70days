@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import AWSAppSync
+//import AWSAppSync
 
 extension UIView {
   

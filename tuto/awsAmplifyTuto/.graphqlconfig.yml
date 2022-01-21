@@ -1,0 +1,18 @@
+projects:
+  awsAmplifyTuto-dev:
+    schemaPath: graphql/schema.json
+    includes:
+      - graphql/**/*.graphql
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: swift
+        generatedFileName: API.swift
+        docsFilePath: graphql
+        region: ap-northeast-2
+        apiId: l7i2mvbdgbfcrb7gc3v6ceqmuu
+        maxDepth: 2
+extensions:
+  amplify:
+    version: 3

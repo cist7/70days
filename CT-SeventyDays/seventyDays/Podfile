@@ -20,35 +20,14 @@ target 'seventyDays dev' do
   pod 'ReachabilitySwift', '~> 4.3.0'
   pod 'GDPerformanceView-Swift'
 
-  pod 'AWSCore', '~> 2.10.2'
-  pod 'AWSAppSync', '~> 2.14.2'
+#  pod 'AWSCore', '~> 2.10.2'
+#  pod 'AWSAppSync', '~> 2.14.2'
 
-  pod 'lottie-ios'
-  pod 'Toaster'
+pod 'Amplify'
+pod 'Amplify/Tools'
+pod 'AmplifyPlugins/AWSAPIPlugin'
+pod 'AmplifyPlugins/AWSDataStorePlugin'
 
-end
-
-target 'seventyDays dist' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for seventyDays dist
-  pod 'Alamofire', '~> 4.1'
-  pod 'AlamofireObjectMapper', '~> 5.2'
-
-  pod 'ObjectMapper', '~> 3.4.2'
-  pod 'SwiftyJSON', '~> 5.0.0'
-  pod 'Kingfisher', '~> 5.4.0'
-  pod 'SwifterSwift', '~> 5.0.0'
-  
-  pod 'Hero', '1.4.0'
-  pod 'arek', '~> 4.0.2'
-  
-  pod 'ReachabilitySwift', '~> 4.3.0'
-  pod 'GDPerformanceView-Swift'
-
-  pod 'AWSCore', '~> 2.10.2'
-  pod 'AWSAppSync', '~> 2.14.2'
 
   pod 'lottie-ios'
   pod 'Toaster'

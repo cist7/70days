@@ -1,15 +1,28 @@
 {
-    "ios": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-seventydays-ios-163118-authRole",
-            "UnauthRoleArn": "arn:aws:iam::001509925178:role/amplify-seventydays-ios-163118-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::001509925178:role/amplify-seventydays-ios-163118-authRole",
-            "Region": "ap-northeast-2",
-            "DeploymentBucketName": "amplify-seventydays-ios-163118-deployment",
-            "UnauthRoleName": "amplify-seventydays-ios-163118-unauthRole",
-            "StackName": "amplify-seventydays-ios-163118",
-            "StackId": "arn:aws:cloudformation:ap-northeast-2:001509925178:stack/amplify-seventydays-ios-163118/1092d6d0-1668-11ea-940d-02c0c6d9876a",
-            "AmplifyAppId": "d3evixjpjaj0iv"
-        }
+  "ios": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-seventydays-ios-163118-authRole",
+      "UnauthRoleArn": "arn:aws:iam::001509925178:role/amplify-seventydays-ios-163118-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::001509925178:role/amplify-seventydays-ios-163118-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-seventydays-ios-163118-deployment",
+      "UnauthRoleName": "amplify-seventydays-ios-163118-unauthRole",
+      "StackName": "amplify-seventydays-ios-163118",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:001509925178:stack/amplify-seventydays-ios-163118/1092d6d0-1668-11ea-940d-02c0c6d9876a",
+      "AmplifyAppId": "d3evixjpjaj0iv"
     }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-seventydays-dev-133126-authRole",
+      "UnauthRoleArn": "arn:aws:iam::603046677063:role/amplify-seventydays-dev-133126-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::603046677063:role/amplify-seventydays-dev-133126-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-seventydays-dev-133126-deployment",
+      "UnauthRoleName": "amplify-seventydays-dev-133126-unauthRole",
+      "StackName": "amplify-seventydays-dev-133126",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:603046677063:stack/amplify-seventydays-dev-133126/5b98d5a0-774e-11ec-a872-06df163a788c",
+      "AmplifyAppId": "dy4w89b3pnv6u"
+    }
+  }
 }

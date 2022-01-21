@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7ED972934BCE514B0FFF8A30 /* Pods_awsAmplifyTuto__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6217A94A171F7FBED312EBC2 /* Pods_awsAmplifyTuto__iOS_.framework */; };
+		BE0FD9B52798EE7000E95414 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = BE0FD9B42798EE7000E95414 /* AWSAPIPlugin */; };
+		BE0FD9B72798EE7000E95414 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = BE0FD9B62798EE7000E95414 /* AWSDataStorePlugin */; };
+		BE0FD9B92798EE7000E95414 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = BE0FD9B82798EE7000E95414 /* Amplify */; };
+		BE0FD9BE2798F2B900E95414 /* CTMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BB2798F2B900E95414 /* CTMemory.swift */; };
+		BE0FD9BF2798F2B900E95414 /* CTMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BB2798F2B900E95414 /* CTMemory.swift */; };
+		BE0FD9C02798F2B900E95414 /* CTMemory+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */; };
+		BE0FD9C12798F2B900E95414 /* CTMemory+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */; };
+		BE0FD9C22798F2B900E95414 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */; };
+		BE0FD9C32798F2B900E95414 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */; };
+		BEC5FED12797C8A300A2C017 /* awsAmplifyTutoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */; };
+		BEC5FED22797C8A300A2C017 /* awsAmplifyTutoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */; };
+		BEC5FED32797C8A300A2C017 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEC22797C8A100A2C017 /* ContentView.swift */; };
+		BEC5FED42797C8A300A2C017 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEC22797C8A100A2C017 /* ContentView.swift */; };
+		BEC5FED52797C8A300A2C017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEC32797C8A300A2C017 /* Assets.xcassets */; };
+		BEC5FED62797C8A300A2C017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEC32797C8A300A2C017 /* Assets.xcassets */; };
+		BEC5FEE82797CB4A00A2C017 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEE62797CB4A00A2C017 /* awsconfiguration.json */; };
+		BEC5FEE92797CB4A00A2C017 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEE62797CB4A00A2C017 /* awsconfiguration.json */; };
+		BEC5FEEA2797CB4A00A2C017 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEE72797CB4A00A2C017 /* amplifyconfiguration.json */; };
+		BEC5FEEB2797CB4A00A2C017 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEE72797CB4A00A2C017 /* amplifyconfiguration.json */; };
+		BEC5FEED2797DB7300A2C017 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEEC2797DB7300A2C017 /* API.swift */; };
+		BEC5FEEE2797DB7300A2C017 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEEC2797DB7300A2C017 /* API.swift */; };
+		F2C156C1657CBFD64D49A03D /* Pods_awsAmplifyTuto__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA0841EBED107B85193949A /* Pods_awsAmplifyTuto__macOS_.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C4533B7D6FC0DA52BC9F226 /* Pods-awsAmplifyTuto (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awsAmplifyTuto (iOS).release.xcconfig"; path = "Target Support Files/Pods-awsAmplifyTuto (iOS)/Pods-awsAmplifyTuto (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		6217A94A171F7FBED312EBC2 /* Pods_awsAmplifyTuto__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awsAmplifyTuto__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		747073F6B935C35F54306AB1 /* Pods-awsAmplifyTuto (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awsAmplifyTuto (macOS).debug.xcconfig"; path = "Target Support Files/Pods-awsAmplifyTuto (macOS)/Pods-awsAmplifyTuto (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		A16C1231F15E69F0A1DE8D36 /* Pods-awsAmplifyTuto (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awsAmplifyTuto (macOS).release.xcconfig"; path = "Target Support Files/Pods-awsAmplifyTuto (macOS)/Pods-awsAmplifyTuto (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		BE0FD9BB2798F2B900E95414 /* CTMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTMemory.swift; path = amplify/generated/models/CTMemory.swift; sourceTree = SOURCE_ROOT; };
+		BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CTMemory+Schema.swift"; path = "amplify/generated/models/CTMemory+Schema.swift"; sourceTree = SOURCE_ROOT; };
+		BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = SOURCE_ROOT; };
+		BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awsAmplifyTutoApp.swift; sourceTree = "<group>"; };
+		BEC5FEC22797C8A100A2C017 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BEC5FEC32797C8A300A2C017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEC5FEC82797C8A300A2C017 /* awsAmplifyTuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awsAmplifyTuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC5FECE2797C8A300A2C017 /* awsAmplifyTuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awsAmplifyTuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC5FED02797C8A300A2C017 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		BEC5FEE62797CB4A00A2C017 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		BEC5FEE72797CB4A00A2C017 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		BEC5FEEC2797DB7300A2C017 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
+		FBA0841EBED107B85193949A /* Pods_awsAmplifyTuto__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awsAmplifyTuto__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE404AA843C4B910E27865FF /* Pods-awsAmplifyTuto (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awsAmplifyTuto (iOS).debug.xcconfig"; path = "Target Support Files/Pods-awsAmplifyTuto (iOS)/Pods-awsAmplifyTuto (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEC5FEC52797C8A300A2C017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE0FD9B72798EE7000E95414 /* AWSDataStorePlugin in Frameworks */,
+				BE0FD9B92798EE7000E95414 /* Amplify in Frameworks */,
+				BE0FD9B52798EE7000E95414 /* AWSAPIPlugin in Frameworks */,
+				7ED972934BCE514B0FFF8A30 /* Pods_awsAmplifyTuto__iOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC5FECB2797C8A300A2C017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2C156C1657CBFD64D49A03D /* Pods_awsAmplifyTuto__macOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		841A2B68568FFE21D29F756F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE404AA843C4B910E27865FF /* Pods-awsAmplifyTuto (iOS).debug.xcconfig */,
+				3C4533B7D6FC0DA52BC9F226 /* Pods-awsAmplifyTuto (iOS).release.xcconfig */,
+				747073F6B935C35F54306AB1 /* Pods-awsAmplifyTuto (macOS).debug.xcconfig */,
+				A16C1231F15E69F0A1DE8D36 /* Pods-awsAmplifyTuto (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE0FD9BA2798F2A500E95414 /* AWSModels */ = {
+			isa = PBXGroup;
+			children = (
+				BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */,
+				BE0FD9BB2798F2B900E95414 /* CTMemory.swift */,
+				BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */,
+			);
+			path = AWSModels;
+			sourceTree = "<group>";
+		};
+		BEC5FEBB2797C8A100A2C017 = {
+			isa = PBXGroup;
+			children = (
+				BEC5FEC02797C8A100A2C017 /* Shared */,
+				BEC5FECF2797C8A300A2C017 /* macOS */,
+				BEC5FEC92797C8A300A2C017 /* Products */,
+				841A2B68568FFE21D29F756F /* Pods */,
+				F0E6D710C73B04527C436515 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BEC5FEC02797C8A100A2C017 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BE0FD9BA2798F2A500E95414 /* AWSModels */,
+				BEC5FEEC2797DB7300A2C017 /* API.swift */,
+				BEC5FEE72797CB4A00A2C017 /* amplifyconfiguration.json */,
+				BEC5FEE62797CB4A00A2C017 /* awsconfiguration.json */,
+				BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */,
+				BEC5FEC22797C8A100A2C017 /* ContentView.swift */,
+				BEC5FEC32797C8A300A2C017 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BEC5FEC92797C8A300A2C017 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEC5FEC82797C8A300A2C017 /* awsAmplifyTuto.app */,
+				BEC5FECE2797C8A300A2C017 /* awsAmplifyTuto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEC5FECF2797C8A300A2C017 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				BEC5FED02797C8A300A2C017 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		F0E6D710C73B04527C436515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6217A94A171F7FBED312EBC2 /* Pods_awsAmplifyTuto__iOS_.framework */,
+				FBA0841EBED107B85193949A /* Pods_awsAmplifyTuto__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEC5FEC72797C8A300A2C017 /* awsAmplifyTuto (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC5FED92797C8A300A2C017 /* Build configuration list for PBXNativeTarget "awsAmplifyTuto (iOS)" */;
+			buildPhases = (
+				12C7DD064621832409CFAA08 /* [CP] Check Pods Manifest.lock */,
+				BEC5FEC42797C8A300A2C017 /* Sources */,
+				BEC5FEC52797C8A300A2C017 /* Frameworks */,
+				BEC5FEC62797C8A300A2C017 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "awsAmplifyTuto (iOS)";
+			packageProductDependencies = (
+				BE0FD9B42798EE7000E95414 /* AWSAPIPlugin */,
+				BE0FD9B62798EE7000E95414 /* AWSDataStorePlugin */,
+				BE0FD9B82798EE7000E95414 /* Amplify */,
+			);
+			productName = "awsAmplifyTuto (iOS)";
+			productReference = BEC5FEC82797C8A300A2C017 /* awsAmplifyTuto.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEC5FECD2797C8A300A2C017 /* awsAmplifyTuto (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC5FEDC2797C8A300A2C017 /* Build configuration list for PBXNativeTarget "awsAmplifyTuto (macOS)" */;
+			buildPhases = (
+				77864E765613740158110E7E /* [CP] Check Pods Manifest.lock */,
+				BEC5FECA2797C8A300A2C017 /* Sources */,
+				BEC5FECB2797C8A300A2C017 /* Frameworks */,
+				BEC5FECC2797C8A300A2C017 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "awsAmplifyTuto (macOS)";
+			productName = "awsAmplifyTuto (macOS)";
+			productReference = BEC5FECE2797C8A300A2C017 /* awsAmplifyTuto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEC5FEBC2797C8A100A2C017 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					BEC5FEC72797C8A300A2C017 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					BEC5FECD2797C8A300A2C017 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = BEC5FEBF2797C8A100A2C017 /* Build configuration list for PBXProject "awsAmplifyTuto" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEC5FEBB2797C8A100A2C017;
+			packageReferences = (
+				BE0FD9B32798EE7000E95414 /* XCRemoteSwiftPackageReference "amplify-ios" */,
+			);
+			productRefGroup = BEC5FEC92797C8A300A2C017 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEC5FEC72797C8A300A2C017 /* awsAmplifyTuto (iOS) */,
+				BEC5FECD2797C8A300A2C017 /* awsAmplifyTuto (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEC5FEC62797C8A300A2C017 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC5FEE82797CB4A00A2C017 /* awsconfiguration.json in Resources */,
+				BEC5FEEA2797CB4A00A2C017 /* amplifyconfiguration.json in Resources */,
+				BEC5FED52797C8A300A2C017 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC5FECC2797C8A300A2C017 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC5FEE92797CB4A00A2C017 /* awsconfiguration.json in Resources */,
+				BEC5FEEB2797CB4A00A2C017 /* amplifyconfiguration.json in Resources */,
+				BEC5FED62797C8A300A2C017 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12C7DD064621832409CFAA08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-awsAmplifyTuto (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77864E765613740158110E7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-awsAmplifyTuto (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEC5FEC42797C8A300A2C017 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC5FED32797C8A300A2C017 /* ContentView.swift in Sources */,
+				BE0FD9BE2798F2B900E95414 /* CTMemory.swift in Sources */,
+				BEC5FEED2797DB7300A2C017 /* API.swift in Sources */,
+				BEC5FED12797C8A300A2C017 /* awsAmplifyTutoApp.swift in Sources */,
+				BE0FD9C22798F2B900E95414 /* AmplifyModels.swift in Sources */,
+				BE0FD9C02798F2B900E95414 /* CTMemory+Schema.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC5FECA2797C8A300A2C017 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC5FED42797C8A300A2C017 /* ContentView.swift in Sources */,
+				BE0FD9BF2798F2B900E95414 /* CTMemory.swift in Sources */,
+				BEC5FEEE2797DB7300A2C017 /* API.swift in Sources */,
+				BEC5FED22797C8A300A2C017 /* awsAmplifyTutoApp.swift in Sources */,
+				BE0FD9C32798F2B900E95414 /* AmplifyModels.swift in Sources */,
+				BE0FD9C12798F2B900E95414 /* CTMemory+Schema.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BEC5FED72797C8A300A2C017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEC5FED82797C8A300A2C017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BEC5FEDA2797C8A300A2C017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE404AA843C4B910E27865FF /* Pods-awsAmplifyTuto (iOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV77GQ7R7J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cistree.awsAmplifyTuto;
+				PRODUCT_NAME = awsAmplifyTuto;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEC5FEDB2797C8A300A2C017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4533B7D6FC0DA52BC9F226 /* Pods-awsAmplifyTuto (iOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV77GQ7R7J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cistree.awsAmplifyTuto;
+				PRODUCT_NAME = awsAmplifyTuto;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEC5FEDD2797C8A300A2C017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 747073F6B935C35F54306AB1 /* Pods-awsAmplifyTuto (macOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV77GQ7R7J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cistree.awsAmplifyTuto;
+				PRODUCT_NAME = awsAmplifyTuto;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BEC5FEDE2797C8A300A2C017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A16C1231F15E69F0A1DE8D36 /* Pods-awsAmplifyTuto (macOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DV77GQ7R7J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cistree.awsAmplifyTuto;
+				PRODUCT_NAME = awsAmplifyTuto;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEC5FEBF2797C8A100A2C017 /* Build configuration list for PBXProject "awsAmplifyTuto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC5FED72797C8A300A2C017 /* Debug */,
+				BEC5FED82797C8A300A2C017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC5FED92797C8A300A2C017 /* Build configuration list for PBXNativeTarget "awsAmplifyTuto (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC5FEDA2797C8A300A2C017 /* Debug */,
+				BEC5FEDB2797C8A300A2C017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC5FEDC2797C8A300A2C017 /* Build configuration list for PBXNativeTarget "awsAmplifyTuto (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC5FEDD2797C8A300A2C017 /* Debug */,
+				BEC5FEDE2797C8A300A2C017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE0FD9B32798EE7000E95414 /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE0FD9B42798EE7000E95414 /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE0FD9B32798EE7000E95414 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSAPIPlugin;
+		};
+		BE0FD9B62798EE7000E95414 /* AWSDataStorePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE0FD9B32798EE7000E95414 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSDataStorePlugin;
+		};
+		BE0FD9B82798EE7000E95414 /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE0FD9B32798EE7000E95414 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = Amplify;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BEC5FEBC2797C8A100A2C017 /* Project object */;
+}

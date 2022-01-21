@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import AWSAppSync
+//import AWSAppSync
 import UIKit
 
 class MemoryDetailViewController : BaseMemoryViewController {
