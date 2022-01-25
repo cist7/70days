@@ -17,16 +17,20 @@
 		BE0FD9C12798F2B900E95414 /* CTMemory+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */; };
 		BE0FD9C22798F2B900E95414 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */; };
 		BE0FD9C32798F2B900E95414 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */; };
+		BE0FD9CD279FC69000E95414 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9CB279FC69000E95414 /* amplifyconfiguration.json */; };
+		BE0FD9CE279FC69000E95414 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9CB279FC69000E95414 /* amplifyconfiguration.json */; };
+		BE0FD9CF279FC69000E95414 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9CC279FC69000E95414 /* awsconfiguration.json */; };
+		BE0FD9D0279FC69000E95414 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9CC279FC69000E95414 /* awsconfiguration.json */; };
+		BE0FD9D2279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */; };
+		BE0FD9D3279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */; };
+		BE0FD9D5279FC75500E95414 /* awsconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */; };
+		BE0FD9D6279FC75500E95414 /* awsconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */; };
 		BEC5FED12797C8A300A2C017 /* awsAmplifyTutoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */; };
 		BEC5FED22797C8A300A2C017 /* awsAmplifyTutoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */; };
 		BEC5FED32797C8A300A2C017 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEC22797C8A100A2C017 /* ContentView.swift */; };
 		BEC5FED42797C8A300A2C017 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEC22797C8A100A2C017 /* ContentView.swift */; };
 		BEC5FED52797C8A300A2C017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEC32797C8A300A2C017 /* Assets.xcassets */; };
 		BEC5FED62797C8A300A2C017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEC32797C8A300A2C017 /* Assets.xcassets */; };
-		BEC5FEE82797CB4A00A2C017 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEE62797CB4A00A2C017 /* awsconfiguration.json */; };
-		BEC5FEE92797CB4A00A2C017 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEE62797CB4A00A2C017 /* awsconfiguration.json */; };
-		BEC5FEEA2797CB4A00A2C017 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEE72797CB4A00A2C017 /* amplifyconfiguration.json */; };
-		BEC5FEEB2797CB4A00A2C017 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEE72797CB4A00A2C017 /* amplifyconfiguration.json */; };
 		BEC5FEED2797DB7300A2C017 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEEC2797DB7300A2C017 /* API.swift */; };
 		BEC5FEEE2797DB7300A2C017 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEEC2797DB7300A2C017 /* API.swift */; };
 		F2C156C1657CBFD64D49A03D /* Pods_awsAmplifyTuto__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA0841EBED107B85193949A /* Pods_awsAmplifyTuto__macOS_.framework */; };
@@ -40,14 +44,17 @@
 		BE0FD9BB2798F2B900E95414 /* CTMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTMemory.swift; path = amplify/generated/models/CTMemory.swift; sourceTree = SOURCE_ROOT; };
 		BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CTMemory+Schema.swift"; path = "amplify/generated/models/CTMemory+Schema.swift"; sourceTree = SOURCE_ROOT; };
 		BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = SOURCE_ROOT; };
+		BE0FD9CA279FC65200E95414 /* jsonfile.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = jsonfile.geojson; sourceTree = "<group>"; };
+		BE0FD9CB279FC69000E95414 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		BE0FD9CC279FC69000E95414 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json2.json; sourceTree = "<group>"; };
+		BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json2.json; sourceTree = "<group>"; };
 		BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awsAmplifyTutoApp.swift; sourceTree = "<group>"; };
 		BEC5FEC22797C8A100A2C017 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BEC5FEC32797C8A300A2C017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEC5FEC82797C8A300A2C017 /* awsAmplifyTuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awsAmplifyTuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC5FECE2797C8A300A2C017 /* awsAmplifyTuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awsAmplifyTuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC5FED02797C8A300A2C017 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		BEC5FEE62797CB4A00A2C017 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
-		BEC5FEE72797CB4A00A2C017 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		BEC5FEEC2797DB7300A2C017 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
 		FBA0841EBED107B85193949A /* Pods_awsAmplifyTuto__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awsAmplifyTuto__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE404AA843C4B910E27865FF /* Pods-awsAmplifyTuto (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awsAmplifyTuto (iOS).debug.xcconfig"; path = "Target Support Files/Pods-awsAmplifyTuto (iOS)/Pods-awsAmplifyTuto (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +97,8 @@
 		BE0FD9BA2798F2A500E95414 /* AWSModels */ = {
 			isa = PBXGroup;
 			children = (
+				BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */,
+				BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */,
 				BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */,
 				BE0FD9BB2798F2B900E95414 /* CTMemory.swift */,
 				BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */,
@@ -111,13 +120,14 @@
 		BEC5FEC02797C8A100A2C017 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BE0FD9CB279FC69000E95414 /* amplifyconfiguration.json */,
+				BE0FD9CC279FC69000E95414 /* awsconfiguration.json */,
 				BE0FD9BA2798F2A500E95414 /* AWSModels */,
 				BEC5FEEC2797DB7300A2C017 /* API.swift */,
-				BEC5FEE72797CB4A00A2C017 /* amplifyconfiguration.json */,
-				BEC5FEE62797CB4A00A2C017 /* awsconfiguration.json */,
 				BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */,
 				BEC5FEC22797C8A100A2C017 /* ContentView.swift */,
 				BEC5FEC32797C8A300A2C017 /* Assets.xcassets */,
+				BE0FD9CA279FC65200E95414 /* jsonfile.geojson */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -237,9 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC5FEE82797CB4A00A2C017 /* awsconfiguration.json in Resources */,
-				BEC5FEEA2797CB4A00A2C017 /* amplifyconfiguration.json in Resources */,
 				BEC5FED52797C8A300A2C017 /* Assets.xcassets in Resources */,
+				BE0FD9CD279FC69000E95414 /* amplifyconfiguration.json in Resources */,
+				BE0FD9D5279FC75500E95414 /* awsconfiguration.json2.json in Resources */,
+				BE0FD9CF279FC69000E95414 /* awsconfiguration.json in Resources */,
+				BE0FD9D2279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,9 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC5FEE92797CB4A00A2C017 /* awsconfiguration.json in Resources */,
-				BEC5FEEB2797CB4A00A2C017 /* amplifyconfiguration.json in Resources */,
 				BEC5FED62797C8A300A2C017 /* Assets.xcassets in Resources */,
+				BE0FD9CE279FC69000E95414 /* amplifyconfiguration.json in Resources */,
+				BE0FD9D6279FC75500E95414 /* awsconfiguration.json2.json in Resources */,
+				BE0FD9D0279FC69000E95414 /* awsconfiguration.json in Resources */,
+				BE0FD9D3279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
