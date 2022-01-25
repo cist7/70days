@@ -17,10 +17,6 @@
 		BE0FD9C12798F2B900E95414 /* CTMemory+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */; };
 		BE0FD9C22798F2B900E95414 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */; };
 		BE0FD9C32798F2B900E95414 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */; };
-		BE0FD9CD279FC69000E95414 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9CB279FC69000E95414 /* amplifyconfiguration.json */; };
-		BE0FD9CE279FC69000E95414 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9CB279FC69000E95414 /* amplifyconfiguration.json */; };
-		BE0FD9CF279FC69000E95414 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9CC279FC69000E95414 /* awsconfiguration.json */; };
-		BE0FD9D0279FC69000E95414 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9CC279FC69000E95414 /* awsconfiguration.json */; };
 		BE0FD9D2279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */; };
 		BE0FD9D3279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */; };
 		BE0FD9D5279FC75500E95414 /* awsconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */; };
@@ -44,9 +40,6 @@
 		BE0FD9BB2798F2B900E95414 /* CTMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTMemory.swift; path = amplify/generated/models/CTMemory.swift; sourceTree = SOURCE_ROOT; };
 		BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CTMemory+Schema.swift"; path = "amplify/generated/models/CTMemory+Schema.swift"; sourceTree = SOURCE_ROOT; };
 		BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = SOURCE_ROOT; };
-		BE0FD9CA279FC65200E95414 /* jsonfile.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = jsonfile.geojson; sourceTree = "<group>"; };
-		BE0FD9CB279FC69000E95414 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
-		BE0FD9CC279FC69000E95414 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json2.json; sourceTree = "<group>"; };
 		BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json2.json; sourceTree = "<group>"; };
 		BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awsAmplifyTutoApp.swift; sourceTree = "<group>"; };
@@ -120,14 +113,11 @@
 		BEC5FEC02797C8A100A2C017 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				BE0FD9CB279FC69000E95414 /* amplifyconfiguration.json */,
-				BE0FD9CC279FC69000E95414 /* awsconfiguration.json */,
 				BE0FD9BA2798F2A500E95414 /* AWSModels */,
 				BEC5FEEC2797DB7300A2C017 /* API.swift */,
 				BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */,
 				BEC5FEC22797C8A100A2C017 /* ContentView.swift */,
 				BEC5FEC32797C8A300A2C017 /* Assets.xcassets */,
-				BE0FD9CA279FC65200E95414 /* jsonfile.geojson */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -248,9 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC5FED52797C8A300A2C017 /* Assets.xcassets in Resources */,
-				BE0FD9CD279FC69000E95414 /* amplifyconfiguration.json in Resources */,
 				BE0FD9D5279FC75500E95414 /* awsconfiguration.json2.json in Resources */,
-				BE0FD9CF279FC69000E95414 /* awsconfiguration.json in Resources */,
 				BE0FD9D2279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,9 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC5FED62797C8A300A2C017 /* Assets.xcassets in Resources */,
-				BE0FD9CE279FC69000E95414 /* amplifyconfiguration.json in Resources */,
 				BE0FD9D6279FC75500E95414 /* awsconfiguration.json2.json in Resources */,
-				BE0FD9D0279FC69000E95414 /* awsconfiguration.json in Resources */,
 				BE0FD9D3279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
