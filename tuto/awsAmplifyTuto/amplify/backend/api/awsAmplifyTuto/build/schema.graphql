@@ -1,0 +1,156 @@
+type CTMemory @aws_iam @aws_api_key {
+  id: ID!
+  name: String
+  _version: Int!
+  _deleted: Boolean
+  _lastChangedAt: AWSTimestamp!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelCTMemoryConnection @aws_api_key @aws_iam {
+  items: [CTMemory]!
+  nextToken: String
+  startedAt: AWSTimestamp
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+input ModelCTMemoryFilterInput {
+  id: ModelIDInput
+  name: ModelStringInput
+  and: [ModelCTMemoryFilterInput]
+  or: [ModelCTMemoryFilterInput]
+  not: ModelCTMemoryFilterInput
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+type Query {
+  getCTMemory(id: ID!): CTMemory @aws_api_key @aws_iam
+  listCTMemorys(filter: ModelCTMemoryFilterInput, limit: Int, nextToken: String): ModelCTMemoryConnection @aws_api_key @aws_iam
+  syncCTMemories(filter: ModelCTMemoryFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelCTMemoryConnection @aws_api_key @aws_iam
+}
+
+input CreateCTMemoryInput {
+  id: ID
+  name: String
+  _version: Int
+}
+
+input UpdateCTMemoryInput {
+  id: ID!
+  name: String
+  _version: Int
+}
+
+input DeleteCTMemoryInput {
+  id: ID!
+  _version: Int
+}
+
+type Mutation {
+  createCTMemory(input: CreateCTMemoryInput!, condition: ModelCTMemoryConditionInput): CTMemory @aws_api_key @aws_iam
+  updateCTMemory(input: UpdateCTMemoryInput!, condition: ModelCTMemoryConditionInput): CTMemory @aws_api_key @aws_iam
+  deleteCTMemory(input: DeleteCTMemoryInput!, condition: ModelCTMemoryConditionInput): CTMemory @aws_api_key @aws_iam
+}
+
+input ModelCTMemoryConditionInput {
+  name: ModelStringInput
+  and: [ModelCTMemoryConditionInput]
+  or: [ModelCTMemoryConditionInput]
+  not: ModelCTMemoryConditionInput
+}
+
+type Subscription {
+  onCreateCTMemory: CTMemory @aws_subscribe(mutations: ["createCTMemory"]) @aws_api_key @aws_iam
+  onUpdateCTMemory: CTMemory @aws_subscribe(mutations: ["updateCTMemory"]) @aws_api_key @aws_iam
+  onDeleteCTMemory: CTMemory @aws_subscribe(mutations: ["deleteCTMemory"]) @aws_api_key @aws_iam
+}

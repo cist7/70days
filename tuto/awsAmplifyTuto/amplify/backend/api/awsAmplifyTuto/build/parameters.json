@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "awsAmplifyTuto",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-awsamplifytuto-dev-132818-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/19ab15c133ddbc9a8f7b501688dd51a607c65ed2"
+}
