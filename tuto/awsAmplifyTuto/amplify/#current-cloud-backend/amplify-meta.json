@@ -35,12 +35,60 @@
         "GraphQLAPIEndpointOutput": "https://fyrdriktujahphi3b5utp6nkfa.appsync-api.ap-northeast-2.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-lygbnx7w45e6tlziqiiqmzwnuu"
       },
-      "lastPushTimeStamp": "2022-01-20T01:54:36.680Z",
+      "lastPushTimeStamp": "2022-01-21T07:27:25.581Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiawsAmplifyTuto"
+      }
+    }
+  },
+  "auth": {
+    "awsAmplifyTuto": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [
+          "GOOGLE"
+        ],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "PHONE_NUMBER",
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
       },
-      "lastPushDirHash": "zoLLqTu5/UwZwYZxmV77WKvCSxE="
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::603046677063:role/sns75218052132818-dev",
+        "UserPoolId": "ap-northeast-2_NfiNG1eb0",
+        "AppClientIDWeb": "2a5dhvp4mnn32h1s24833itiq6",
+        "AppClientID": "5esttqe8qn60pa0h49ph33l3cv",
+        "HostedUIDomain": "8u6gdzadlcme-dev",
+        "IdentityPoolId": "ap-northeast-2:cf95b8f0-2add-48df-90fa-72196bb8dfed",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-2:603046677063:userpool/ap-northeast-2_NfiNG1eb0",
+        "IdentityPoolName": "testAuthIdentityPool__dev",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://8u6gdzadlcme-dev.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse\"],\"LogoutURLs\":[\"https://8u6gdzadlcme-dev.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse\"]}",
+        "UserPoolName": "awsAmplifyTuto"
+      },
+      "lastPushTimeStamp": "2022-01-21T07:27:25.592Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/auth/awsAmplifyTuto-cloudformation-template.json",
+        "logicalId": "authawsAmplifyTuto"
+      },
+      "lastPushDirHash": "vqq5+WbgcQyqZAOlxm1xtZEekSY="
     }
   }
 }

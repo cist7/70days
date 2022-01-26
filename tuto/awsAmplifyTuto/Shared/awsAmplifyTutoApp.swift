@@ -9,6 +9,8 @@ import Amplify
 import AWSAPIPlugin
 import AWSDataStorePlugin
 
+import AWSCognitoAuthPlugin
+import AWSS3StoragePlugin
 //import AWSAppSync
 
 import SwiftUI
@@ -32,6 +34,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         do {
             
             try Amplify.add(plugin: AWSAPIPlugin(modelRegistration: AmplifyModels()))
+            
+            //S3 filesave
+            try Amplify.add(plugin: AWSCognitoAuthPlugin())
+            try Amplify.add(plugin: AWSS3StoragePlugin())
+            
             try Amplify.configure()
             
 //            createMemory()
@@ -51,6 +58,166 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
         return true
     }
+    
+//    func uploadData() {
+    func uploadImage(image: UIImage) {
+//        let dataString = "Example file contents"
+//        let data = dataString.data(using: .utf8)!
+        guard let data = image.pngData() else { return }
+        Amplify.Storage.uploadData(key: "ExampleKey", data: data,
+            progressListener: { progress in
+                print("Progress: \(progress)")
+            }, resultListener: { (event) in
+                switch event {
+                case .success(let data):
+                    print("Completed: \(data)")
+                case .failure(let storageError):
+                    print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+            }
+        })
+    }
+    
+    //-----------------------------------------------------------------------------
+    // upload file
+    
+    var storageOperation: StorageUploadFileOperation
+    func uploadFile(url: String) {
+        let dataString = "My Data"
+        let fileNameKey = "myFile.txt"
+        let filename = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent(fileNameKey)
+        do {
+            try dataString.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            print("Failed to write to file \(error)")
+        }
+
+        storageOperation = Amplify.Storage.uploadFile(
+            key: fileNameKey,
+            local: filename,
+            progressListener: { progress in
+                print("Progress: \(progress)")
+            }, resultListener: { event in
+                switch event {
+                case let .success(data):
+                    print("Completed: \(data)")
+                case let .failure(storageError):
+                    print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+                }
+            }
+        )
+    }
+    
+    func downloadData() {
+        let storageOperation = Amplify.Storage.downloadData(
+            key: "myKey",
+            progressListener: { progress in
+                print("Progress: \(progress)")
+            }, resultListener: { (event) in
+                switch event {
+                case let .success(data):
+                    print("Completed: \(data)")
+                case let .failure(storageError):
+                    print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+            }
+        })
+    }
+    func downloadFile() {
+        let downloadToFileName = FileManager.default.urls(for: .documentDirectory,
+                                                          in: .userDomainMask)[0]
+            .appendingPathComponent("myFile.txt")
+
+        let storageOperation = Amplify.Storage.downloadFile(
+            key: "myKey",
+            local: downloadToFileName,
+            progressListener: { progress in
+                print("Progress: \(progress)")
+            }, resultListener: { event in
+                switch event {
+                case .success:
+                    print("Completed")
+                case .failure(let storageError):
+                    print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+                }
+            })
+    }
+    
+    func downloadUrl() {
+        Amplify.Storage.getURL(key: "myKey") { event in
+            switch event {
+            case let .success(url):
+                print("Completed: \(url)")
+            case let .failure(storageError):
+                print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+            }
+        }
+    }
+    
+    func s3AllFileList() {
+        Amplify.Storage.list { event in
+            switch event {
+            case let .success(listResult):
+                print("Completed")
+                listResult.items.forEach { item in
+                    print("Key: \(item.key)")
+                }
+            case let .failure(storageError):
+                print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+            }
+        }
+    }
+    
+    func removeFile() {
+        Amplify.Storage.remove(key: "myKey") { event in
+            switch event {
+            case let .success(data):
+                print("Completed: Deleted \(data)")
+            case let .failure(storageError):
+                print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+            }
+        }
+    }
+    
+    func uploadData(key: String, data: Data) {
+        let options = StorageUploadDataRequest.Options(accessLevel: .protected)
+//        let options = StorageUploadDataRequest.Options(accessLevel: .private) //private
+        Amplify.Storage.uploadData(key: key, data: data, options: options) { progress in
+            print("Progress: \(progress)")
+        } resultListener: { event in
+            switch event {
+            case .success(let data):
+                print("Completed: \(data)")
+            case .failure(let storageError):
+                print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+            }
+        }
+    }
+    
+    func downloadData(key: String, identityId: String) {
+        let options = StorageDownloadDataRequest.Options(accessLevel: .protected, targetIdentityId: identityId)
+//        let options = StorageDownloadDataRequest.Options(accessLevel: .private) //private
+        Amplify.Storage.downloadData(
+            key: key,
+            options: options,
+            progressListener: { progress in
+                print("Progress: \(progress)")
+            }, resultListener: { (event) in
+                switch event {
+                case let .success(data):
+                    print("Completed: \(data)")
+                case let .failure(storageError):
+                    print("Failed: \(storageError.errorDescription). \(storageError.recoverySuggestion)")
+            }
+        })
+    }
+    
+    func cancelUpload() {
+        storageOperation.cancel()
+        
+//        storageOperation.pause()
+//        storageOperation.resume()
+    }
+    //-----------------------------------------------------------------------------
     
     func saveMemory(name: String) {
         let memory = CTMemory(name: name)
