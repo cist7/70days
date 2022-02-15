@@ -35,7 +35,7 @@
         "GraphQLAPIEndpointOutput": "https://fyrdriktujahphi3b5utp6nkfa.appsync-api.ap-northeast-2.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-lygbnx7w45e6tlziqiiqmzwnuu"
       },
-      "lastPushTimeStamp": "2022-01-21T07:27:25.581Z",
+      "lastPushTimeStamp": "2022-01-27T04:23:32.460Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiawsAmplifyTuto"
@@ -83,12 +83,24 @@
         "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://8u6gdzadlcme-dev.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse\"],\"LogoutURLs\":[\"https://8u6gdzadlcme-dev.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse\"]}",
         "UserPoolName": "awsAmplifyTuto"
       },
-      "lastPushTimeStamp": "2022-01-21T07:27:25.592Z",
+      "lastPushTimeStamp": "2022-01-27T04:23:32.465Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/auth/awsAmplifyTuto-cloudformation-template.json",
         "logicalId": "authawsAmplifyTuto"
+      }
+    }
+  },
+  "storage": {
+    "awsamplifytutobeb29be6": {
+      "service": "S3",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "BucketName": "amplify-70days-staging-51214-deployment",
+        "Region": "ap-northeast-2"
       },
-      "lastPushDirHash": "vqq5+WbgcQyqZAOlxm1xtZEekSY="
+      "lastPushTimeStamp": "2022-01-27T04:23:36.244Z"
     }
   }
 }

@@ -51,5 +51,13 @@
         ]
       }
     }
+  },
+  "storage": {
+    "awsamplifytutobeb29be6": {
+      "service": "S3",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
+    }
   }
 }

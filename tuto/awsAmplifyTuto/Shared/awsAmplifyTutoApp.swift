@@ -30,14 +30,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     @Published var memoryList: MemoryList = MemoryList()
     
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         do {
             
             try Amplify.add(plugin: AWSAPIPlugin(modelRegistration: AmplifyModels()))
             
             //S3 filesave
-            try Amplify.add(plugin: AWSCognitoAuthPlugin())
-            try Amplify.add(plugin: AWSS3StoragePlugin())
+//            try Amplify.add(plugin: AWSCognitoAuthPlugin())       //CognitoAuthPlgin auth 에러 발생하여 주석처리
+//            try Amplify.add(plugin: AWSS3StoragePlugin())         //AWSS3StoragePlugin auth 에러 발생하여 주석처리
             
             try Amplify.configure()
             
@@ -80,7 +81,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     //-----------------------------------------------------------------------------
     // upload file
     
-    var storageOperation: StorageUploadFileOperation
+//    /: StorageUploadFileOperation = StorageUploadFileRequest()
     func uploadFile(url: String) {
         let dataString = "My Data"
         let fileNameKey = "myFile.txt"
@@ -92,7 +93,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             print("Failed to write to file \(error)")
         }
 
-        storageOperation = Amplify.Storage.uploadFile(
+        let storageOperation = Amplify.Storage.uploadFile(
             key: fileNameKey,
             local: filename,
             progressListener: { progress in
@@ -211,12 +212,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         })
     }
     
-    func cancelUpload() {
-        storageOperation.cancel()
-        
-//        storageOperation.pause()
-//        storageOperation.resume()
-    }
+//    func cancelUpload() {
+//        storageOperation.cancel()
+//
+////        storageOperation.pause()
+////        storageOperation.resume()
+//    }
     //-----------------------------------------------------------------------------
     
     func saveMemory(name: String) {

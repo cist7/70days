@@ -14,14 +14,6 @@
 		BE0FD9C12798F2B900E95414 /* CTMemory+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */; };
 		BE0FD9C22798F2B900E95414 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */; };
 		BE0FD9C32798F2B900E95414 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */; };
-		BE0FD9D2279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */; };
-		BE0FD9D3279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */; };
-		BE0FD9D5279FC75500E95414 /* awsconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */; };
-		BE0FD9D6279FC75500E95414 /* awsconfiguration.json2.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */; };
-		BE0FD9DF279FCC5400E95414 /* amplifyconfiguration3.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9DD279FCC5400E95414 /* amplifyconfiguration3.json */; };
-		BE0FD9E0279FCC5400E95414 /* amplifyconfiguration3.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9DD279FCC5400E95414 /* amplifyconfiguration3.json */; };
-		BE0FD9E1279FCC5400E95414 /* awsconfiguration3.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9DE279FCC5400E95414 /* awsconfiguration3.json */; };
-		BE0FD9E2279FCC5400E95414 /* awsconfiguration3.json in Resources */ = {isa = PBXBuildFile; fileRef = BE0FD9DE279FCC5400E95414 /* awsconfiguration3.json */; };
 		BE0FD9E527A10C9B00E95414 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = BE0FD9E427A10C9B00E95414 /* AWSAPIPlugin */; };
 		BE0FD9E727A10C9B00E95414 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = BE0FD9E627A10C9B00E95414 /* AWSCognitoAuthPlugin */; };
 		BE0FD9E927A10C9B00E95414 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = BE0FD9E827A10C9B00E95414 /* AWSDataStorePlugin */; };
@@ -38,6 +30,10 @@
 		BEC5FED62797C8A300A2C017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC5FEC32797C8A300A2C017 /* Assets.xcassets */; };
 		BEC5FEED2797DB7300A2C017 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEEC2797DB7300A2C017 /* API.swift */; };
 		BEC5FEEE2797DB7300A2C017 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5FEEC2797DB7300A2C017 /* API.swift */; };
+		BEEABACA27BB66A200609622 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEEABAC827BB66A200609622 /* amplifyconfiguration.json */; };
+		BEEABACB27BB66A200609622 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEEABAC827BB66A200609622 /* amplifyconfiguration.json */; };
+		BEEABACC27BB66A200609622 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEEABAC927BB66A200609622 /* awsconfiguration.json */; };
+		BEEABACD27BB66A200609622 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = BEEABAC927BB66A200609622 /* awsconfiguration.json */; };
 		F2C156C1657CBFD64D49A03D /* Pods_awsAmplifyTuto__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA0841EBED107B85193949A /* Pods_awsAmplifyTuto__macOS_.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,10 +45,6 @@
 		BE0FD9BB2798F2B900E95414 /* CTMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CTMemory.swift; path = amplify/generated/models/CTMemory.swift; sourceTree = SOURCE_ROOT; };
 		BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CTMemory+Schema.swift"; path = "amplify/generated/models/CTMemory+Schema.swift"; sourceTree = SOURCE_ROOT; };
 		BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = SOURCE_ROOT; };
-		BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json2.json; sourceTree = "<group>"; };
-		BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json2.json; sourceTree = "<group>"; };
-		BE0FD9DD279FCC5400E95414 /* amplifyconfiguration3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration3.json; sourceTree = "<group>"; };
-		BE0FD9DE279FCC5400E95414 /* awsconfiguration3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration3.json; sourceTree = "<group>"; };
 		BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awsAmplifyTutoApp.swift; sourceTree = "<group>"; };
 		BEC5FEC22797C8A100A2C017 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BEC5FEC32797C8A300A2C017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +52,8 @@
 		BEC5FECE2797C8A300A2C017 /* awsAmplifyTuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awsAmplifyTuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC5FED02797C8A300A2C017 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		BEC5FEEC2797DB7300A2C017 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
+		BEEABAC827BB66A200609622 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		BEEABAC927BB66A200609622 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		FBA0841EBED107B85193949A /* Pods_awsAmplifyTuto__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awsAmplifyTuto__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE404AA843C4B910E27865FF /* Pods-awsAmplifyTuto (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awsAmplifyTuto (iOS).debug.xcconfig"; path = "Target Support Files/Pods-awsAmplifyTuto (iOS)/Pods-awsAmplifyTuto (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,8 +100,6 @@
 		BE0FD9BA2798F2A500E95414 /* AWSModels */ = {
 			isa = PBXGroup;
 			children = (
-				BE0FD9D4279FC75500E95414 /* awsconfiguration.json2.json */,
-				BE0FD9D1279FC72700E95414 /* amplifyconfiguration.json2.json */,
 				BE0FD9BD2798F2B900E95414 /* AmplifyModels.swift */,
 				BE0FD9BB2798F2B900E95414 /* CTMemory.swift */,
 				BE0FD9BC2798F2B900E95414 /* CTMemory+Schema.swift */,
@@ -118,8 +110,6 @@
 		BEC5FEBB2797C8A100A2C017 = {
 			isa = PBXGroup;
 			children = (
-				BE0FD9DD279FCC5400E95414 /* amplifyconfiguration3.json */,
-				BE0FD9DE279FCC5400E95414 /* awsconfiguration3.json */,
 				BEC5FEC02797C8A100A2C017 /* Shared */,
 				BEC5FECF2797C8A300A2C017 /* macOS */,
 				BEC5FEC92797C8A300A2C017 /* Products */,
@@ -131,6 +121,8 @@
 		BEC5FEC02797C8A100A2C017 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BEEABAC827BB66A200609622 /* amplifyconfiguration.json */,
+				BEEABAC927BB66A200609622 /* awsconfiguration.json */,
 				BE0FD9BA2798F2A500E95414 /* AWSModels */,
 				BEC5FEEC2797DB7300A2C017 /* API.swift */,
 				BEC5FEC12797C8A100A2C017 /* awsAmplifyTutoApp.swift */,
@@ -260,11 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE0FD9E1279FCC5400E95414 /* awsconfiguration3.json in Resources */,
+				BEEABACC27BB66A200609622 /* awsconfiguration.json in Resources */,
+				BEEABACA27BB66A200609622 /* amplifyconfiguration.json in Resources */,
 				BEC5FED52797C8A300A2C017 /* Assets.xcassets in Resources */,
-				BE0FD9D5279FC75500E95414 /* awsconfiguration.json2.json in Resources */,
-				BE0FD9D2279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */,
-				BE0FD9DF279FCC5400E95414 /* amplifyconfiguration3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,11 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE0FD9E2279FCC5400E95414 /* awsconfiguration3.json in Resources */,
+				BEEABACD27BB66A200609622 /* awsconfiguration.json in Resources */,
+				BEEABACB27BB66A200609622 /* amplifyconfiguration.json in Resources */,
 				BEC5FED62797C8A300A2C017 /* Assets.xcassets in Resources */,
-				BE0FD9D6279FC75500E95414 /* awsconfiguration.json2.json in Resources */,
-				BE0FD9D3279FC72700E95414 /* amplifyconfiguration.json2.json in Resources */,
-				BE0FD9E0279FCC5400E95414 /* amplifyconfiguration3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -463,6 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -486,7 +476,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -517,7 +507,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

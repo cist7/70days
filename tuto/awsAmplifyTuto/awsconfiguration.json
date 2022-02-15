@@ -1,22 +1,22 @@
-{
-    "UserAgent": "aws-amplify/cli",
-    "Version": "0.1.0",
+﻿{
+    "UserAgent": "aws-amplify-cli/0.1.0",
+    "Version": "1.0",
     "IdentityManager": {
         "Default": {}
     },
     "AppSync": {
         "Default": {
-            "ApiUrl": "https://fyrdriktujahphi3b5utp6nkfa.appsync-api.ap-northeast-2.amazonaws.com/graphql",
+            "ApiUrl": "https://w6kly7tnlfeb3hcwflh6krzar4.appsync-api.ap-northeast-2.amazonaws.com/graphql",
             "Region": "ap-northeast-2",
             "AuthMode": "API_KEY",
-            "ApiKey": "da2-lygbnx7w45e6tlziqiiqmzwnuu",
-            "ClientDatabasePrefix": "awsAmplifyTuto_API_KEY"
+            "ApiKey": "da2-jj4rlix6cnft5pyn6wlyvpwyyi",
+            "ClientDatabasePrefix": "70days-staging_API_KEY"
         },
-        "awsAmplifyTuto_AWS_IAM": {
-            "ApiUrl": "https://fyrdriktujahphi3b5utp6nkfa.appsync-api.ap-northeast-2.amazonaws.com/graphql",
+        "70days-staging_AWS_IAM": {
+            "ApiUrl": "https://w6kly7tnlfeb3hcwflh6krzar4.appsync-api.ap-northeast-2.amazonaws.com/graphql",
             "Region": "ap-northeast-2",
             "AuthMode": "AWS_IAM",
-            "ClientDatabasePrefix": "awsAmplifyTuto_AWS_IAM"
+            "ClientDatabasePrefix": "70days-staging_AWS_IAM"
         }
     }
 }

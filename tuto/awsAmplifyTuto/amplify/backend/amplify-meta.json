@@ -35,12 +35,11 @@
         "GraphQLAPIEndpointOutput": "https://fyrdriktujahphi3b5utp6nkfa.appsync-api.ap-northeast-2.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-lygbnx7w45e6tlziqiiqmzwnuu"
       },
-      "lastPushTimeStamp": "2022-01-26T04:54:35.212Z",
+      "lastPushTimeStamp": "2022-02-15T04:57:01.749Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiawsAmplifyTuto"
-      },
-      "lastPushDirHash": "zoLLqTu5/UwZwYZxmV77WKvCSxE="
+      }
     }
   },
   "auth": {
@@ -66,12 +65,7 @@
         "verificationMechanisms": [
           "EMAIL"
         ]
-      },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/auth/awsamplifytuto72201e3c-cloudformation-template.json",
-        "logicalId": "authawsamplifytuto72201e3c"
-      },
-      "lastPushTimeStamp": "2022-01-26T04:54:35.222Z"
+      }
     }
   },
   "storage": {
@@ -79,11 +73,7 @@
       "service": "S3",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
-      "lastPushTimeStamp": "2022-01-26T04:54:35.310Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "logicalId": "storageS370days"
-      }
+      "lastPushTimeStamp": "2022-02-15T04:57:03.941Z"
     }
   }
 }
