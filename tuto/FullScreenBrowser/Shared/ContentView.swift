@@ -137,46 +137,55 @@ struct BottomMenuBarFlexibleView: View {
 //                        Text(bar ? "Before" : "After")
                 Spacer()
                 HStack {
+                    HStack {
+                        Button(action: {
+    //                            self.viewModel.foo.send(true)
+                        }) {
+                            Text("<")
+                        }
+                        Spacer()
+                            .frame(width: 30, height: 10)
+                        Button(action: {
+    //                            self.viewModel.foo.send(true)
+                        }) {
+                            Text(">")
+                        }
+                    }
+                    .frame(width: 70, height: 30, alignment: .center)
+                    Spacer()
                     Button(action: {
-//                            self.viewModel.foo.send(true)
+    //                        self.viewModel.foo.send(true)
                     }) {
-                        Text("<")
+    //                    Text("Address")
+                        TextField("Input Address", text: $addressStr)
                     }
                     Spacer()
-                        .frame(width: 30, height: 10)
                     Button(action: {
-//                            self.viewModel.foo.send(true)
+    //                        self.viewModel.foo.send(true)
                     }) {
-                        Text(">")
+                        Text("Refresh")
+                    }
+                    Spacer()
+                    Button(action: {
+    //                        self.viewModel.foo.send(true)
+    //                        favoriteToggleOn.toggle()
+                        self.$isFavoriteToggleOn.wrappedValue.toggle()
+                    }) {
+                        Text("Favorite")
                     }
                 }
-                .frame(width: 70, height: 30, alignment: .center)
-                Spacer()
-                Button(action: {
-//                        self.viewModel.foo.send(true)
-                }) {
-//                    Text("Address")
-                    TextField("Input Address", text: $addressStr)
-                }
-                Spacer()
-                Button(action: {
-//                        self.viewModel.foo.send(true)
-                }) {
-                    Text("Refresh")
-                }
-                Spacer()
-                Button(action: {
-//                        self.viewModel.foo.send(true)
-//                        favoriteToggleOn.toggle()
-                    self.$isFavoriteToggleOn.wrappedValue.toggle()
-                }) {
-                    Text("Favorite")
-                }
+                .padding(.top, 10)
+                .font(.system(size: 14, weight: .regular, design: .default))
+//                .font(Font.system(size: 10, weight: .regular, design: Font.Design.default)
+                .foregroundColor(.white)
                 Spacer()
             }
-            .frame(height: 50, alignment: .center)
-            .background(.white)
-//            .opacity(0.5)
+            .frame(height: 60, alignment: .center)
+//            .background(.white)
+            .background(.gray)
+            .cornerRadius(10)
+            .padding(.top, -10)
+            .clipped()
             HStack {
                 Button {
 //                        Text("=")
@@ -184,8 +193,9 @@ struct BottomMenuBarFlexibleView: View {
                 } label: {
                     VStack {
                         Text("===").foregroundColor(Color.black)
-                        Text("===").foregroundColor(Color.black)
+//                        Text("===").foregroundColor(Color.black)
                     }
+                    .padding(.top, -10)
                 }
             }
             .frame(height: 20, alignment: .center)
@@ -310,7 +320,7 @@ struct ContentView: View {
     @State var isTopFavoriteToggleOn:Bool = false
     @State var isBottomFavoriteToggleOn:Bool = false
     
-    @State var webViewDefaultHeight: CGFloat = 400
+    @State var webViewDefaultHeight: CGFloat = 470
     @State var webViewBgColor: Color = .clear
     
     @State var addrString: String = ""
@@ -333,16 +343,13 @@ struct ContentView: View {
 //                                    Spacer()
 //                                    BottomMenuBarView(isFavoriteToggleOn: $isTopFavoriteToggleOn)
                                     BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
-                                        .background(webViewBgColor)
-//                                        .cornerRadius(10)
+                                        .background(.clear)
                                     
-                                        .onTapGesture {
-                        //                    isPresention.toggle()
-                                        }
                                 }
                             }
                         }
                         .cornerRadius(10)
+                        .clipped()
                         .background(webViewBgColor)
                         .frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
                         
@@ -350,24 +357,26 @@ struct ContentView: View {
                             .frame(height: 10, alignment: .center)
                             .background(.gray)
                         
-                        VStack {
-                            if self.isBottomFavoriteToggleOn {
+                        VStack(spacing: 0) {
+                            if self.isTopFavoriteToggleOn {
                                 ZStack {
-                                    FavoriteListView(isCloseButtonToggleOn: $isBottomFavoriteToggleOn)
+                                    FavoriteListView(isCloseButtonToggleOn: $isTopFavoriteToggleOn)
                                 }
                             } else {
-                                ZStack {
+//                                ZStack {
+                                VStack(spacing: 0) {
+                                    
                                     WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1h", viewModel: viewModel)
-        //                            WebView(url: "https://upbit.com/exchange", viewModel: viewModel)
-                                    Spacer()
-                                    BottomMenuBarView(isFavoriteToggleOn: $isBottomFavoriteToggleOn)
-                                        .onTapGesture {
-                        //                    isPresention.toggle()
-                                        }
+//                                    Spacer()
+//                                    BottomMenuBarView(isFavoriteToggleOn: $isTopFavoriteToggleOn)
+                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
+                                        .background(.clear)
+                                    
                                 }
                             }
                         }
                         .cornerRadius(10)
+                        .clipped()
                         .background(webViewBgColor)
                         .frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
                         
@@ -375,24 +384,26 @@ struct ContentView: View {
                             .frame(height: 10, alignment: .center)
                             .background(.gray)
                         
-                        VStack {
-                            if self.isBottomFavoriteToggleOn {
+                        VStack(spacing: 0) {
+                            if self.isTopFavoriteToggleOn {
                                 ZStack {
-                                    FavoriteListView(isCloseButtonToggleOn: $isBottomFavoriteToggleOn)
+                                    FavoriteListView(isCloseButtonToggleOn: $isTopFavoriteToggleOn)
                                 }
                             } else {
-                                ZStack {
+//                                ZStack {
+                                VStack(spacing: 0) {
+                                    
                                     WebView(url: "https://www.naver.com", viewModel: viewModel)
-        //                            WebView(url: "https://upbit.com/exchange", viewModel: viewModel)
-                                    Spacer()
-                                    BottomMenuBarView(isFavoriteToggleOn: $isBottomFavoriteToggleOn)
-                                        .onTapGesture {
-                        //                    isPresention.toggle()
-                                        }
+//                                    Spacer()
+//                                    BottomMenuBarView(isFavoriteToggleOn: $isTopFavoriteToggleOn)
+                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
+                                        .background(.clear)
+                                    
                                 }
                             }
                         }
                         .cornerRadius(10)
+                        .clipped()
                         .background(webViewBgColor)
                         .frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
                         
@@ -422,11 +433,11 @@ struct ContentView: View {
                         .frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
                     }
                 }
-                .background(.blue)
+                .background(.black)
                 .frame(alignment: .center)
                 .padding(.leading, 10)
             }
-            .background(.blue)
+            .background(.black)
             .frame(alignment: .center)
         }
     }
