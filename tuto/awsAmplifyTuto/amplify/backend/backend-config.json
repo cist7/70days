@@ -1,6 +1,6 @@
 {
   "api": {
-    "awsAmplifyTuto": {
+    "70days": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -8,8 +8,9 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 30,
-              "description": "api key description"
+              "apiKeyExpirationDays": 300,
+              "apiKeyExpirationDate": "2022-12-14T01:56:57.214Z",
+              "description": "70daysApiKey"
             }
           },
           "additionalAuthenticationProviders": [
@@ -22,16 +23,20 @@
     }
   },
   "auth": {
-    "awsamplifytuto72201e3c": {
+    "70days": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [],
-        "usernameAttributes": [],
-        "signupAttributes": [
+        "usernameAttributes": [
           "EMAIL"
+        ],
+        "signupAttributes": [
+          "PHONE_NUMBER",
+          "EMAIL",
+          "NICKNAME"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
@@ -45,13 +50,6 @@
           "EMAIL"
         ]
       }
-    }
-  },
-  "storage": {
-    "S370days": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": []
     }
   }
 }

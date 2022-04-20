@@ -4,12 +4,12 @@
     "api": {
         "plugins": {
             "awsAPIPlugin": {
-                "awsAmplifyTuto": {
+                "70days": {
                     "endpointType": "GraphQL",
-                    "endpoint": "https://fyrdriktujahphi3b5utp6nkfa.appsync-api.ap-northeast-2.amazonaws.com/graphql",
+                    "endpoint": "https://w6kly7tnlfeb3hcwflh6krzar4.appsync-api.ap-northeast-2.amazonaws.com/graphql",
                     "region": "ap-northeast-2",
                     "authorizationType": "API_KEY",
-                    "apiKey": "da2-lygbnx7w45e6tlziqiiqmzwnuu"
+                    "apiKey": "da2-jj4rlix6cnft5pyn6wlyvpwyyi"
                 }
             }
         }
@@ -24,17 +24,57 @@
                 },
                 "AppSync": {
                     "Default": {
-                        "ApiUrl": "https://fyrdriktujahphi3b5utp6nkfa.appsync-api.ap-northeast-2.amazonaws.com/graphql",
+                        "ApiUrl": "https://w6kly7tnlfeb3hcwflh6krzar4.appsync-api.ap-northeast-2.amazonaws.com/graphql",
                         "Region": "ap-northeast-2",
                         "AuthMode": "API_KEY",
-                        "ApiKey": "da2-lygbnx7w45e6tlziqiiqmzwnuu",
-                        "ClientDatabasePrefix": "awsAmplifyTuto_API_KEY"
+                        "ApiKey": "da2-jj4rlix6cnft5pyn6wlyvpwyyi",
+                        "ClientDatabasePrefix": "70days_API_KEY"
                     },
-                    "awsAmplifyTuto_AWS_IAM": {
-                        "ApiUrl": "https://fyrdriktujahphi3b5utp6nkfa.appsync-api.ap-northeast-2.amazonaws.com/graphql",
+                    "70days_AWS_IAM": {
+                        "ApiUrl": "https://w6kly7tnlfeb3hcwflh6krzar4.appsync-api.ap-northeast-2.amazonaws.com/graphql",
                         "Region": "ap-northeast-2",
                         "AuthMode": "AWS_IAM",
-                        "ClientDatabasePrefix": "awsAmplifyTuto_AWS_IAM"
+                        "ClientDatabasePrefix": "70days_AWS_IAM"
+                    }
+                },
+                "CredentialsProvider": {
+                    "CognitoIdentity": {
+                        "Default": {
+                            "PoolId": "ap-northeast-2:985122b1-17a3-4436-958d-1df9339e04c1",
+                            "Region": "ap-northeast-2"
+                        }
+                    }
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "ap-northeast-2_vaYiqoeO3",
+                        "AppClientId": "4sdvrrgs0rtgmsv0jkhi5b6p94",
+                        "Region": "ap-northeast-2"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "authenticationFlowType": "USER_SRP_AUTH",
+                        "socialProviders": [],
+                        "usernameAttributes": [
+                            "EMAIL"
+                        ],
+                        "signupAttributes": [
+                            "PHONE_NUMBER",
+                            "EMAIL",
+                            "NICKNAME"
+                        ],
+                        "passwordProtectionSettings": {
+                            "passwordPolicyMinLength": 8,
+                            "passwordPolicyCharacters": []
+                        },
+                        "mfaConfiguration": "OFF",
+                        "mfaTypes": [
+                            "SMS"
+                        ],
+                        "verificationMechanisms": [
+                            "EMAIL"
+                        ]
                     }
                 }
             }

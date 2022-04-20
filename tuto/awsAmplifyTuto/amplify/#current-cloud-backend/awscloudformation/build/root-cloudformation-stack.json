@@ -152,30 +152,35 @@
         }
       }
     },
-    "apiawsAmplifyTuto": {
+    "api70days": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-70days-staging-51214-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "Parameters": {
-          "CreateAPIKey": 1,
-          "AppSyncApiName": "awsAmplifyTuto",
+          "AppSyncApiName": "70days",
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
           "DynamoDBEnableServerSideEncryption": false,
-          "S3DeploymentBucket": "amplify-awsamplifytuto-dev-132818-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/19ab15c133ddbc9a8f7b501688dd51a607c65ed2",
-          "env": "dev"
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "S3DeploymentBucket": "amplify-70days-staging-51214-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/90810f07905d9ce7a44d68c594b3315e31cdf2c6",
+          "env": "staging"
         }
       }
     },
-    "authawsAmplifyTuto": {
+    "auth70days": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/auth/awsAmplifyTuto-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-70days-staging-51214-deployment/amplify-cfn-templates/auth/70days-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "testAuthIdentityPool",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "awsamp75218052",
-          "userPoolName": "awsAmplifyTuto",
+          "resourceNameTruncated": "70days2141b16a",
+          "userPoolName": "70days",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -186,16 +191,16 @@
           "defaultPasswordPolicy": false,
           "passwordPolicyMinLength": 8,
           "passwordPolicyCharacters": "",
-          "requiredAttributes": "phone_number,email",
+          "requiredAttributes": "phone_number,email,nickname",
           "aliasAttributes": "",
           "userpoolClientGenerateSecret": false,
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "",
           "userpoolClientReadAttributes": "",
-          "userpoolClientLambdaRole": "awsAmp75218052_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "70days2141b16a_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "75218052",
-          "resourceName": "awsAmplifyTuto",
+          "sharedId": "2141b16a",
+          "resourceName": "70days",
           "authSelections": "identityPoolAndUserPool",
           "serviceName": "Cognito",
           "usernameAttributes": "email,phone_number",
@@ -205,12 +210,8 @@
           "adminQueries": false,
           "thirdPartyAuth": false,
           "authProviders": "",
-          "hostedUI": true,
-          "hostedUIDomainName": "8u6gdzadlcme",
-          "authProvidersUserPool": "Google",
-          "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid profile email\",\"AttributeMapping\":{\"phone_number\":\"phoneNumbers\",\"email\":\"email\",\"username\":\"sub\"}}]",
-          "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://8u6gdzadlcme-dev.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse\"],\"LogoutURLs\":[\"https://8u6gdzadlcme-dev.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse\"]}",
-          "useEnabledMfas": false,
+          "usernameCaseSensitive": false,
+          "useEnabledMfas": true,
           "authRoleArn": {
             "Fn::GetAtt": [
               "AuthRole",
@@ -223,10 +224,9 @@
               "Arn"
             ]
           },
-          "breakCircularDependency": false,
+          "breakCircularDependency": true,
           "dependsOn": "",
-          "hostedUIProviderCreds": "[{\"ProviderName\":\"Google\",\"client_id\":\"509663314059-t2tivl8m0fnvt5tof7l23ng5iml3ss1m.apps.googleusercontent.com\",\"client_secret\":\"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\"}]",
-          "env": "dev"
+          "env": "staging"
         }
       }
     },
@@ -234,7 +234,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authawsAmplifyTuto"
+        "auth70days"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -329,7 +329,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authawsAmplifyTuto",
+            "auth70days",
             "Outputs.IdentityPoolId"
           ]
         },

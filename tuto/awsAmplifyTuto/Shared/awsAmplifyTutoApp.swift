@@ -9,8 +9,8 @@ import Amplify
 import AWSAPIPlugin
 import AWSDataStorePlugin
 
-import AWSCognitoAuthPlugin
-import AWSS3StoragePlugin
+//import AWSCognitoAuthPlugin
+//import AWSS3StoragePlugin
 //import AWSAppSync
 
 import SwiftUI
@@ -28,6 +28,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 //      name: String
 //    }
     
+    
     @Published var memoryList: MemoryList = MemoryList()
     
     
@@ -44,7 +45,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             
 //            createMemory()
             print("Amplify configured with API plugin")
-            listMemories()
+//            listMemories()
 //            getMemories()
 //                switch result {
 //                    case .success:

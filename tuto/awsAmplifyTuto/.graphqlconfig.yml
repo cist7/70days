@@ -1,6 +1,6 @@
 projects:
-  awsAmplifyTuto-dev:
-    schemaPath: graphql/schema.json
+  70days:
+    schemaPath: amplify/backend/api/70days/build/schema.graphql
     includes:
       - graphql/**/*.graphql
     excludes:
@@ -11,7 +11,7 @@ projects:
         generatedFileName: API.swift
         docsFilePath: graphql
         region: ap-northeast-2
-        apiId: l7i2mvbdgbfcrb7gc3v6ceqmuu
+        apiId: null
         maxDepth: 2
 extensions:
   amplify:

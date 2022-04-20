@@ -583,7 +583,7 @@
 //
 //public final class CreateCtMemoryMutation: GraphQLMutation {
 //  public static let operationString =
-//    "mutation CreateCtMemory($input: CreateCTMemoryInput!, $condition: ModelCTMemoryConditionInput) {\n  createCTMemory(input: $input, condition: $condition) {\n    __typename\n    id\n    name\n    _version\n    _deleted\n    _lastChangedAt\n    createdAt\n    updatedAt\n  }\n}"
+//    "mutation CreateCTMemory($input: CreateCTMemoryInput!, $condition: ModelCTMemoryConditionInput) {\n  createCTMemory(input: $input, condition: $condition) {\n    __typename\n    id\n    name\n    createdAt\n    updatedAt\n    _version\n    _deleted\n    _lastChangedAt\n  }\n}"
 //
 //  public var input: CreateCTMemoryInput
 //  public var condition: ModelCTMemoryConditionInput?
@@ -630,11 +630,11 @@
 //        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
 //        GraphQLField("name", type: .scalar(String.self)),
+//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
+//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("_version", type: .nonNull(.scalar(Int.self))),
 //        GraphQLField("_deleted", type: .scalar(Bool.self)),
 //        GraphQLField("_lastChangedAt", type: .nonNull(.scalar(Int.self))),
-//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
-//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //      ]
 //
 //      public var snapshot: Snapshot
@@ -643,8 +643,8 @@
 //        self.snapshot = snapshot
 //      }
 //
-//      public init(id: GraphQLID, name: String? = nil, version: Int, deleted: Bool? = nil, lastChangedAt: Int, createdAt: String, updatedAt: String) {
-//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt, "createdAt": createdAt, "updatedAt": updatedAt])
+//      public init(id: GraphQLID, name: String? = nil, createdAt: String, updatedAt: String, version: Int, deleted: Bool? = nil, lastChangedAt: Int) {
+//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "createdAt": createdAt, "updatedAt": updatedAt, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt])
 //      }
 //
 //      public var __typename: String {
@@ -674,6 +674,24 @@
 //        }
 //      }
 //
+//      public var createdAt: String {
+//        get {
+//          return snapshot["createdAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "createdAt")
+//        }
+//      }
+//
+//      public var updatedAt: String {
+//        get {
+//          return snapshot["updatedAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "updatedAt")
+//        }
+//      }
+//
 //      public var version: Int {
 //        get {
 //          return snapshot["_version"]! as! Int
@@ -700,31 +718,13 @@
 //          snapshot.updateValue(newValue, forKey: "_lastChangedAt")
 //        }
 //      }
-//
-//      public var createdAt: String {
-//        get {
-//          return snapshot["createdAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "createdAt")
-//        }
-//      }
-//
-//      public var updatedAt: String {
-//        get {
-//          return snapshot["updatedAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "updatedAt")
-//        }
-//      }
 //    }
 //  }
 //}
 //
 //public final class UpdateCtMemoryMutation: GraphQLMutation {
 //  public static let operationString =
-//    "mutation UpdateCtMemory($input: UpdateCTMemoryInput!, $condition: ModelCTMemoryConditionInput) {\n  updateCTMemory(input: $input, condition: $condition) {\n    __typename\n    id\n    name\n    _version\n    _deleted\n    _lastChangedAt\n    createdAt\n    updatedAt\n  }\n}"
+//    "mutation UpdateCTMemory($input: UpdateCTMemoryInput!, $condition: ModelCTMemoryConditionInput) {\n  updateCTMemory(input: $input, condition: $condition) {\n    __typename\n    id\n    name\n    createdAt\n    updatedAt\n    _version\n    _deleted\n    _lastChangedAt\n  }\n}"
 //
 //  public var input: UpdateCTMemoryInput
 //  public var condition: ModelCTMemoryConditionInput?
@@ -771,11 +771,11 @@
 //        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
 //        GraphQLField("name", type: .scalar(String.self)),
+//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
+//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("_version", type: .nonNull(.scalar(Int.self))),
 //        GraphQLField("_deleted", type: .scalar(Bool.self)),
 //        GraphQLField("_lastChangedAt", type: .nonNull(.scalar(Int.self))),
-//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
-//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //      ]
 //
 //      public var snapshot: Snapshot
@@ -784,8 +784,8 @@
 //        self.snapshot = snapshot
 //      }
 //
-//      public init(id: GraphQLID, name: String? = nil, version: Int, deleted: Bool? = nil, lastChangedAt: Int, createdAt: String, updatedAt: String) {
-//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt, "createdAt": createdAt, "updatedAt": updatedAt])
+//      public init(id: GraphQLID, name: String? = nil, createdAt: String, updatedAt: String, version: Int, deleted: Bool? = nil, lastChangedAt: Int) {
+//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "createdAt": createdAt, "updatedAt": updatedAt, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt])
 //      }
 //
 //      public var __typename: String {
@@ -815,6 +815,24 @@
 //        }
 //      }
 //
+//      public var createdAt: String {
+//        get {
+//          return snapshot["createdAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "createdAt")
+//        }
+//      }
+//
+//      public var updatedAt: String {
+//        get {
+//          return snapshot["updatedAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "updatedAt")
+//        }
+//      }
+//
 //      public var version: Int {
 //        get {
 //          return snapshot["_version"]! as! Int
@@ -841,31 +859,13 @@
 //          snapshot.updateValue(newValue, forKey: "_lastChangedAt")
 //        }
 //      }
-//
-//      public var createdAt: String {
-//        get {
-//          return snapshot["createdAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "createdAt")
-//        }
-//      }
-//
-//      public var updatedAt: String {
-//        get {
-//          return snapshot["updatedAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "updatedAt")
-//        }
-//      }
 //    }
 //  }
 //}
 //
 //public final class DeleteCtMemoryMutation: GraphQLMutation {
 //  public static let operationString =
-//    "mutation DeleteCtMemory($input: DeleteCTMemoryInput!, $condition: ModelCTMemoryConditionInput) {\n  deleteCTMemory(input: $input, condition: $condition) {\n    __typename\n    id\n    name\n    _version\n    _deleted\n    _lastChangedAt\n    createdAt\n    updatedAt\n  }\n}"
+//    "mutation DeleteCTMemory($input: DeleteCTMemoryInput!, $condition: ModelCTMemoryConditionInput) {\n  deleteCTMemory(input: $input, condition: $condition) {\n    __typename\n    id\n    name\n    createdAt\n    updatedAt\n    _version\n    _deleted\n    _lastChangedAt\n  }\n}"
 //
 //  public var input: DeleteCTMemoryInput
 //  public var condition: ModelCTMemoryConditionInput?
@@ -912,11 +912,11 @@
 //        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
 //        GraphQLField("name", type: .scalar(String.self)),
+//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
+//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("_version", type: .nonNull(.scalar(Int.self))),
 //        GraphQLField("_deleted", type: .scalar(Bool.self)),
 //        GraphQLField("_lastChangedAt", type: .nonNull(.scalar(Int.self))),
-//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
-//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //      ]
 //
 //      public var snapshot: Snapshot
@@ -925,8 +925,8 @@
 //        self.snapshot = snapshot
 //      }
 //
-//      public init(id: GraphQLID, name: String? = nil, version: Int, deleted: Bool? = nil, lastChangedAt: Int, createdAt: String, updatedAt: String) {
-//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt, "createdAt": createdAt, "updatedAt": updatedAt])
+//      public init(id: GraphQLID, name: String? = nil, createdAt: String, updatedAt: String, version: Int, deleted: Bool? = nil, lastChangedAt: Int) {
+//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "createdAt": createdAt, "updatedAt": updatedAt, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt])
 //      }
 //
 //      public var __typename: String {
@@ -956,6 +956,24 @@
 //        }
 //      }
 //
+//      public var createdAt: String {
+//        get {
+//          return snapshot["createdAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "createdAt")
+//        }
+//      }
+//
+//      public var updatedAt: String {
+//        get {
+//          return snapshot["updatedAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "updatedAt")
+//        }
+//      }
+//
 //      public var version: Int {
 //        get {
 //          return snapshot["_version"]! as! Int
@@ -982,31 +1000,13 @@
 //          snapshot.updateValue(newValue, forKey: "_lastChangedAt")
 //        }
 //      }
-//
-//      public var createdAt: String {
-//        get {
-//          return snapshot["createdAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "createdAt")
-//        }
-//      }
-//
-//      public var updatedAt: String {
-//        get {
-//          return snapshot["updatedAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "updatedAt")
-//        }
-//      }
 //    }
 //  }
 //}
 //
 //public final class GetCtMemoryQuery: GraphQLQuery {
 //  public static let operationString =
-//    "query GetCtMemory($id: ID!) {\n  getCTMemory(id: $id) {\n    __typename\n    id\n    name\n    _version\n    _deleted\n    _lastChangedAt\n    createdAt\n    updatedAt\n  }\n}"
+//    "query GetCTMemory($id: ID!) {\n  getCTMemory(id: $id) {\n    __typename\n    id\n    name\n    createdAt\n    updatedAt\n    _version\n    _deleted\n    _lastChangedAt\n  }\n}"
 //
 //  public var id: GraphQLID
 //
@@ -1051,11 +1051,11 @@
 //        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
 //        GraphQLField("name", type: .scalar(String.self)),
+//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
+//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("_version", type: .nonNull(.scalar(Int.self))),
 //        GraphQLField("_deleted", type: .scalar(Bool.self)),
 //        GraphQLField("_lastChangedAt", type: .nonNull(.scalar(Int.self))),
-//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
-//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //      ]
 //
 //      public var snapshot: Snapshot
@@ -1064,8 +1064,8 @@
 //        self.snapshot = snapshot
 //      }
 //
-//      public init(id: GraphQLID, name: String? = nil, version: Int, deleted: Bool? = nil, lastChangedAt: Int, createdAt: String, updatedAt: String) {
-//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt, "createdAt": createdAt, "updatedAt": updatedAt])
+//      public init(id: GraphQLID, name: String? = nil, createdAt: String, updatedAt: String, version: Int, deleted: Bool? = nil, lastChangedAt: Int) {
+//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "createdAt": createdAt, "updatedAt": updatedAt, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt])
 //      }
 //
 //      public var __typename: String {
@@ -1095,6 +1095,24 @@
 //        }
 //      }
 //
+//      public var createdAt: String {
+//        get {
+//          return snapshot["createdAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "createdAt")
+//        }
+//      }
+//
+//      public var updatedAt: String {
+//        get {
+//          return snapshot["updatedAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "updatedAt")
+//        }
+//      }
+//
 //      public var version: Int {
 //        get {
 //          return snapshot["_version"]! as! Int
@@ -1121,31 +1139,13 @@
 //          snapshot.updateValue(newValue, forKey: "_lastChangedAt")
 //        }
 //      }
-//
-//      public var createdAt: String {
-//        get {
-//          return snapshot["createdAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "createdAt")
-//        }
-//      }
-//
-//      public var updatedAt: String {
-//        get {
-//          return snapshot["updatedAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "updatedAt")
-//        }
-//      }
 //    }
 //  }
 //}
 //
-//public final class ListCtMemorysQuery: GraphQLQuery {
+//public final class ListCtMemoriesQuery: GraphQLQuery {
 //  public static let operationString =
-//    "query ListCtMemorys($filter: ModelCTMemoryFilterInput, $limit: Int, $nextToken: String) {\n  listCTMemorys(filter: $filter, limit: $limit, nextToken: $nextToken) {\n    __typename\n    items {\n      __typename\n      id\n      name\n      _version\n      _deleted\n      _lastChangedAt\n      createdAt\n      updatedAt\n    }\n    nextToken\n    startedAt\n  }\n}"
+//    "query ListCTMemories($filter: ModelCTMemoryFilterInput, $limit: Int, $nextToken: String) {\n  listCTMemories(filter: $filter, limit: $limit, nextToken: $nextToken) {\n    __typename\n    items {\n      __typename\n      id\n      name\n      createdAt\n      updatedAt\n      _version\n      _deleted\n      _lastChangedAt\n    }\n    nextToken\n    startedAt\n  }\n}"
 //
 //  public var filter: ModelCTMemoryFilterInput?
 //  public var limit: Int?
@@ -1165,7 +1165,7 @@
 //    public static let possibleTypes = ["Query"]
 //
 //    public static let selections: [GraphQLSelection] = [
-//      GraphQLField("listCTMemorys", arguments: ["filter": GraphQLVariable("filter"), "limit": GraphQLVariable("limit"), "nextToken": GraphQLVariable("nextToken")], type: .object(ListCtMemory.selections)),
+//      GraphQLField("listCTMemories", arguments: ["filter": GraphQLVariable("filter"), "limit": GraphQLVariable("limit"), "nextToken": GraphQLVariable("nextToken")], type: .object(ListCtMemory.selections)),
 //    ]
 //
 //    public var snapshot: Snapshot
@@ -1174,16 +1174,16 @@
 //      self.snapshot = snapshot
 //    }
 //
-//    public init(listCtMemorys: ListCtMemory? = nil) {
-//      self.init(snapshot: ["__typename": "Query", "listCTMemorys": listCtMemorys.flatMap { $0.snapshot }])
+//    public init(listCtMemories: ListCtMemory? = nil) {
+//      self.init(snapshot: ["__typename": "Query", "listCTMemories": listCtMemories.flatMap { $0.snapshot }])
 //    }
 //
-//    public var listCtMemorys: ListCtMemory? {
+//    public var listCtMemories: ListCtMemory? {
 //      get {
-//        return (snapshot["listCTMemorys"] as? Snapshot).flatMap { ListCtMemory(snapshot: $0) }
+//        return (snapshot["listCTMemories"] as? Snapshot).flatMap { ListCtMemory(snapshot: $0) }
 //      }
 //      set {
-//        snapshot.updateValue(newValue?.snapshot, forKey: "listCTMemorys")
+//        snapshot.updateValue(newValue?.snapshot, forKey: "listCTMemories")
 //      }
 //    }
 //
@@ -1250,11 +1250,11 @@
 //          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
 //          GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
 //          GraphQLField("name", type: .scalar(String.self)),
+//          GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
+//          GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //          GraphQLField("_version", type: .nonNull(.scalar(Int.self))),
 //          GraphQLField("_deleted", type: .scalar(Bool.self)),
 //          GraphQLField("_lastChangedAt", type: .nonNull(.scalar(Int.self))),
-//          GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
-//          GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //        ]
 //
 //        public var snapshot: Snapshot
@@ -1263,8 +1263,8 @@
 //          self.snapshot = snapshot
 //        }
 //
-//        public init(id: GraphQLID, name: String? = nil, version: Int, deleted: Bool? = nil, lastChangedAt: Int, createdAt: String, updatedAt: String) {
-//          self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt, "createdAt": createdAt, "updatedAt": updatedAt])
+//        public init(id: GraphQLID, name: String? = nil, createdAt: String, updatedAt: String, version: Int, deleted: Bool? = nil, lastChangedAt: Int) {
+//          self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "createdAt": createdAt, "updatedAt": updatedAt, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt])
 //        }
 //
 //        public var __typename: String {
@@ -1294,6 +1294,24 @@
 //          }
 //        }
 //
+//        public var createdAt: String {
+//          get {
+//            return snapshot["createdAt"]! as! String
+//          }
+//          set {
+//            snapshot.updateValue(newValue, forKey: "createdAt")
+//          }
+//        }
+//
+//        public var updatedAt: String {
+//          get {
+//            return snapshot["updatedAt"]! as! String
+//          }
+//          set {
+//            snapshot.updateValue(newValue, forKey: "updatedAt")
+//          }
+//        }
+//
 //        public var version: Int {
 //          get {
 //            return snapshot["_version"]! as! Int
@@ -1320,24 +1338,6 @@
 //            snapshot.updateValue(newValue, forKey: "_lastChangedAt")
 //          }
 //        }
-//
-//        public var createdAt: String {
-//          get {
-//            return snapshot["createdAt"]! as! String
-//          }
-//          set {
-//            snapshot.updateValue(newValue, forKey: "createdAt")
-//          }
-//        }
-//
-//        public var updatedAt: String {
-//          get {
-//            return snapshot["updatedAt"]! as! String
-//          }
-//          set {
-//            snapshot.updateValue(newValue, forKey: "updatedAt")
-//          }
-//        }
 //      }
 //    }
 //  }
@@ -1345,7 +1345,7 @@
 //
 //public final class SyncCtMemoriesQuery: GraphQLQuery {
 //  public static let operationString =
-//    "query SyncCtMemories($filter: ModelCTMemoryFilterInput, $limit: Int, $nextToken: String, $lastSync: AWSTimestamp) {\n  syncCTMemories(filter: $filter, limit: $limit, nextToken: $nextToken, lastSync: $lastSync) {\n    __typename\n    items {\n      __typename\n      id\n      name\n      _version\n      _deleted\n      _lastChangedAt\n      createdAt\n      updatedAt\n    }\n    nextToken\n    startedAt\n  }\n}"
+//    "query SyncCTMemories($filter: ModelCTMemoryFilterInput, $limit: Int, $nextToken: String, $lastSync: AWSTimestamp) {\n  syncCTMemories(filter: $filter, limit: $limit, nextToken: $nextToken, lastSync: $lastSync) {\n    __typename\n    items {\n      __typename\n      id\n      name\n      createdAt\n      updatedAt\n      _version\n      _deleted\n      _lastChangedAt\n    }\n    nextToken\n    startedAt\n  }\n}"
 //
 //  public var filter: ModelCTMemoryFilterInput?
 //  public var limit: Int?
@@ -1452,11 +1452,11 @@
 //          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
 //          GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
 //          GraphQLField("name", type: .scalar(String.self)),
+//          GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
+//          GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //          GraphQLField("_version", type: .nonNull(.scalar(Int.self))),
 //          GraphQLField("_deleted", type: .scalar(Bool.self)),
 //          GraphQLField("_lastChangedAt", type: .nonNull(.scalar(Int.self))),
-//          GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
-//          GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //        ]
 //
 //        public var snapshot: Snapshot
@@ -1465,8 +1465,8 @@
 //          self.snapshot = snapshot
 //        }
 //
-//        public init(id: GraphQLID, name: String? = nil, version: Int, deleted: Bool? = nil, lastChangedAt: Int, createdAt: String, updatedAt: String) {
-//          self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt, "createdAt": createdAt, "updatedAt": updatedAt])
+//        public init(id: GraphQLID, name: String? = nil, createdAt: String, updatedAt: String, version: Int, deleted: Bool? = nil, lastChangedAt: Int) {
+//          self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "createdAt": createdAt, "updatedAt": updatedAt, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt])
 //        }
 //
 //        public var __typename: String {
@@ -1496,6 +1496,24 @@
 //          }
 //        }
 //
+//        public var createdAt: String {
+//          get {
+//            return snapshot["createdAt"]! as! String
+//          }
+//          set {
+//            snapshot.updateValue(newValue, forKey: "createdAt")
+//          }
+//        }
+//
+//        public var updatedAt: String {
+//          get {
+//            return snapshot["updatedAt"]! as! String
+//          }
+//          set {
+//            snapshot.updateValue(newValue, forKey: "updatedAt")
+//          }
+//        }
+//
 //        public var version: Int {
 //          get {
 //            return snapshot["_version"]! as! Int
@@ -1522,24 +1540,6 @@
 //            snapshot.updateValue(newValue, forKey: "_lastChangedAt")
 //          }
 //        }
-//
-//        public var createdAt: String {
-//          get {
-//            return snapshot["createdAt"]! as! String
-//          }
-//          set {
-//            snapshot.updateValue(newValue, forKey: "createdAt")
-//          }
-//        }
-//
-//        public var updatedAt: String {
-//          get {
-//            return snapshot["updatedAt"]! as! String
-//          }
-//          set {
-//            snapshot.updateValue(newValue, forKey: "updatedAt")
-//          }
-//        }
 //      }
 //    }
 //  }
@@ -1547,7 +1547,7 @@
 //
 //public final class OnCreateCtMemorySubscription: GraphQLSubscription {
 //  public static let operationString =
-//    "subscription OnCreateCtMemory {\n  onCreateCTMemory {\n    __typename\n    id\n    name\n    _version\n    _deleted\n    _lastChangedAt\n    createdAt\n    updatedAt\n  }\n}"
+//    "subscription OnCreateCTMemory {\n  onCreateCTMemory {\n    __typename\n    id\n    name\n    createdAt\n    updatedAt\n    _version\n    _deleted\n    _lastChangedAt\n  }\n}"
 //
 //  public init() {
 //  }
@@ -1585,11 +1585,11 @@
 //        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
 //        GraphQLField("name", type: .scalar(String.self)),
+//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
+//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("_version", type: .nonNull(.scalar(Int.self))),
 //        GraphQLField("_deleted", type: .scalar(Bool.self)),
 //        GraphQLField("_lastChangedAt", type: .nonNull(.scalar(Int.self))),
-//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
-//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //      ]
 //
 //      public var snapshot: Snapshot
@@ -1598,8 +1598,8 @@
 //        self.snapshot = snapshot
 //      }
 //
-//      public init(id: GraphQLID, name: String? = nil, version: Int, deleted: Bool? = nil, lastChangedAt: Int, createdAt: String, updatedAt: String) {
-//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt, "createdAt": createdAt, "updatedAt": updatedAt])
+//      public init(id: GraphQLID, name: String? = nil, createdAt: String, updatedAt: String, version: Int, deleted: Bool? = nil, lastChangedAt: Int) {
+//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "createdAt": createdAt, "updatedAt": updatedAt, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt])
 //      }
 //
 //      public var __typename: String {
@@ -1629,6 +1629,24 @@
 //        }
 //      }
 //
+//      public var createdAt: String {
+//        get {
+//          return snapshot["createdAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "createdAt")
+//        }
+//      }
+//
+//      public var updatedAt: String {
+//        get {
+//          return snapshot["updatedAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "updatedAt")
+//        }
+//      }
+//
 //      public var version: Int {
 //        get {
 //          return snapshot["_version"]! as! Int
@@ -1655,31 +1673,13 @@
 //          snapshot.updateValue(newValue, forKey: "_lastChangedAt")
 //        }
 //      }
-//
-//      public var createdAt: String {
-//        get {
-//          return snapshot["createdAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "createdAt")
-//        }
-//      }
-//
-//      public var updatedAt: String {
-//        get {
-//          return snapshot["updatedAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "updatedAt")
-//        }
-//      }
 //    }
 //  }
 //}
 //
 //public final class OnUpdateCtMemorySubscription: GraphQLSubscription {
 //  public static let operationString =
-//    "subscription OnUpdateCtMemory {\n  onUpdateCTMemory {\n    __typename\n    id\n    name\n    _version\n    _deleted\n    _lastChangedAt\n    createdAt\n    updatedAt\n  }\n}"
+//    "subscription OnUpdateCTMemory {\n  onUpdateCTMemory {\n    __typename\n    id\n    name\n    createdAt\n    updatedAt\n    _version\n    _deleted\n    _lastChangedAt\n  }\n}"
 //
 //  public init() {
 //  }
@@ -1717,11 +1717,11 @@
 //        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
 //        GraphQLField("name", type: .scalar(String.self)),
+//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
+//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("_version", type: .nonNull(.scalar(Int.self))),
 //        GraphQLField("_deleted", type: .scalar(Bool.self)),
 //        GraphQLField("_lastChangedAt", type: .nonNull(.scalar(Int.self))),
-//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
-//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //      ]
 //
 //      public var snapshot: Snapshot
@@ -1730,8 +1730,8 @@
 //        self.snapshot = snapshot
 //      }
 //
-//      public init(id: GraphQLID, name: String? = nil, version: Int, deleted: Bool? = nil, lastChangedAt: Int, createdAt: String, updatedAt: String) {
-//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt, "createdAt": createdAt, "updatedAt": updatedAt])
+//      public init(id: GraphQLID, name: String? = nil, createdAt: String, updatedAt: String, version: Int, deleted: Bool? = nil, lastChangedAt: Int) {
+//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "createdAt": createdAt, "updatedAt": updatedAt, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt])
 //      }
 //
 //      public var __typename: String {
@@ -1761,6 +1761,24 @@
 //        }
 //      }
 //
+//      public var createdAt: String {
+//        get {
+//          return snapshot["createdAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "createdAt")
+//        }
+//      }
+//
+//      public var updatedAt: String {
+//        get {
+//          return snapshot["updatedAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "updatedAt")
+//        }
+//      }
+//
 //      public var version: Int {
 //        get {
 //          return snapshot["_version"]! as! Int
@@ -1787,31 +1805,13 @@
 //          snapshot.updateValue(newValue, forKey: "_lastChangedAt")
 //        }
 //      }
-//
-//      public var createdAt: String {
-//        get {
-//          return snapshot["createdAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "createdAt")
-//        }
-//      }
-//
-//      public var updatedAt: String {
-//        get {
-//          return snapshot["updatedAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "updatedAt")
-//        }
-//      }
 //    }
 //  }
 //}
 //
 //public final class OnDeleteCtMemorySubscription: GraphQLSubscription {
 //  public static let operationString =
-//    "subscription OnDeleteCtMemory {\n  onDeleteCTMemory {\n    __typename\n    id\n    name\n    _version\n    _deleted\n    _lastChangedAt\n    createdAt\n    updatedAt\n  }\n}"
+//    "subscription OnDeleteCTMemory {\n  onDeleteCTMemory {\n    __typename\n    id\n    name\n    createdAt\n    updatedAt\n    _version\n    _deleted\n    _lastChangedAt\n  }\n}"
 //
 //  public init() {
 //  }
@@ -1849,11 +1849,11 @@
 //        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
 //        GraphQLField("name", type: .scalar(String.self)),
+//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
+//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //        GraphQLField("_version", type: .nonNull(.scalar(Int.self))),
 //        GraphQLField("_deleted", type: .scalar(Bool.self)),
 //        GraphQLField("_lastChangedAt", type: .nonNull(.scalar(Int.self))),
-//        GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
-//        GraphQLField("updatedAt", type: .nonNull(.scalar(String.self))),
 //      ]
 //
 //      public var snapshot: Snapshot
@@ -1862,8 +1862,8 @@
 //        self.snapshot = snapshot
 //      }
 //
-//      public init(id: GraphQLID, name: String? = nil, version: Int, deleted: Bool? = nil, lastChangedAt: Int, createdAt: String, updatedAt: String) {
-//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt, "createdAt": createdAt, "updatedAt": updatedAt])
+//      public init(id: GraphQLID, name: String? = nil, createdAt: String, updatedAt: String, version: Int, deleted: Bool? = nil, lastChangedAt: Int) {
+//        self.init(snapshot: ["__typename": "CTMemory", "id": id, "name": name, "createdAt": createdAt, "updatedAt": updatedAt, "_version": version, "_deleted": deleted, "_lastChangedAt": lastChangedAt])
 //      }
 //
 //      public var __typename: String {
@@ -1893,6 +1893,24 @@
 //        }
 //      }
 //
+//      public var createdAt: String {
+//        get {
+//          return snapshot["createdAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "createdAt")
+//        }
+//      }
+//
+//      public var updatedAt: String {
+//        get {
+//          return snapshot["updatedAt"]! as! String
+//        }
+//        set {
+//          snapshot.updateValue(newValue, forKey: "updatedAt")
+//        }
+//      }
+//
 //      public var version: Int {
 //        get {
 //          return snapshot["_version"]! as! Int
@@ -1917,24 +1935,6 @@
 //        }
 //        set {
 //          snapshot.updateValue(newValue, forKey: "_lastChangedAt")
-//        }
-//      }
-//
-//      public var createdAt: String {
-//        get {
-//          return snapshot["createdAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "createdAt")
-//        }
-//      }
-//
-//      public var updatedAt: String {
-//        get {
-//          return snapshot["updatedAt"]! as! String
-//        }
-//        set {
-//          snapshot.updateValue(newValue, forKey: "updatedAt")
 //        }
 //      }
 //    }

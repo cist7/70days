@@ -1,34 +1,34 @@
 # this is an auto generated file. This will be overwritten
-subscription OnCreateCtMemory {
+subscription OnCreateCTMemory {
   onCreateCTMemory {
     id
     name
+    createdAt
+    updatedAt
     _version
     _deleted
     _lastChangedAt
-    createdAt
-    updatedAt
   }
 }
-subscription OnUpdateCtMemory {
+subscription OnUpdateCTMemory {
   onUpdateCTMemory {
     id
     name
+    createdAt
+    updatedAt
     _version
     _deleted
     _lastChangedAt
-    createdAt
-    updatedAt
   }
 }
-subscription OnDeleteCtMemory {
+subscription OnDeleteCTMemory {
   onDeleteCTMemory {
     id
     name
+    createdAt
+    updatedAt
     _version
     _deleted
     _lastChangedAt
-    createdAt
-    updatedAt
   }
 }

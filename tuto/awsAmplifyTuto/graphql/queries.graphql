@@ -1,35 +1,35 @@
 # this is an auto generated file. This will be overwritten
-query GetCtMemory($id: ID!) {
+query GetCTMemory($id: ID!) {
   getCTMemory(id: $id) {
     id
     name
+    createdAt
+    updatedAt
     _version
     _deleted
     _lastChangedAt
-    createdAt
-    updatedAt
   }
 }
-query ListCtMemorys(
+query ListCTMemories(
   $filter: ModelCTMemoryFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listCTMemorys(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listCTMemories(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
       name
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
     nextToken
     startedAt
   }
 }
-query SyncCtMemories(
+query SyncCTMemories(
   $filter: ModelCTMemoryFilterInput
   $limit: Int
   $nextToken: String
@@ -44,11 +44,11 @@ query SyncCtMemories(
     items {
       id
       name
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
     nextToken
     startedAt

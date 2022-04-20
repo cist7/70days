@@ -152,55 +152,66 @@
         }
       }
     },
-    "apiawsAmplifyTuto": {
+    "api70days": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-70days-staging-51214-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "Parameters": {
-          "CreateAPIKey": 1,
-          "AppSyncApiName": "awsAmplifyTuto",
+          "AppSyncApiName": "70days",
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
           "DynamoDBEnableServerSideEncryption": false,
-          "S3DeploymentBucket": "amplify-awsamplifytuto-dev-132818-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/faca3f646a8489718caef37582557eb640a51e2f",
-          "env": "dev"
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "S3DeploymentBucket": "amplify-70days-staging-51214-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/90810f07905d9ce7a44d68c594b3315e31cdf2c6",
+          "env": "staging"
         }
       }
     },
-    "authawsamplifytuto72201e3c": {
+    "auth70days": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/auth/awsamplifytuto72201e3c-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-70days-staging-51214-deployment/amplify-cfn-templates/auth/70days-cloudformation-template.json",
         "Parameters": {
-          "identityPoolName": "awsamplifytuto72201e3c_identitypool_72201e3c",
-          "allowUnauthenticatedIdentities": true,
-          "resourceNameTruncated": "awsamp72201e3c",
-          "userPoolName": "awsamplifytuto72201e3c_userpool_72201e3c",
+          "identityPoolName": "testAuthIdentityPool",
+          "allowUnauthenticatedIdentities": false,
+          "resourceNameTruncated": "70days2141b16a",
+          "userPoolName": "70days",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
           "smsAuthenticationMessage": "Your authentication code is {####}",
           "smsVerificationMessage": "Your verification code is {####}",
-          "emailVerificationSubject": "Your verification code",
-          "emailVerificationMessage": "Your verification code is {####}",
+          "emailVerificationSubject": "Forgot password code: {####}",
+          "emailVerificationMessage": "Forgot password code: {####}",
           "defaultPasswordPolicy": false,
           "passwordPolicyMinLength": 8,
           "passwordPolicyCharacters": "",
-          "requiredAttributes": "email",
+          "requiredAttributes": "phone_number,email,nickname",
           "aliasAttributes": "",
           "userpoolClientGenerateSecret": false,
           "userpoolClientRefreshTokenValidity": 30,
-          "userpoolClientWriteAttributes": "email",
-          "userpoolClientReadAttributes": "email",
-          "userpoolClientLambdaRole": "awsamp72201e3c_userpoolclient_lambda_role",
+          "userpoolClientWriteAttributes": "",
+          "userpoolClientReadAttributes": "",
+          "userpoolClientLambdaRole": "70days2141b16a_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "72201e3c",
-          "resourceName": "awsamplifytuto72201e3c",
+          "sharedId": "2141b16a",
+          "resourceName": "70days",
           "authSelections": "identityPoolAndUserPool",
-          "useDefault": "default",
-          "userPoolGroupList": "",
           "serviceName": "Cognito",
-          "useEnabledMfas": false,
+          "usernameAttributes": "email,phone_number",
+          "useDefault": "manual",
+          "userPoolGroups": false,
+          "userPoolGroupList": "",
+          "adminQueries": false,
+          "thirdPartyAuth": false,
+          "authProviders": "",
+          "usernameCaseSensitive": false,
+          "useEnabledMfas": true,
           "authRoleArn": {
             "Fn::GetAtt": [
               "AuthRole",
@@ -213,42 +224,9 @@
               "Arn"
             ]
           },
-          "breakCircularDependency": false,
+          "breakCircularDependency": true,
           "dependsOn": "",
-          "env": "dev"
-        }
-      }
-    },
-    "storageS370days": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "Parameters": {
-          "bucketName": "S370daysBucket",
-          "selectedGuestPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
-          "selectedAuthenticatedPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
-          "unauthRoleName": {
-            "Ref": "UnauthRoleName"
-          },
-          "authRoleName": {
-            "Ref": "AuthRoleName"
-          },
-          "s3PrivatePolicy": "Private_policy_696fc39e",
-          "s3ProtectedPolicy": "Protected_policy_696fc39e",
-          "s3PublicPolicy": "Public_policy_696fc39e",
-          "s3ReadPolicy": "read_policy_696fc39e",
-          "s3UploadsPolicy": "Uploads_policy_696fc39e",
-          "authPolicyName": "s3_amplify_696fc39e",
-          "unauthPolicyName": "s3_amplify_696fc39e",
-          "AuthenticatedAllowList": "ALLOW",
-          "GuestAllowList": "ALLOW",
-          "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-          "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-          "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-          "s3PermissionsAuthenticatedUploads": "s3:PutObject",
-          "s3PermissionsGuestPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-          "s3PermissionsGuestUploads": "s3:PutObject",
-          "env": "dev"
+          "env": "staging"
         }
       }
     },
@@ -256,7 +234,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authawsamplifytuto72201e3c"
+        "auth70days"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -351,7 +329,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authawsamplifytuto72201e3c",
+            "auth70days",
             "Outputs.IdentityPoolId"
           ]
         },

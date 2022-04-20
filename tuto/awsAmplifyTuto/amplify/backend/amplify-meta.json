@@ -1,19 +1,19 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-awsamplifytuto-dev-132818-authRole",
-      "UnauthRoleArn": "arn:aws:iam::603046677063:role/amplify-awsamplifytuto-dev-132818-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::603046677063:role/amplify-awsamplifytuto-dev-132818-authRole",
+      "AuthRoleName": "amplify-70days-staging-51214-authRole",
+      "UnauthRoleArn": "arn:aws:iam::603046677063:role/amplify-70days-staging-51214-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::603046677063:role/amplify-70days-staging-51214-authRole",
       "Region": "ap-northeast-2",
-      "DeploymentBucketName": "amplify-awsamplifytuto-dev-132818-deployment",
-      "UnauthRoleName": "amplify-awsamplifytuto-dev-132818-unauthRole",
-      "StackName": "amplify-awsamplifytuto-dev-132818",
-      "StackId": "arn:aws:cloudformation:ap-northeast-2:603046677063:stack/amplify-awsamplifytuto-dev-132818/3c72b2c0-78e0-11ec-9572-021f251486ea",
-      "AmplifyAppId": "dvqfoxv7kfc2u"
+      "DeploymentBucketName": "amplify-70days-staging-51214-deployment",
+      "UnauthRoleName": "amplify-70days-staging-51214-unauthRole",
+      "StackName": "amplify-70days-staging-51214",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:603046677063:stack/amplify-70days-staging-51214/08ef9540-7754-11ec-98de-0a59526e9546",
+      "AmplifyAppId": "dy604skbsde31"
     }
   },
   "api": {
-    "awsAmplifyTuto": {
+    "70days": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -21,8 +21,9 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 30,
-              "description": "api key description"
+              "apiKeyExpirationDays": 300,
+              "apiKeyExpirationDate": "2022-12-14T01:56:57.214Z",
+              "description": "70daysApiKey"
             }
           },
           "additionalAuthenticationProviders": [
@@ -31,28 +32,32 @@
             }
           ]
         },
-        "GraphQLAPIIdOutput": "l7i2mvbdgbfcrb7gc3v6ceqmuu",
-        "GraphQLAPIEndpointOutput": "https://fyrdriktujahphi3b5utp6nkfa.appsync-api.ap-northeast-2.amazonaws.com/graphql",
-        "GraphQLAPIKeyOutput": "da2-lygbnx7w45e6tlziqiiqmzwnuu"
+        "GraphQLAPIIdOutput": "gxjs7plh2fgmfd3ge7axslckxq",
+        "GraphQLAPIEndpointOutput": "https://w6kly7tnlfeb3hcwflh6krzar4.appsync-api.ap-northeast-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-jj4rlix6cnft5pyn6wlyvpwyyi"
       },
-      "lastPushTimeStamp": "2022-02-15T04:57:01.749Z",
+      "lastPushTimeStamp": "2022-02-17T01:57:01.123Z",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifytuto-dev-132818-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "logicalId": "apiawsAmplifyTuto"
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-70days-staging-51214-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "api70days"
       }
     }
   },
   "auth": {
-    "awsamplifytuto72201e3c": {
+    "70days": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [],
-        "usernameAttributes": [],
-        "signupAttributes": [
+        "usernameAttributes": [
           "EMAIL"
+        ],
+        "signupAttributes": [
+          "PHONE_NUMBER",
+          "EMAIL",
+          "NICKNAME"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
@@ -65,15 +70,22 @@
         "verificationMechanisms": [
           "EMAIL"
         ]
+      },
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::603046677063:role/sns2141b16a51214-staging",
+        "UserPoolId": "ap-northeast-2_vaYiqoeO3",
+        "AppClientIDWeb": "5sernkkntlqmv96gm5obqas3j6",
+        "AppClientID": "4sdvrrgs0rtgmsv0jkhi5b6p94",
+        "IdentityPoolId": "ap-northeast-2:985122b1-17a3-4436-958d-1df9339e04c1",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-2:603046677063:userpool/ap-northeast-2_vaYiqoeO3",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "70days"
+      },
+      "lastPushTimeStamp": "2022-02-17T01:54:29.530Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-70days-staging-51214-deployment/amplify-cfn-templates/auth/70days-cloudformation-template.json",
+        "logicalId": "auth70days"
       }
-    }
-  },
-  "storage": {
-    "S370days": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "lastPushTimeStamp": "2022-02-15T04:57:03.941Z"
     }
   }
 }

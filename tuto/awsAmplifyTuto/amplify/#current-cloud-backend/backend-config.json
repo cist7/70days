@@ -1,6 +1,6 @@
 {
   "api": {
-    "awsAmplifyTuto": {
+    "70days": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -22,21 +22,20 @@
     }
   },
   "auth": {
-    "awsAmplifyTuto": {
+    "70days": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
-        "socialProviders": [
-          "GOOGLE"
-        ],
+        "socialProviders": [],
         "usernameAttributes": [
           "EMAIL"
         ],
         "signupAttributes": [
           "PHONE_NUMBER",
-          "EMAIL"
+          "EMAIL",
+          "NICKNAME"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
@@ -50,14 +49,6 @@
           "EMAIL"
         ]
       }
-    }
-  },
-  "storage": {
-    "awsamplifytutobeb29be6": {
-      "service": "S3",
-      "serviceType": "imported",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": []
     }
   }
 }

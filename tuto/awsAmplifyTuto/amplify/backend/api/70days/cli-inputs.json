@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "70days",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/mobile_ios/70days/tuto/awsAmplifyTuto/amplify/backend/api/70days/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 300,
+      "apiKeyExpirationDate": "2022-12-14T01:56:57.214Z",
+      "keyDescription": "70daysApiKey"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}
