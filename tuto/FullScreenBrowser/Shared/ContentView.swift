@@ -204,6 +204,7 @@ struct BottomMenuBarFlexibleView: View {
         .frame(height: 70, alignment: .center)
     }
 }
+
 struct BottomMenuBarView: View {
     @Binding var isFavoriteToggleOn: Bool
     var body: some View {
@@ -312,11 +313,86 @@ struct FavoriteListView: View {
     }
 }
 
+func geometryProxy(_ geometry: GeometryProxy) -> some View {
+  let size = geometry.size
+  return Text("Hello world")
+    .frame(width: size.width, height: size.height, alignment: .top)
+}
+
+struct BottomNavigationBarView: View {
+    
+    @State var webViewID: String = "1"
+    @Binding var isFavoriteToggleOn: Bool
+    @Binding var webViewFlexibleHeight: CGFloat
+    @Binding var searchText: String
+    @Binding var isCloseButtonToggleOn:Bool
+    
+    var iconWidth: CGFloat = 30.0
+    var body: some View {
+//        GeometryReader { geo in
+//        VStack {
+//            Spacer()
+            HStack {
+                HStack(spacing: 10) {
+                    Spacer()
+                    Button {
+                    } label: {
+                        Image(systemName: "arrow.left.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                    }
+                    Button {
+                    } label: {
+                        Image(systemName: "arrow.right.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                    }
+                    TextField("Search", text: $searchText)
+//                        .frame(width: geo.size.width - (50*5) , height: 35, alignment: .leading)
+                        .frame(height: 35, alignment: .leading)
+//                        .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.white, lineWidth: 2))
+                    Button {
+                    } label: {
+                        Image(systemName: "arrow.clockwise").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                     
+                    }
+                    Button {
+                        isFavoriteToggleOn.toggle()
+                    } label: {
+                        Image(systemName: isFavoriteToggleOn ? "bookmark.circle.fill" : "bookmark.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                     
+                    }
+                    Button {
+                        $isCloseButtonToggleOn.wrappedValue = true
+                    } label: {
+                        Image(systemName: "xmark.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                    }
+                    Spacer()
+                }
+                .padding(.top, 10)
+                
+            }
+//            .frame(width: geo.size.width - 20, height: 60, alignment: .leading)
+            .frame(height: 60, alignment: .leading)
+            .foregroundColor(.white)
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+            .background(Color(red: 255/255, green: 182/255, blue: 193/255))
+//            .background(.black)
+            .cornerRadius(10)
+            .padding(.top, -10)
+            .clipped()
+        }
+        
+//    }
+//    }
+}
+
 struct ContentView: View {
     
     @ObservedObject var viewModel = WebViewModel()
     @State var bar = true
     @State var isPresention = false
+    @State var isFavoriteToggleOn:Bool = false
     @State var isTopFavoriteToggleOn:Bool = false
     @State var isBottomFavoriteToggleOn:Bool = false
     
@@ -324,28 +400,22 @@ struct ContentView: View {
     @State var webViewBgColor: Color = .clear
     
     @State var addrString: String = ""
-    
+    var currentBgColor: Color = Color.white
     var body: some View {
         ZStack {
             GeometryReader { geo in
                 VStack {
                     ScrollView {
                         VStack(spacing: 0) {
-                            if self.isTopFavoriteToggleOn {
-                                ZStack {
-                                    FavoriteListView(isCloseButtonToggleOn: $isTopFavoriteToggleOn)
-                                }
-                            } else {
-//                                ZStack {
-                                VStack(spacing: 0) {
-                                    
-                                    WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewModel: viewModel)
-//                                    Spacer()
-//                                    BottomMenuBarView(isFavoriteToggleOn: $isTopFavoriteToggleOn)
-                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
-                                        .background(.clear)
-                                    
-                                }
+                            
+                            VStack(spacing: 0) {
+                                
+                                WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewModel: viewModel)
+//                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
+//                                        .background(.clear)
+                                BottomNavigationBarView(isFavoriteToggleOn: $isFavoriteToggleOn, webViewFlexibleHeight: $webViewDefaultHeight, searchText: $addrString, isCloseButtonToggleOn: $isTopFavoriteToggleOn)
+                                    .background(.clear)
+                            
                             }
                         }
                         .cornerRadius(10)
@@ -358,21 +428,14 @@ struct ContentView: View {
                             .background(.gray)
                         
                         VStack(spacing: 0) {
-                            if self.isTopFavoriteToggleOn {
-                                ZStack {
-                                    FavoriteListView(isCloseButtonToggleOn: $isTopFavoriteToggleOn)
-                                }
-                            } else {
-//                                ZStack {
-                                VStack(spacing: 0) {
-                                    
-                                    WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1h", viewModel: viewModel)
-//                                    Spacer()
-//                                    BottomMenuBarView(isFavoriteToggleOn: $isTopFavoriteToggleOn)
-                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
-                                        .background(.clear)
-                                    
-                                }
+                            VStack(spacing: 0) {
+                                
+                                WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1h", viewModel: viewModel)
+//                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
+//                                        .background(.clear)
+                                BottomNavigationBarView(isFavoriteToggleOn: $isFavoriteToggleOn, webViewFlexibleHeight: $webViewDefaultHeight, searchText: $addrString, isCloseButtonToggleOn: $isTopFavoriteToggleOn)
+                                    .background(.clear)
+                            
                             }
                         }
                         .cornerRadius(10)
@@ -385,21 +448,14 @@ struct ContentView: View {
                             .background(.gray)
                         
                         VStack(spacing: 0) {
-                            if self.isTopFavoriteToggleOn {
-                                ZStack {
-                                    FavoriteListView(isCloseButtonToggleOn: $isTopFavoriteToggleOn)
-                                }
-                            } else {
-//                                ZStack {
-                                VStack(spacing: 0) {
-                                    
-                                    WebView(url: "https://www.naver.com", viewModel: viewModel)
-//                                    Spacer()
-//                                    BottomMenuBarView(isFavoriteToggleOn: $isTopFavoriteToggleOn)
-                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
-                                        .background(.clear)
-                                    
-                                }
+                            VStack(spacing: 0) {
+                                
+                                WebView(url: "https://www.naver.com", viewModel: viewModel)
+//                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
+//                                        .background(.clear)
+                                BottomNavigationBarView(isFavoriteToggleOn: $isFavoriteToggleOn, webViewFlexibleHeight: $webViewDefaultHeight, searchText: $addrString, isCloseButtonToggleOn: $isTopFavoriteToggleOn)
+                                    .background(.clear)
+                            
                             }
                         }
                         .cornerRadius(10)
@@ -412,32 +468,28 @@ struct ContentView: View {
                             .background(.gray)
                         
                         VStack {
-                            if self.isBottomFavoriteToggleOn {
-                                ZStack {
-                                    FavoriteListView(isCloseButtonToggleOn: $isBottomFavoriteToggleOn)
-                                }
-                            } else {
-                                ZStack {
-                                    WebView(url: "https://www.youtube.com/", viewModel: viewModel)
-        //                            WebView(url: "https://upbit.com/exchange", viewModel: viewModel)
-                                    Spacer()
-                                    BottomMenuBarView(isFavoriteToggleOn: $isBottomFavoriteToggleOn)
-                                        .onTapGesture {
-                        //                    isPresention.toggle()
-                                        }
-                                }
+                            
+                            VStack(spacing: 0) {
+                                
+                                WebView(url: "https://www.youtube.com/", viewModel: viewModel)
+//                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
+//                                        .background(.clear)
+                                BottomNavigationBarView(isFavoriteToggleOn: $isFavoriteToggleOn, webViewFlexibleHeight: $webViewDefaultHeight, searchText: $addrString, isCloseButtonToggleOn: $isTopFavoriteToggleOn)
+                                    .background(.clear)
+                            
                             }
+                            
                         }
                         .cornerRadius(10)
                         .background(webViewBgColor)
                         .frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
                     }
                 }
-                .background(.black)
+                .background(currentBgColor)
                 .frame(alignment: .center)
                 .padding(.leading, 10)
             }
-            .background(.black)
+            .background(currentBgColor)
             .frame(alignment: .center)
         }
     }
