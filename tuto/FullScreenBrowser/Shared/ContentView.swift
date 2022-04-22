@@ -322,6 +322,8 @@ func geometryProxy(_ geometry: GeometryProxy) -> some View {
 struct BottomNavigationBarView: View {
     
     @State var webViewID: String = "1"
+    @State var themeColor: Color = Color.black
+    
     @Binding var isFavoriteToggleOn: Bool
     @Binding var webViewFlexibleHeight: CGFloat
     @Binding var searchText: String
@@ -376,7 +378,7 @@ struct BottomNavigationBarView: View {
             .frame(height: 60, alignment: .leading)
             .foregroundColor(.white)
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-            .background(Color(red: 255/255, green: 182/255, blue: 193/255))
+            .background(themeColor)
 //            .background(.black)
             .cornerRadius(10)
             .padding(.top, -10)
@@ -387,6 +389,91 @@ struct BottomNavigationBarView: View {
 //    }
 }
 
+//VStack(spacing: 0) {
+//
+//    VStack(spacing: 0) {
+//
+//        WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewModel: viewModel)
+////                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
+////                                        .background(.clear)
+//        BottomNavigationBarView(isFavoriteToggleOn: $isFavoriteToggleOn, webViewFlexibleHeight: $webViewDefaultHeight, searchText: $addrString, isCloseButtonToggleOn: $isTopFavoriteToggleOn)
+//            .background(.clear)
+//
+//    }
+//}
+//.cornerRadius(10)
+//.clipped()
+//.background(webViewBgColor)
+//.frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
+
+struct WebViewBox: View {
+    
+//    @ObservedObject
+    @State var viewModel: WebViewBoxModel
+    @ObservedObject var webViewModel: WebViewModel = WebViewModel()
+//    @Binding var isCloseButtonToggleOn: Bool
+    @State var isCloseButtonToggleOn: Bool = false
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            VStack(spacing: 0) {
+        
+//                WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewModel: viewModel)
+                WebView(url: viewModel.addressStr, viewModel: webViewModel)
+                    .cornerRadius(10)
+//                    .border(viewModel.themeColor, width: 2)
+                BottomNavigationBarView(themeColor: viewModel.themeColor, isFavoriteToggleOn: $viewModel.isFavorite, webViewFlexibleHeight: $viewModel.webViewFlexibleHeight, searchText: $viewModel.searchText, isCloseButtonToggleOn: $isCloseButtonToggleOn)
+                    .background(.clear)
+        
+            }
+        }
+        .cornerRadius(10)
+        .clipped()
+        .background(viewModel.webViewBgColor)
+//        .frame(width: geo.size.width - 20, height: viewModel.webViewFlexibleHeight, alignment: .center)
+    }
+}
+
+// MARK: - ViewModel
+class WebViewBoxModel: ObservableObject, Identifiable {
+    private var webViewID: String = "" //UUID()
+    
+    var addressStr: String = "https://www.naver.com"
+    var isFavorite: Bool = false
+    var webViewFlexibleHeight: CGFloat = 500
+    var searchText: String = ""
+    var webViewBgColor: Color = .clear
+    var themeColor: Color = .gray
+//    private var isCloseButtonToggleOn:Bool
+    
+    init(urlAddressString: String, viewHeight: CGFloat = 500, isFavorite: Bool = false, themeColor: Color = Color(red: 255/255, green: 182/255, blue: 193/255)) {
+        self.webViewID = UUID().uuidString
+        self.addressStr = urlAddressString
+        self.webViewFlexibleHeight = viewHeight
+        self.isFavorite = isFavorite
+        self.themeColor = themeColor
+    }
+
+    
+//    var disposeBag = DisposeBag()
+//
+//    private let errorSubject: PublishSubject<ResultError?> = .init()
+//
+//    init() {
+//    }
+//
+//    deinit {
+//        logg.verbose("\(String(describing: self)) disposed")
+//    }
+//
+//    var inputs: HogaViewModelInputs { self }
+//    var outputs: HogaViewModelOutputs { self }
+}
+
+// MARK: - Outputs
+extension WebViewBoxModel {
+}
+ 
 struct ContentView: View {
     
     @ObservedObject var viewModel = WebViewModel()
@@ -400,94 +487,92 @@ struct ContentView: View {
     @State var webViewBgColor: Color = .clear
     
     @State var addrString: String = ""
+//    @State var webViewList: [WebViewBox] = [WebViewBox(isCloseButtonToggleOn: false)
+//                                            ,WebViewBox(isCloseButtonToggleOn: false)
+//                                            ,WebViewBox(isCloseButtonToggleOn: false)
+//                                            ,WebViewBox(isCloseButtonToggleOn: false)
+//                                            ,WebViewBox(isCloseButtonToggleOn: false)
+//                                            ,WebViewBox(isCloseButtonToggleOn: false)
+//    ]
+    @State var webViewModelList: [WebViewBoxModel] = [WebViewBoxModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewHeight: 400, isFavorite: false)
+                                            ,WebViewBoxModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1h", viewHeight: 400, isFavorite: false)
+                                                      ,WebViewBoxModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1d", viewHeight: 800, isFavorite: false)
+                                                      ,WebViewBoxModel(urlAddressString: "https://www.daum.net", viewHeight: 300, isFavorite: false)
+                                                      ,WebViewBoxModel(urlAddressString: "https://www.naver.com", viewHeight: 400, isFavorite: false)
+                                                      ,WebViewBoxModel(urlAddressString: "https://www.youtube.com", viewHeight: 500, isFavorite: false)
+    ]
+    
     var currentBgColor: Color = Color.white
+    var iconWidth: CGFloat = 30
     var body: some View {
         ZStack {
             GeometryReader { geo in
-                VStack {
+                VStack(spacing: 0) {
+                    ZStack {
                     ScrollView {
-                        VStack(spacing: 0) {
-                            
-                            VStack(spacing: 0) {
-                                
-                                WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewModel: viewModel)
-//                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
-//                                        .background(.clear)
-                                BottomNavigationBarView(isFavoriteToggleOn: $isFavoriteToggleOn, webViewFlexibleHeight: $webViewDefaultHeight, searchText: $addrString, isCloseButtonToggleOn: $isTopFavoriteToggleOn)
-                                    .background(.clear)
-                            
-                            }
+//                        ForEach(webViewList, id: \.self) {
+                        ForEach(webViewModelList) {
+//                            WebViewBox(viewModel: $0, isCloseButtonToggleOn: false)
+                            WebViewBox(viewModel: $0)
+                            .frame(width: geo.size.width - 20, height: $0.webViewFlexibleHeight, alignment: .center)
+//                            .padding(.leading, 10)
+//                            Text($0.asComma)
+//                                .foregroundColor(Color(Asset.text.color))
+//                                .background(Color(Asset.background.color))
+//                                .frame(height: 100)
                         }
-                        .cornerRadius(10)
-                        .clipped()
-                        .background(webViewBgColor)
-                        .frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
-                        
-                        Spacer()
-                            .frame(height: 10, alignment: .center)
-                            .background(.gray)
-                        
-                        VStack(spacing: 0) {
-                            VStack(spacing: 0) {
-                                
-                                WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1h", viewModel: viewModel)
-//                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
-//                                        .background(.clear)
-                                BottomNavigationBarView(isFavoriteToggleOn: $isFavoriteToggleOn, webViewFlexibleHeight: $webViewDefaultHeight, searchText: $addrString, isCloseButtonToggleOn: $isTopFavoriteToggleOn)
-                                    .background(.clear)
-                            
-                            }
-                        }
-                        .cornerRadius(10)
-                        .clipped()
-                        .background(webViewBgColor)
-                        .frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
-                        
-                        Spacer()
-                            .frame(height: 10, alignment: .center)
-                            .background(.gray)
-                        
-                        VStack(spacing: 0) {
-                            VStack(spacing: 0) {
-                                
-                                WebView(url: "https://www.naver.com", viewModel: viewModel)
-//                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
-//                                        .background(.clear)
-                                BottomNavigationBarView(isFavoriteToggleOn: $isFavoriteToggleOn, webViewFlexibleHeight: $webViewDefaultHeight, searchText: $addrString, isCloseButtonToggleOn: $isTopFavoriteToggleOn)
-                                    .background(.clear)
-                            
-                            }
-                        }
-                        .cornerRadius(10)
-                        .clipped()
-                        .background(webViewBgColor)
-                        .frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
-                        
-                        Spacer()
-                            .frame(height: 10, alignment: .center)
-                            .background(.gray)
-                        
-                        VStack {
-                            
-                            VStack(spacing: 0) {
-                                
-                                WebView(url: "https://www.youtube.com/", viewModel: viewModel)
-//                                    BottomMenuBarFlexibleView(isFavoriteToggleOn: $isTopFavoriteToggleOn, addressStr: $addrString, webViewFlexibleHeight: $webViewDefaultHeight)
-//                                        .background(.clear)
-                                BottomNavigationBarView(isFavoriteToggleOn: $isFavoriteToggleOn, webViewFlexibleHeight: $webViewDefaultHeight, searchText: $addrString, isCloseButtonToggleOn: $isTopFavoriteToggleOn)
-                                    .background(.clear)
-                            
-                            }
-                            
-                        }
-                        .cornerRadius(10)
-                        .background(webViewBgColor)
-                        .frame(width: geo.size.width - 20, height: webViewDefaultHeight, alignment: .center)
+
                     }
+//                    .padding(.bottom, 50)
+//                        Text(" ").frame(height: 150)
+//                    Spacer().frame(height: 0)
+                    
+                        ZStack {
+                            
+                        VStack {
+                            Spacer()
+                            VStack {
+                                HStack {
+                                    Spacer()
+            //                        Button {
+            //                        } label: {
+            //                            Image(systemName: "arrow.left.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+            //                        }
+                                    Button {
+                                    } label: {
+            //                            Image(systemName: "rectangle.grid.1x2").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                                        Image(systemName: "square.stack").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                                    }
+                                    Spacer()
+                                    Button {
+                                    } label: {
+            //                            Image(systemName: "plus").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                                        Image(systemName: "plus.square.on.square").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                                    }
+            //                        Button {
+            //                        } label: {
+            //                            Image(systemName: "tray.full").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+            //                        }
+                                    Spacer()
+                                    Button {
+                                    } label: {
+                                        Image(systemName: "gear").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                                    }
+                                    Spacer()
+                                }
+                                .foregroundColor(.white)
+                                
+                            }
+                            .frame(height: 50, alignment: .center)
+//                            .opacity(0.5)
+                            .background(.gray)
+                        }
+                        }.opacity(0.7)
+                    }
+                    
                 }
                 .background(currentBgColor)
                 .frame(alignment: .center)
-                .padding(.leading, 10)
             }
             .background(currentBgColor)
             .frame(alignment: .center)
