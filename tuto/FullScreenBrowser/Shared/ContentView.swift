@@ -491,7 +491,7 @@ struct ContentView: View {
     @State var webViewBgColor: Color = .clear
     
     
-    
+    //puu req test
     @State var addrString: String = ""
 //    @State var webViewList: [WebViewBox] = [WebViewBox(isCloseButtonToggleOn: false)
 //                                            ,WebViewBox(isCloseButtonToggleOn: false)
