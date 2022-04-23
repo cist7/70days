@@ -490,6 +490,8 @@ struct ContentView: View {
     @State var webViewDefaultHeight: CGFloat = 470
     @State var webViewBgColor: Color = .clear
     
+    
+    
     @State var addrString: String = ""
 //    @State var webViewList: [WebViewBox] = [WebViewBox(isCloseButtonToggleOn: false)
 //                                            ,WebViewBox(isCloseButtonToggleOn: false)
