@@ -355,7 +355,7 @@ struct BottomNavigationBarView: View {
                                     .stroke(Color.white, lineWidth: 2))
                     Button {
                     } label: {
-                        Image(systemName: "arrow.clockwise").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                        Image(systemName: "arrow.clockwise.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
                      
                     }
                     Button {
@@ -363,6 +363,11 @@ struct BottomNavigationBarView: View {
                     } label: {
                         Image(systemName: isFavoriteToggleOn ? "bookmark.circle.fill" : "bookmark.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
                      
+                    }
+                    Button {
+//                        $isCloseButtonToggleOn.wrappedValue = true
+                    } label: {
+                        Image(systemName: "camera.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
                     }
                     Button {
                         $isCloseButtonToggleOn.wrappedValue = true
@@ -420,7 +425,6 @@ struct WebViewBox: View {
         
 //                WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewModel: viewModel)
                 WebView(url: viewModel.addressStr, viewModel: webViewModel)
-                    .cornerRadius(10)
 //                    .border(viewModel.themeColor, width: 2)
                 BottomNavigationBarView(themeColor: viewModel.themeColor, isFavoriteToggleOn: $viewModel.isFavorite, webViewFlexibleHeight: $viewModel.webViewFlexibleHeight, searchText: $viewModel.searchText, isCloseButtonToggleOn: $isCloseButtonToggleOn)
                     .background(.clear)
@@ -514,7 +518,7 @@ struct ContentView: View {
                         ForEach(webViewModelList) {
 //                            WebViewBox(viewModel: $0, isCloseButtonToggleOn: false)
                             WebViewBox(viewModel: $0)
-                            .frame(width: geo.size.width - 20, height: $0.webViewFlexibleHeight, alignment: .center)
+                            .frame(width: geo.size.width - 20, height: $0.webViewFlexibleHeight + 50, alignment: .center)
 //                            .padding(.leading, 10)
 //                            Text($0.asComma)
 //                                .foregroundColor(Color(Asset.text.color))
