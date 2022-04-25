@@ -319,6 +319,86 @@ func geometryProxy(_ geometry: GeometryProxy) -> some View {
     .frame(width: size.width, height: size.height, alignment: .top)
 }
 
+struct TopNavigationBarView: View {
+    @State var webViewID: String = "1"
+    @State var themeColor: Color = Color.black
+    @State var titleText: String
+    
+    @Binding var isCloseButtonToggleOn: Bool
+//    @Binding var webViewFlexibleHeight: CGFloat
+    
+    @Binding var isSmallButtonToggleOn:Bool
+    
+    var iconWidth: CGFloat = 25.0
+    var body: some View {
+//        GeometryReader { geo in
+//        VStack {
+//            Spacer()
+            HStack {
+                HStack(spacing: 10) {
+//                    Spacer()
+//                    Button {
+//                    } label: {
+//                        Image(systemName: "arrow.left.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+//                    }
+//                    Button {
+//                    } label: {
+//                        Image(systemName: "arrow.right.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+//                    }
+                    Text(titleText)
+                        .frame(height: 35, alignment: .leading)
+                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+//                        .overlay(
+//                                RoundedRectangle(cornerRadius: 10)
+//                                    .stroke(Color.white, lineWidth: 2))
+                    Spacer()
+                    
+//                    Button {
+//                    } label: {
+//                        Image(systemName: "plus").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+//
+//                    }
+                    Button {
+                        isSmallButtonToggleOn.toggle()
+                    } label: {
+//                        Image(systemName: "minus").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+//                        Image(systemName: isSmallButtonToggleOn ? "plus.circle" : "minus.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                        Image(systemName: isSmallButtonToggleOn ? "plus.squareΩ" : "minus.square").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                        
+                     
+                    }
+                    Button {
+//                        $isCloseButtonToggleOn.wrappedValue = true
+                        isCloseButtonToggleOn.toggle()
+                    } label: {
+//                        Image(systemName: "xmark.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                        Image(systemName: "xmark.square").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+                    }
+//                    Button {
+//                        $isCloseButtonToggleOn.wrappedValue = true
+//                    } label: {
+//                        Image(systemName: "xmark.circle").resizable().frame(width: iconWidth, height: iconWidth, alignment: .center)
+//                    }
+//                    Spacer()
+                }
+//                .padding(.top, -10)
+                
+            }
+//            .frame(width: geo.size.width - 20, height: 60, alignment: .leading)
+            .frame(height: 50, alignment: .leading)
+            .foregroundColor(.white)
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+            .background(themeColor)
+//            .background(.black)
+//            .cornerRadius(10)
+//            .padding(.top, 10)
+            .clipped()
+        }
+        
+//    }
+//    }
+}
+
 struct BottomNavigationBarView: View {
     
     @State var webViewID: String = "1"
@@ -329,7 +409,7 @@ struct BottomNavigationBarView: View {
     @Binding var searchText: String
     @Binding var isCloseButtonToggleOn:Bool
     
-    var iconWidth: CGFloat = 30.0
+    var iconWidth: CGFloat = 25.0
     var body: some View {
 //        GeometryReader { geo in
 //        VStack {
@@ -347,7 +427,7 @@ struct BottomNavigationBarView: View {
                     }
                     TextField("Search", text: $searchText)
 //                        .frame(width: geo.size.width - (50*5) , height: 35, alignment: .leading)
-                        .frame(height: 35, alignment: .leading)
+                        .frame(height: 25, alignment: .leading)
 //                        .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                         .overlay(
@@ -419,11 +499,14 @@ struct WebViewBox: View {
 //    @Binding var isCloseButtonToggleOn: Bool
     @State var isCloseButtonToggleOn: Bool = false
     
+    @State var isSmallButtonToggleOn: Bool = false
+    
     var body: some View {
         VStack(spacing: 0) {
             VStack(spacing: 0) {
         
 //                WebView(url: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewModel: viewModel)
+                TopNavigationBarView(themeColor: viewModel.themeColor, titleText: "NAVER", isCloseButtonToggleOn: $isCloseButtonToggleOn, isSmallButtonToggleOn: $isSmallButtonToggleOn)
                 WebView(url: viewModel.addressStr, viewModel: webViewModel)
 //                    .border(viewModel.themeColor, width: 2)
                 BottomNavigationBarView(themeColor: viewModel.themeColor, isFavoriteToggleOn: $viewModel.isFavorite, webViewFlexibleHeight: $viewModel.webViewFlexibleHeight, searchText: $viewModel.searchText, isCloseButtonToggleOn: $isCloseButtonToggleOn)
@@ -450,12 +533,12 @@ class WebViewBoxModel: ObservableObject, Identifiable {
     var themeColor: Color = .gray
 //    private var isCloseButtonToggleOn:Bool
     
-    init(urlAddressString: String, viewHeight: CGFloat = 500, isFavorite: Bool = false, themeColor: Color = Color(red: 255/255, green: 182/255, blue: 193/255)) {
+    init(urlAddressString: String, viewHeight: CGFloat = 500, isFavorite: Bool = false, themeColor: Color = .gray) {
         self.webViewID = UUID().uuidString
         self.addressStr = urlAddressString
         self.webViewFlexibleHeight = viewHeight
         self.isFavorite = isFavorite
-        self.themeColor = themeColor
+        self.themeColor = themeColor //테바 분홍 Color(red: 255/255, green: 182/255, blue: 193/255)
     }
 
     
@@ -493,13 +576,7 @@ struct ContentView: View {
     
     
     @State var addrString: String = ""
-//    @State var webViewList: [WebViewBox] = [WebViewBox(isCloseButtonToggleOn: false)
-//                                            ,WebViewBox(isCloseButtonToggleOn: false)
-//                                            ,WebViewBox(isCloseButtonToggleOn: false)
-//                                            ,WebViewBox(isCloseButtonToggleOn: false)
-//                                            ,WebViewBox(isCloseButtonToggleOn: false)
-//                                            ,WebViewBox(isCloseButtonToggleOn: false)
-//    ]
+    
     @State var webViewModelList: [WebViewBoxModel] = [WebViewBoxModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewHeight: 400, isFavorite: false)
                                             ,WebViewBoxModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1h", viewHeight: 400, isFavorite: false)
                                                       ,WebViewBoxModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1d", viewHeight: 800, isFavorite: false)
@@ -520,7 +597,7 @@ struct ContentView: View {
                         ForEach(webViewModelList) {
 //                            WebViewBox(viewModel: $0, isCloseButtonToggleOn: false)
                             WebViewBox(viewModel: $0)
-                            .frame(width: geo.size.width - 20, height: $0.webViewFlexibleHeight + 50, alignment: .center)
+                            .frame(width: geo.size.width - 20, height: $0.webViewFlexibleHeight + 50 + 50, alignment: .center)
 //                            .padding(.leading, 10)
 //                            Text($0.asComma)
 //                                .foregroundColor(Color(Asset.text.color))
