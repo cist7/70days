@@ -494,13 +494,18 @@ struct BottomNavigationBarView: View {
 struct WebViewBox: View {
     
 //    @ObservedObject
-    @State var viewModel: WebViewBoxModel
+    @State var viewModel: WebViewBoxViewModel
     @ObservedObject var webViewModel: WebViewModel = WebViewModel()
 //    @Binding var isCloseButtonToggleOn: Bool
     @State var isCloseButtonToggleOn: Bool = false
     
     @State var isSmallButtonToggleOn: Bool = false
     
+    
+    @GestureState private var isDragging = false
+//    @State private var rectPosition = CGPoint(x: 50, y: 50)
+    
+    @Binding var flexibleHeight: CGFloat
     var body: some View {
         VStack(spacing: 0) {
             VStack(spacing: 0) {
@@ -511,57 +516,70 @@ struct WebViewBox: View {
 //                    .border(viewModel.themeColor, width: 2)
                 BottomNavigationBarView(themeColor: viewModel.themeColor, isFavoriteToggleOn: $viewModel.isFavorite, webViewFlexibleHeight: $viewModel.webViewFlexibleHeight, searchText: $viewModel.searchText, isCloseButtonToggleOn: $isCloseButtonToggleOn)
                     .background(.clear)
-        
             }
         }
         .cornerRadius(10)
         .clipped()
         .background(viewModel.webViewBgColor)
+//        .frame(height: viewModel.webViewFlexibleHeight + 100, alignment: .center)
+        .frame(height: flexibleHeight + 100, alignment: .center)
+        
+        
 //        .frame(width: geo.size.width - 20, height: viewModel.webViewFlexibleHeight, alignment: .center)
+//        .position(rectPosition)
+//                .gesture(DragGesture().onChanged({ value in
+//                    self.rectPosition = value.location
+//                }))
     }
 }
 
+class WebViewBoxModel: ObservableObject {
+    
+}
+
 // MARK: - ViewModel
-class WebViewBoxModel: ObservableObject, Identifiable {
+class WebViewBoxViewModel: ObservableObject, Identifiable {
     private var webViewID: String = "" //UUID()
+    
+    @Published var dataSource: WebViewBoxModel = WebViewBoxModel()
     
     var addressStr: String = "https://www.naver.com"
     var isFavorite: Bool = false
     var webViewFlexibleHeight: CGFloat = 500
+//    @Binding var webViewFlexibleHeight: CGFloat
     var searchText: String = ""
-    var webViewBgColor: Color = .clear
+    var webViewBgColor: Color = .clear 
     var themeColor: Color = .gray
 //    private var isCloseButtonToggleOn:Bool
     
-    init(urlAddressString: String, viewHeight: CGFloat = 500, isFavorite: Bool = false, themeColor: Color = .gray) {
+    var webViewFrame: CGRect
+    
+//    init(dataSource: WebViewBoxModel) {
+//            self.dataSource = dataSource
+//    }
+    
+    init(urlAddressString: String, viewHeight: CGFloat = 500, isFavorite: Bool = false, themeColor: Color = .gray, webViewFrame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 200)) {
         self.webViewID = UUID().uuidString
         self.addressStr = urlAddressString
         self.webViewFlexibleHeight = viewHeight
         self.isFavorite = isFavorite
         self.themeColor = themeColor //테바 분홍 Color(red: 255/255, green: 182/255, blue: 193/255)
+        self.webViewFrame = webViewFrame
+//        self.dataSource = dataSource
     }
-
-    
-//    var disposeBag = DisposeBag()
-//
-//    private let errorSubject: PublishSubject<ResultError?> = .init()
-//
-//    init() {
-//    }
-//
-//    deinit {
-//        logg.verbose("\(String(describing: self)) disposed")
-//    }
-//
-//    var inputs: HogaViewModelInputs { self }
-//    var outputs: HogaViewModelOutputs { self }
 }
 
 // MARK: - Outputs
 extension WebViewBoxModel {
 }
  
+class Settings: ObservableObject {
+    @Published var version = 0
+}
+
 struct ContentView: View {
+    
+    @EnvironmentObject var settings: Settings
     
     @ObservedObject var viewModel = WebViewModel()
     @State var bar = true
@@ -577,16 +595,35 @@ struct ContentView: View {
     
     @State var addrString: String = ""
     
-    @State var webViewModelList: [WebViewBoxModel] = [WebViewBoxModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewHeight: 400, isFavorite: false)
-                                            ,WebViewBoxModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1h", viewHeight: 400, isFavorite: false)
-                                                      ,WebViewBoxModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1d", viewHeight: 800, isFavorite: false)
-                                                      ,WebViewBoxModel(urlAddressString: "https://www.daum.net", viewHeight: 300, isFavorite: false)
-                                                      ,WebViewBoxModel(urlAddressString: "https://www.naver.com", viewHeight: 400, isFavorite: false)
-                                                      ,WebViewBoxModel(urlAddressString: "https://www.youtube.com", viewHeight: 500, isFavorite: false)
+    @State var webViewModelList: [WebViewBoxViewModel] = [WebViewBoxViewModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewHeight: 400, isFavorite: false)
+                                            ,WebViewBoxViewModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1h", viewHeight: 400, isFavorite: false)
+                                                      ,WebViewBoxViewModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=1d", viewHeight: 800, isFavorite: false)
+                                                      ,WebViewBoxViewModel(urlAddressString: "https://www.daum.net", viewHeight: 300, isFavorite: false)
+                                                      ,WebViewBoxViewModel(urlAddressString: "https://www.naver.com", viewHeight: 400, isFavorite: false)
+                                                      ,WebViewBoxViewModel(urlAddressString: "https://www.youtube.com", viewHeight: 500, isFavorite: false)
     ]
+    
+//    @GestureState private var isDragging = false
+//    rectPosition
+//        .position(rectPosition)
+//                .gesture(DragGesture().onChanged({ value in
+//                    self.rectPosition = value.location
+//                }))
     
     var currentBgColor: Color = Color.white
     var iconWidth: CGFloat = 30
+    
+    
+    @GestureState private var isDragging = false
+    @State private var isEnded = false
+    @State private var rectPosition = CGPoint(x: 50, y: 50)
+//    @State var viewHeights: [CGFloat] = []
+//    @State var viewHeight: CGFloat = 500
+//    @State var viewheights: [CGFloat] = []
+    @State var webViewHeight: CGFloat = 500 //$0.webViewFlexibleHeight + 50 + 50
+    var padding: CGFloat = 10
+    var multi: CGFloat = 1
+    
     var body: some View {
         ZStack {
             GeometryReader { geo in
@@ -594,17 +631,42 @@ struct ContentView: View {
                     ZStack {
                     ScrollView {
 //                        ForEach(webViewList, id: \.self) {
-                        ForEach(webViewModelList) {
+//                        ForEach(webViewModelList) {
+                        
+                        
+                        ForEach(webViewModelList.indices,id:\.self) { index in
+                            
+//                            self.viewHeights.append(webViewModelList[index].webViewFlexibleHeight)
 //                            WebViewBox(viewModel: $0, isCloseButtonToggleOn: false)
-                            WebViewBox(viewModel: $0)
-                            .frame(width: geo.size.width - 20, height: $0.webViewFlexibleHeight + 50 + 50, alignment: .center)
-//                            .padding(.leading, 10)
-//                            Text($0.asComma)
-//                                .foregroundColor(Color(Asset.text.color))
-//                                .background(Color(Asset.background.color))
-//                                .frame(height: 100)
+//                            self.$viewHeights.wrappedValue.append(webViewModelList[index].webViewFlexibleHeight)
+//                            WebViewBox(viewModel: webViewModelList[index]) //, flexibleHeight: self.$viewHeights[index])
+//                            WebViewBox(viewModel: webViewModelList[index], flexibleHeight: $viewHeights)
+                            WebViewBox(viewModel: webViewModelList[index], flexibleHeight: $webViewHeight)
+                            .frame(width: geo.size.width - 20, height: webViewModelList[index].webViewFlexibleHeight + 50 + 50, alignment: .center)
+                            .gesture(DragGesture().onChanged({ value in
+//                                self.rectPosition = value.location
+//                                value.webViewFlexibleHeight = value.webViewFlexibleHeight + 1
+//                                self.rectPosition = CGPoint(x: value.location.x, y: 50)
+//                                CGFloat(integerLiteral: index)
+                            
+                                webViewModelList[index].webViewFrame = CGRect(x: 0, y: (webViewModelList[index].webViewFlexibleHeight + 50 + 50 + padding) * CGFloat(integerLiteral: index), width: geo.size.width - 20, height: webViewModelList[index].webViewFlexibleHeight + 50 + 50)
+//                                webViewModelList[index].webViewFlexibleHeight =
+                                webViewModelList[index].webViewFlexibleHeight = webViewModelList[index].webViewFlexibleHeight + (value.location.y - value.startLocation.y)
+                                $webViewHeight.wrappedValue = webViewModelList[index].webViewFlexibleHeight
+//                                webViewModelList[index].webViewFlexibleHeight
+//                                print(value)
+                                print("height : \(webViewModelList[index].webViewFlexibleHeight)\n")
+                                
+                            }).updating($isDragging, body: { (value, state, trans) in
+                                state = true
+                            }).onEnded({ value in
+                                self.isEnded = true //value.location.x < 120
+                            }))
+                            
+                            
+                            
+//                            webViewModelList[index].webViewFrame = CGRect(x: 10, y: (webViewModelList[index].webViewFlexibleHeight + 50 + 50 + padding), width: geo.size.width - 20, height: webViewModelList[index].webViewFlexibleHeight + 50 + 50)
                         }
-
                     }
 //                    .padding(.bottom, 50)
 //                        Text(" ").frame(height: 150)
