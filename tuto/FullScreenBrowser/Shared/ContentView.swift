@@ -592,7 +592,7 @@ struct ContentView: View {
     @State var webViewBgColor: Color = .clear
     
     
-    
+    //puu req test
     @State var addrString: String = ""
     
     @State var webViewModelList: [WebViewBoxViewModel] = [WebViewBoxViewModel(urlAddressString: "https://cryptowat.ch/ko/charts/BINANCE:BTC-USDT?period=5m", viewHeight: 400, isFavorite: false)
