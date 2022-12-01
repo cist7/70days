@@ -13,7 +13,6 @@
 		BE5B1290280E9A3F00DFFD52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5B127E280E9A3D00DFFD52 /* ContentView.swift */; };
 		BE5B1291280E9A3F00DFFD52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5B127F280E9A3F00DFFD52 /* Assets.xcassets */; };
 		BE5B1292280E9A3F00DFFD52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5B127F280E9A3F00DFFD52 /* Assets.xcassets */; };
-		BEB7BE422816583700324F9C /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = BEB7BE412816583700324F9C /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEB7BE422816583700324F9C /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +95,6 @@
 			);
 			name = "FullScreenBrowser (iOS)";
 			packageProductDependencies = (
-				BEB7BE412816583700324F9C /* Introspect */,
 			);
 			productName = "FullScreenBrowser (iOS)";
 			productReference = BE5B1284280E9A3F00DFFD52 /* FullScreenBrowser.app */;
@@ -148,7 +145,6 @@
 			);
 			mainGroup = BE5B1277280E9A3D00DFFD52;
 			packageReferences = (
-				BEB7BE402816583700324F9C /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = BE5B1285280E9A3F00DFFD52 /* Products */;
 			projectDirPath = "";
@@ -460,25 +456,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BEB7BE402816583700324F9C /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.4;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BEB7BE412816583700324F9C /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BEB7BE402816583700324F9C /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE5B1278280E9A3D00DFFD52 /* Project object */;
 }
