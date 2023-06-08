@@ -3,7 +3,7 @@
 //  Shared
 //
 //  Created by SamsungFireMobileiOS on 2022/04/19.
-//
+//  Github changed
 
 import SwiftUI
 import Foundation
@@ -40,6 +40,7 @@ struct WebView: UIViewRepresentable {
         if let url = URL(string: url) {
             webView.load(URLRequest(url: url))    // 지정된 URL 요청 개체에서 참조하는 웹 콘텐츠를로드하고 탐색
         }
+        
         
         return webView
     }
